@@ -1,4 +1,5 @@
 import React from 'react';
+import strings from '../strings.json';
 
 const Header = () => {
     return (
@@ -9,7 +10,7 @@ const Header = () => {
                 </div>
                 <div className="header-text">
                     <h1>Nila's butikk</h1>
-                    <p>Hundeutstyr laget av biothane</p>
+                    <p>{strings.beskrivelse}</p>
                 </div>
             </div>
         </header>
