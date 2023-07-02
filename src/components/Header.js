@@ -6,10 +6,10 @@ const Header = () => {
         <header>
             <div className="header-content">
                 <div className="logo">
-                    <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
+                    <img src={`${process.env.PUBLIC_URL}logo.png`} alt="Logo" />
                 </div>
                 <div className="header-text">
-                    <h1>Nila's butikk</h1>
+                    <h1>{strings.navn}</h1>
                     <p>{strings.beskrivelse}</p>
                 </div>
             </div>
