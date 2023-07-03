@@ -90,6 +90,25 @@ const MainContent = () => {
                         <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" target="_blank" rel="noreferrer">Bestill</a>
                     </div>
                 </div>
+                <div className="fargecard">
+                    <div className="carousel-container">
+                        <Carousel>
+                            <div>
+                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
+                            </div>
+                            <div>
+                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
+                            </div>
+                            <div>
+                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
+                            </div>
+                        </Carousel>
+                    </div>
+                    <div className="card-content">
+                        <h2>{strings.fargekart}</h2>
+                        <p>{strings.fargekarttext}</p>
+                    </div>
+                </div>
             </div>
         </main>
     );
