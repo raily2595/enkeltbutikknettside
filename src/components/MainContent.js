@@ -1,6 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import strings from '../strings.json';
+import { NavLink } from 'react-router-dom'
 
 const MainContent = () => {
     return (
@@ -100,7 +101,7 @@ const MainContent = () => {
                                 <img src={`${process.env.PUBLIC_URL}fargekart/Blue521.jpg`} alt="Nila" />
                             </div>
                             <div>
-                                <img src={`${process.env.PUBLIC_URL}fargekart/Brown522.jpg`} alt="Nila" />
+                               <img src={`${process.env.PUBLIC_URL}fargekart/Brown522.jpg`} alt="Nila" />
                             </div>
                             <div>
                                 <img src={`${process.env.PUBLIC_URL}fargekart/Coral521.jpg`} alt="Nila" />
@@ -137,6 +138,11 @@ const MainContent = () => {
                     <div className="card-content">
                         <h2>{strings.fargekart}</h2>
                         <p>{strings.fargekarttext}</p>
+                        <NavLink
+                            className="nav-link"
+                            activeclassname="nav-link-active"
+                            exact="true"
+                            to="/fargekart">Fargekart</NavLink>
                     </div>
                 </div>
             </div>
