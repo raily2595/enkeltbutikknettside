@@ -43,6 +43,27 @@ const MainContent = () => {
                         </Carousel>
                     </div>
                     <div className="card-content">
+                        <h2>{strings.halsband}</h2>
+                        <p>{strings.halsbandtekst1}</p>
+                        <p>{strings.halsbandtekst2}</p>
+                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" target="_blank" rel="noreferrer">Bestill</a>
+                    </div>
+                </div>
+                <div className="card">
+                    <div className="carousel-container">
+                        <Carousel>
+                            <div>
+                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
+                            </div>
+                            <div>
+                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
+                            </div>
+                            <div>
+                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
+                            </div>
+                        </Carousel>
+                    </div>
+                    <div className="card-content">
                         <h2>{strings.sporline}</h2>
                         <p>{strings.sporlinetekst1}</p>
                         <p>{strings.sporlinetekst2}</p>
