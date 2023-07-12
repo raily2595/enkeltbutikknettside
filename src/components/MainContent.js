@@ -161,6 +161,11 @@ const MainContent = () => {
                             activeclassname="nav-link-active"
                             exact="true"
                             to="/fargekart">Fargekart</NavLink>
+                        <NavLink
+                            className="nav-link"
+                            activeclassname="nav-link-active"
+                            exact="true"
+                            to="/font">Font</NavLink>
                     </div>
                 </div>
             </div>

@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import Fargekart from './components/Fargekart'
 import './App.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import './fonts.css';
+import Font from "./components/Font";
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<MainContent />} />
                     <Route path="/fargekart" element={<Fargekart />} />
+                    <Route path="/font" element={<Font />} />
                 </Routes>
                 <Footer />
             </div>
