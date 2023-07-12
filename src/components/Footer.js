@@ -1,8 +1,9 @@
+import strings from '../strings.json';
 const Footer = () => {
     return (
         <footer>
             <div className="footer-content">
-                <p>Er det noe du lurer på, så ikke nøl med å sende en mail til hundeutstyr.wartenberg@gmail.com</p>
+                <p>{strings.footertekst}</p>
             </div>
         </footer>
     );
