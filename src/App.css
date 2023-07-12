@@ -19,7 +19,7 @@ header {
 }
 
 header h1 {
-  margin: 0;
+  margin: 12px;
 }
 
 main {
@@ -55,6 +55,7 @@ main {
 
 .card-content {
   padding: 12px;
+  width:100%
 }
 
 .card-content h2 {
