@@ -112,7 +112,7 @@ const MainContent = () => {
                         <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
                     </div>
                 </div>
-                <div className="fargecard">
+                <div className="card">
                     <div className="carousel-container">
                         <Carousel>
                             <div>
