@@ -25,7 +25,7 @@ const MainContent = () => {
                         <h2>{strings.leieband}</h2>
                         <p>{strings.leiebandtekst1}</p>
                         <p>{strings.leiebandtekst2}</p>
-                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" target="_blank" rel="noreferrer">Bestill</a>
+                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
                     </div>
                 </div>
                 <div className="card">
@@ -46,7 +46,7 @@ const MainContent = () => {
                         <h2>{strings.halsband}</h2>
                         <p>{strings.halsbandtekst1}</p>
                         <p>{strings.halsbandtekst2}</p>
-                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" target="_blank" rel="noreferrer">Bestill</a>
+                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
                     </div>
                 </div>
                 <div className="card">
@@ -67,7 +67,7 @@ const MainContent = () => {
                         <h2>{strings.sporline}</h2>
                         <p>{strings.sporlinetekst1}</p>
                         <p>{strings.sporlinetekst2}</p>
-                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" target="_blank" rel="noreferrer">Bestill</a>
+                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
                     </div>
                 </div>
                 <div className="card">
@@ -88,7 +88,7 @@ const MainContent = () => {
                         <h2>{strings.dobbeltkrok}</h2>
                         <p>{strings.dobbeltkroktekst1}</p>
                         <p>{strings.dobbeltkroktekst2}</p>
-                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" target="_blank" rel="noreferrer">Bestill</a>
+                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
                     </div>
                 </div>
                 <div className="card">
@@ -109,7 +109,7 @@ const MainContent = () => {
                         <h2>{strings.hanefot}</h2>
                         <p>{strings.hanefottekst1}</p>
                         <p>{strings.hanefottekst2}</p>
-                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" target="_blank" rel="noreferrer">Bestill</a>
+                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
                     </div>
                 </div>
                 <div className="fargecard">
@@ -157,12 +157,12 @@ const MainContent = () => {
                         <h2>{strings.fargekart}</h2>
                         <p>{strings.fargekarttext}</p>
                         <NavLink
-                            className="nav-link"
+                            className="card-button"
                             activeclassname="nav-link-active"
                             exact="true"
                             to="/fargekart">Fargekart</NavLink>
                         <NavLink
-                            className="nav-link"
+                            className="card-button"
                             activeclassname="nav-link-active"
                             exact="true"
                             to="/font">Font</NavLink>
