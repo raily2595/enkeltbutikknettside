@@ -1,16 +1,21 @@
 {
   "leieband": "Leiebånd med håndtak og krok",
-  "leiebandtekst1": "Kan fåes enfarget eller tofarget. Lengden velges selv. Vinyltrykk er inkludert i prisen.",
+  "leiebandtekst1": "Kan fåes enfarget eller tofarget. Lengden velges selv. Enkelt vinyltrykk er inkludert i prisen.",
   "leiebandtekst2": "Pris: 200kr + 50kr per meter",
   "sporline": "Sporline med krok",
-  "sporlinetekst1": "Kan fåes enfarget eller tofarget. Lengden velges selv. Vinyltrykk er inkludert i prisen.",
+  "sporlinetekst1": "Kan fåes enfarget eller tofarget. Lengden velges selv. Enkelt vinyltrykk er inkludert i prisen.",
   "sporlinetekst2": "Pris: 200kr + 50kr per meter",
   "dobbeltkrok": "Dobbeltkrok",
-  "dobbeltkroktekst1": "Kan fåes enfarget eller tofarget. Lengden velges selv. Vinyltrykk er inkludert i prisen.",
+  "dobbeltkroktekst1": "Kan fåes enfarget eller tofarget. Lengden velges selv. Enkelt vinyltrykk er inkludert i prisen.",
   "dobbeltkroktekst2": "Pris: 200kr + 50kr per meter",
-  "hanefot": "Leiebånd med håndtak og krok",
-  "hanefottekst1": "Kan fåes enfarget eller tofarget. Lengden velges selv. Vinyltrykk er inkludert i prisen.",
+  "hanefot": "Hanefot",
+  "hanefottekst1": "Kan fåes enfarget eller tofarget. Lengden velges selv. Enkelt vinyltrykk er inkludert i prisen.",
   "hanefottekst2": "Pris: 200kr + 50kr per meter",
+  "halsband": "Regulerbart Halsbånd med klips ",
+  "halsbandtekst1": "Halsbåndet er godkjent i Rallylydighet. Enkelt vinyltrykk er inkludert i prisen.",
+  "halsbandtekst2": "Pris: 300kr",
   "beskrivelse": "Hundeutstyr laget av biothane",
-  "navn": "Nila's Lille Verksted"
+  "navn": "Nila's Lille Verksted",
+  "fargekart": "Fargekart",
+  "fargekarttext": "Her ser du fargene"
 }

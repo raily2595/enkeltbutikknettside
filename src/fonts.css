@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Fresh Mix';
+    src: url('./fonts/FreshMix.ttf') format('truetype');
+    /* Add additional font properties if needed */
+}
+
+@font-face {
+    font-family: 'Comic Sans';
+    src: url('./fonts/ComicSans.ttf') format('truetype');
+    /* Add additional font properties if needed */
+}
+
+@font-face {
+    font-family: 'stjernekrig';
+    src: url('./fonts/stjernekrig.ttf') format('truetype');
+    /* Add additional font properties if needed */
+}
+
+@font-face {
+    font-family: 'wild';
+    src: url('./fonts/wild.ttf') format('truetype');
+    /* Add additional font properties if needed */
+}
+
+@font-face {
+    font-family: 'winnie';
+    src: url('./fonts/winnie.ttf') format('truetype');
+    /* Add additional font properties if needed */
+}
+
+@font-face {
+    font-family: 'bolde';
+    src: url('./fonts/bolde.otf') format('opentype');
+    /* Add additional font properties if needed */
+}
+
+@font-face {
+    font-family: 'dad';
+    src: url('./fonts/dad.otf') format('opentype');
+    /* Add additional font properties if needed */
+}
+
+@font-face {
+    font-family: 'Handskrevet';
+    src: url('./fonts/Handskrevet.otf') format('opentype');
+    /* Add additional font properties if needed */
+}
+
+@font-face {
+    font-family: 'Wizard';
+    src: url('./fonts/wizard.otf') format('opentype');
+    /* Add additional font properties if needed */
+}
