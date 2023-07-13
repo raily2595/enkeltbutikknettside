@@ -32,7 +32,7 @@ main {
   border: 1px solid grey;
   border-radius: 12px;
   padding: 12px;
-  width: 45%; /* Adjust the width as needed */
+  width: 45%;
   background-color: whitesmoke;
 }
 
@@ -49,26 +49,25 @@ main {
 }
 
 .carousel-container {
-  flex-grow: 1;
-  width: 360px;
+  width: 50%;
   margin: 12px;
 }
 
 .card-content {
-  flex-grow: 2;
   padding: 12px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.card-content > div:first-child {
+.card-content > div:nth-child() {
   flex-grow: 1;
 }
 
 .card-button {
   width: 150px;
-  margin: 0 auto;
+  margin: 6px auto;
   padding: 12px;
   border-radius: 12px;
   background-color: #48CFC8;
