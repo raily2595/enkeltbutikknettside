@@ -11,13 +11,10 @@ const MainContent = () => {
                     <div className="carousel-container">
                         <Carousel>
                             <div>
-                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
+                                <img src={`${process.env.PUBLIC_URL}bilder/leieband1.jpg`} alt="Nila" />
                             </div>
                             <div>
-                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
-                            </div>
-                            <div>
-                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
+                                <img src={`${process.env.PUBLIC_URL}bilder/leieband2.jpg`} alt="Nila" />
                             </div>
                         </Carousel>
                     </div>
@@ -33,13 +30,16 @@ const MainContent = () => {
                     <div className="carousel-container">
                         <Carousel>
                             <div>
-                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
+                                <img src={`${process.env.PUBLIC_URL}bilder/halsband1.jpg`} alt="Nila" />
                             </div>
                             <div>
-                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
+                                <img src={`${process.env.PUBLIC_URL}bilder/halsband2.jpg`} alt="Nila" />
                             </div>
                             <div>
-                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
+                                <img src={`${process.env.PUBLIC_URL}bilder/halsband3.jpg`} alt="Nila" />
+                            </div>
+                            <div>
+                                <img src={`${process.env.PUBLIC_URL}bilder/halsband4.jpg`} alt="Nila" />
                             </div>
                         </Carousel>
                     </div>
@@ -55,13 +55,10 @@ const MainContent = () => {
                     <div className="carousel-container">
                         <Carousel>
                             <div>
-                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
+                                <img src={`${process.env.PUBLIC_URL}bilder/sporline1.jpg`} alt="Nila" />
                             </div>
                             <div>
-                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
-                            </div>
-                            <div>
-                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
+                                <img src={`${process.env.PUBLIC_URL}bilder/sporline2.jpg`} alt="Nila" />
                             </div>
                         </Carousel>
                     </div>
@@ -77,13 +74,10 @@ const MainContent = () => {
                     <div className="carousel-container">
                         <Carousel>
                             <div>
-                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
+                                <img src={`${process.env.PUBLIC_URL}bilder/dobbelkrok1.jpg`} alt="Nila" />
                             </div>
                             <div>
-                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
-                            </div>
-                            <div>
-                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
+                                <img src={`${process.env.PUBLIC_URL}bilder/dobbelkrok2.jpg`} alt="Nila" />
                             </div>
                         </Carousel>
                     </div>
@@ -99,13 +93,7 @@ const MainContent = () => {
                     <div className="carousel-container">
                         <Carousel>
                             <div>
-                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
-                            </div>
-                            <div>
-                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
-                            </div>
-                            <div>
-                                <img src={`${process.env.PUBLIC_URL}nila.jpg`} alt="Nila" />
+                                <img src={`${process.env.PUBLIC_URL}bilder/hanefot1.jpg`} alt="Nila" />
                             </div>
                         </Carousel>
                     </div>
