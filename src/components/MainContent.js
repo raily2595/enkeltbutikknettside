@@ -25,6 +25,7 @@ const MainContent = () => {
                         <h2>{strings.leieband}</h2>
                         <p>{strings.leiebandtekst1}</p>
                         <p>{strings.leiebandtekst2}</p>
+                        <p>{strings.vinylinfo}</p>
                         <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
                     </div>
                 </div>
@@ -46,6 +47,7 @@ const MainContent = () => {
                         <h2>{strings.halsband}</h2>
                         <p>{strings.halsbandtekst1}</p>
                         <p>{strings.halsbandtekst2}</p>
+                        <p>{strings.vinylinfo}</p>
                         <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
                     </div>
                 </div>
@@ -67,6 +69,7 @@ const MainContent = () => {
                         <h2>{strings.sporline}</h2>
                         <p>{strings.sporlinetekst1}</p>
                         <p>{strings.sporlinetekst2}</p>
+                        <p>{strings.vinylinfo}</p>
                         <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
                     </div>
                 </div>
@@ -88,6 +91,7 @@ const MainContent = () => {
                         <h2>{strings.dobbeltkrok}</h2>
                         <p>{strings.dobbeltkroktekst1}</p>
                         <p>{strings.dobbeltkroktekst2}</p>
+                        <p>{strings.vinylinfo}</p>
                         <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
                     </div>
                 </div>
@@ -109,6 +113,7 @@ const MainContent = () => {
                         <h2>{strings.hanefot}</h2>
                         <p>{strings.hanefottekst1}</p>
                         <p>{strings.hanefottekst2}</p>
+                        <p>{strings.vinylinfo}</p>
                         <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
                     </div>
                 </div>
