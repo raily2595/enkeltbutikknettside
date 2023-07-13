@@ -44,7 +44,7 @@ main {
 
 @media (max-width: 1100px) {
   .card {
-    width: 90%; /* Reduce the width to 90% when screen width is below 600px */
+    width: 90%;
   }
 }
 
