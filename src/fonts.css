@@ -1,41 +1,35 @@
 @font-face {
-    font-family: 'Fresh Mix';
-    src: url('./fonts/FreshMix.ttf') format('truetype');
-    /* Add additional font properties if needed */
-}
-
-@font-face {
     font-family: 'Comic Sans';
     src: url('./fonts/ComicSans.ttf') format('truetype');
     /* Add additional font properties if needed */
 }
 
 @font-face {
-    font-family: 'stjernekrig';
+    font-family: 'Stjernekrig';
     src: url('./fonts/stjernekrig.ttf') format('truetype');
     /* Add additional font properties if needed */
 }
 
 @font-face {
-    font-family: 'wild';
+    font-family: 'Skog';
     src: url('./fonts/wild.ttf') format('truetype');
     /* Add additional font properties if needed */
 }
 
 @font-face {
-    font-family: 'winnie';
+    font-family: 'Barnebok';
     src: url('./fonts/winnie.ttf') format('truetype');
     /* Add additional font properties if needed */
 }
 
 @font-face {
-    font-family: 'bolde';
+    font-family: 'Tegnefilm';
     src: url('./fonts/bolde.otf') format('opentype');
     /* Add additional font properties if needed */
 }
 
 @font-face {
-    font-family: 'dad';
+    font-family: 'Tøff';
     src: url('./fonts/dad.otf') format('opentype');
     /* Add additional font properties if needed */
 }
@@ -47,7 +41,7 @@
 }
 
 @font-face {
-    font-family: 'Wizard';
+    font-family: 'Magisk';
     src: url('./fonts/wizard.otf') format('opentype');
     /* Add additional font properties if needed */
 }
