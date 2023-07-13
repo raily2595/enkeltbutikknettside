@@ -107,8 +107,10 @@ const MainContent = () => {
                     </div>
                     <div className="card-content">
                         <h2>{strings.hanefot}</h2>
-                        <p>{strings.hanefottekst1}</p>
-                        <p>{strings.hanefottekst2}</p>
+                        <div>
+                            <p>{strings.hanefottekst1}</p>
+                            <p>{strings.hanefottekst2}</p>
+                        </div>
                         <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
                     </div>
                 </div>
@@ -119,7 +121,7 @@ const MainContent = () => {
                                 <img src={`${process.env.PUBLIC_URL}fargekart/Blue521.jpg`} alt="Lysblå" />
                             </div>
                             <div>
-                               <img src={`${process.env.PUBLIC_URL}fargekart/Brown522.jpg`} alt="Rødbrun" />
+                                <img src={`${process.env.PUBLIC_URL}fargekart/Brown522.jpg`} alt="Rødbrun" />
                             </div>
                             <div>
                                 <img src={`${process.env.PUBLIC_URL}fargekart/Coral521.jpg`} alt="Korall" />
