@@ -3,7 +3,7 @@
 }
 
 header {
-  background-color: #f1f1f1;
+  background-color: whitesmoke;
   padding: 12px;
 }
 
@@ -26,52 +26,82 @@ main {
   padding: 12px;
 }
 
-.card {
-  display: flex;
-  margin: 12px;
-  border: 1px solid grey;
-  border-radius: 12px;
-  padding: 12px;
-  width: 45%; /* Adjust the width as needed */
-  background-color: #f1f1f1;
-}
-
 .main-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-@media (max-width: 1100px) {
+.card {
+  display: flex;
+  margin: 12px;
+  border: 1px solid grey;
+  border-radius: 12px;
+  padding: 12px;
+  width: 30%;
+  background-color: whitesmoke;
+}
+
+@media (max-width: 2200px) {
   .card {
-    width: 90%; /* Reduce the width to 90% when screen width is below 600px */
+    width: 45%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .card {
+    width: 90%;
   }
 }
 
 .carousel-container {
-  width: 360px;
+  width: 45%;
   margin: 12px;
 }
 
 .card-content {
   padding: 12px;
-  width:100%
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.card-content h2 {
-  margin: 0;
+.card-content > div:nth-child() {
+  flex-grow: 1;
 }
 
-.card-content a {
-  display: block;
-  margin-top: 10px;
+.card-lone-content {
+  padding: 12px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-lone-content > div:nth-child() {
+  flex-grow: 1;
 }
 
 .card-button {
+  width: 150px;
+  margin: 6px auto;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #48CFC8;
+  color: black;
+  text-decoration: none;
+  font-size: large;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
 
+.card-button:hover {
+  background-color: #3BB8AC;
+  color: whitesmoke;
 }
 
 footer {
-  background-color: #f1f1f1;
+  background-color: whitesmoke;
   padding: 12px;
 }
