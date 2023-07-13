@@ -124,7 +124,7 @@ const MainContent = () => {
                     </div>
                 </div>
                 <div className="card">
-                    <div className="card-content">
+                    <div className="card-lone-content">
                         <div>
                             <h2>{strings.info}</h2>
                             <p>{strings.infotext1}</p>
