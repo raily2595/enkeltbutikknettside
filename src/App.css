@@ -34,7 +34,7 @@ main {
 
 .card {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   flex-direction: row;
   justify-content: space-between;
   margin: 12px;
@@ -45,7 +45,7 @@ main {
   background-color: whitesmoke;
 }
 
-@media (max-width: 2200px) {
+@media (max-width: 2300px) {
   .card {
     width: 45%;
   }
@@ -58,7 +58,7 @@ main {
 }
 
 .carousel-container {
-  width: 45%;
+  width: 55%;
   margin: 12px;
 }
 
@@ -70,7 +70,7 @@ main {
 
 .card-content {
   padding: 12px;
-  width: 45%;
+  width: 35%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
