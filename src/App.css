@@ -105,3 +105,16 @@ footer {
   background-color: whitesmoke;
   padding: 12px;
 }
+
+.font-tabell {
+  margin: 12px;
+  text-align: left;
+}
+
+.font-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 12px;
+  padding: 12px;
+}
