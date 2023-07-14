@@ -14,16 +14,10 @@ const FontPage = () => {
             <input type="text" value={text} onChange={handleInputChange} />
             <div className="font-container">
                 <table className="font-tabell">
-                    <thead>
-                        <tr>
-                            <th style={{ width: 180 + 'px' }}>Navn</th>
-                            <th style={{ width: 360 + 'px' }}>Font</th>
-                        </tr>
-                    </thead>
                     <tbody>
                         <tr>
-                            <th>Tøff</th>
-                            <th><div style={{ fontFamily: 'Tøff', fontSize: '50px' }}>{text}</div></th>
+                            <th style={{ width: 180 + 'px' }}>Tøff</th>
+                            <th style={{ width: 360 + 'px' }}><div style={{ fontFamily: 'Tøff', fontSize: '50px' }}>{text}</div></th>
                         </tr>
                         <tr>
                             <th>Calibri</th>
@@ -48,16 +42,10 @@ const FontPage = () => {
                     </tbody>
                 </table>
                 <table className="font-tabell">
-                    <thead>
-                        <tr>
-                            <th style={{ width: 180 + 'px' }}>Navn</th>
-                            <th style={{ width: 360 + 'px' }}>Font</th>
-                        </tr>
-                    </thead>
                     <tbody>
                         <tr>
-                            <th>Arial</th>
-                            <th><div style={{ fontFamily: 'Arial', fontSize: '50px' }}>{text}</div></th>
+                            <th style={{ width: 180 + 'px' }}>Arial</th>
+                            <th style={{ width: 360 + 'px' }}><div style={{ fontFamily: 'Arial', fontSize: '50px' }}>{text}</div></th>
                         </tr>
                         <tr>
                             <th>Courier New</th>

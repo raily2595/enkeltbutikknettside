@@ -115,6 +115,6 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 12px;
-  padding: 12px;
+  margin: 24px;
+  padding: 24px;
 }
