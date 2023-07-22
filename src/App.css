@@ -9,12 +9,19 @@ header {
 
 .header-content {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
 
+@media (max-width: 750px) {
+  .header-content {
+    justify-content: center;
+  }
+}
+
 .logo img {
-  width: 350px;
+  width: 360px;
   margin: 12px;
 }
 
