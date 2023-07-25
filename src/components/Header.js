@@ -1,6 +1,6 @@
 import React from 'react';
 import strings from '../strings.json';
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -15,11 +15,15 @@ const Header = () => {
                     <h1>{strings.navn}</h1>
                     <p>{strings.beskrivelse}</p>
                     <NavLink
-                        className="logo"
                         activeclassname="nav-link-active"
                         exact="true"
                         target={"_blank"}
-                        to="https://www.instagram.com/nilas_lille_verksted/"><img src={`${process.env.PUBLIC_URL}instalogo.png`} alt="instalogo"/></NavLink>
+                        to="https://www.instagram.com/nilas_lille_verksted/">
+                        <div className="media">
+                            <img src={`${process.env.PUBLIC_URL}instalogo.png`} alt="instalogo" />
+                            <p>@nilas_lille_verksted</p>
+                        </div>
+                    </NavLink>
                 </div>
             </div>
         </header>
