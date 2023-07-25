@@ -14,6 +14,12 @@ const Header = () => {
                 <div className="header-text">
                     <h1>{strings.navn}</h1>
                     <p>{strings.beskrivelse}</p>
+                    <NavLink
+                        className="logo"
+                        activeclassname="nav-link-active"
+                        exact="true"
+                        target={"_blank"}
+                        to="https://www.instagram.com/nilas_lille_verksted/"><img src={`${process.env.PUBLIC_URL}instalogo.png`} alt="instalogo"/></NavLink>
                 </div>
             </div>
         </header>
