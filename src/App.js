@@ -8,6 +8,7 @@ import './App.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './fonts.css';
 import Font from "./components/Font";
+import Banner from "./components/Banner";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Router>
             <div className="App">
                 <Header />
+                <Banner />
                 <Routes>
                     <Route path="/" element={<MainContent />} />
                     <Route path="/fargekart" element={<Fargekart />} />
