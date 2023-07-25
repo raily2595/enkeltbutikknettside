@@ -19,10 +19,14 @@ header {
   padding: 1px;
 }
 
-@media (max-width: 750px) {
-  .header-content {
-    justify-content: center;
-  }
+.banner-content h2 {
+  font-family: 'Courier New';
+  font-size: 50px;
+}
+
+.banner-content p {
+  font-family: 'Courier New';
+  font-size: 50px;
 }
 
 .logo img {
@@ -73,27 +77,9 @@ main {
   background-color: whitesmoke;
 }
 
-@media (max-width: 2300px) {
-  .card {
-    width: 45%;
-  }
-}
-
-@media (max-width: 1400px) {
-  .card {
-    width: 90%;
-  }
-}
-
 .carousel-container {
   width: 55%;
   margin: 12px;
-}
-
-@media (max-width: 700px) {
-  .carousel-container {
-    width: 90%;
-  }
 }
 
 .card-content {
@@ -102,12 +88,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-@media (max-width: 700px) {
-  .card-content {
-    width: 90%;
-  }
 }
 
 .card-content > div:nth-child() {
@@ -147,4 +127,38 @@ main {
 footer {
   background-color: whitesmoke;
   padding: 12px;
+}
+
+@media (max-width: 2300px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 750px) {
+  .header-content {
+    justify-content: center;
+  }
+
+  .banner-content h2 {
+    font-size: 25px;
+  }
+
+  .banner-content p {
+    font-size: 25px;
+  }
+
+  .card-content {
+    width: 90%;
+  }
+  
+  .carousel-container {
+    width: 90%;
+  }
 }
