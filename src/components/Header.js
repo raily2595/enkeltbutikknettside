@@ -10,7 +10,7 @@ const Header = () => {
                     className="logo"
                     activeclassname="nav-link-active"
                     exact="true"
-                    to="/"><img src={`${process.env.PUBLIC_URL}logo.png`} alt="Logo" /></NavLink>
+                    to="/"><img src={`${process.env.PUBLIC_URL}logo.jpg`} alt="Logo" /></NavLink>
                 <div className="header-text">
                     <h1>{strings.navn}</h1>
                     <p>{strings.beskrivelse}</p>
