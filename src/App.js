@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import MainContent from './components/MainContent';
 import Footer from './components/Footer';
@@ -8,7 +8,7 @@ import './App.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './fonts.css';
 import Font from "./components/Font";
-import Banner from "./components/Banner";
+{/* import Banner from "./components/Banner";*/ }
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Router>
             <div className="App">
                 <Header />
-                <Banner />
+                {/* <Banner /> */}
                 <Routes>
                     <Route path="/" element={<MainContent />} />
                     <Route path="/fargekart" element={<Fargekart />} />
