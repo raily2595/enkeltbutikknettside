@@ -117,7 +117,7 @@ const MainContent = () => {
                             <p>{strings.lengdetekst}</p>
                         </div>
                         <div>
-                            <p>{strings.prisinfoband}</p>
+                            <p>{strings.prisinfohanefot}</p>
                             <p>{strings.vinylinfo}</p>
                         </div>
                         <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
