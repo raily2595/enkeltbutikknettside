@@ -5,6 +5,7 @@
 klips 19kr
 regulator 19kr
 d-ring 5,9kr
+o-ring 2,6kr
 
 halsbånd
 3 skruer + 1m 25 mm + 1 klips + 1 regulator + 1 d-ring = 108,8kr gevinst 191,2kr
@@ -18,3 +19,6 @@ Sporline 1m +
 
 dobbeltkrok 1m +
 4 skruer + 1,2m 16mm + 2 krok = 149kr gevinst 100.4kr + 10kr per meter
+
+sele
+24 skruer + 2,5m 16 mm + 6 o-ring = 233kr 500kr? 
