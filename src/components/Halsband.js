@@ -4,7 +4,7 @@ import React from "react";
 import {NavLink} from "react-router-dom";
 const Halsband = () => {
     return (
-        <halsband>
+        <div>
             <div className="halsband-content">
                 <div className="card">
                     <div className="carousel-container">
@@ -53,7 +53,7 @@ const Halsband = () => {
                     </div>
                 </div>
             </div>
-        </halsband>
+        </div>
     );
 };
 

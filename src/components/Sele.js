@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 import React from "react";
 const Sele = () => {
     return (
-        <sele>
+        <div>
             <div className="sele-content">
                 <div className="card">
                     <div className="card-lone-content">
@@ -27,7 +27,7 @@ const Sele = () => {
                     </div>
                 </div>
             </div>
-        </sele>
+        </div>
     );
 };
 

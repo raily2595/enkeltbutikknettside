@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 import React from "react";
 const Annet = () => {
     return (
-        <annet>
+        <div>
             <div className="annet-content">
                 <div className="card">
                     <div className="card-lone-content">
@@ -27,7 +27,7 @@ const Annet = () => {
                     </div>
                 </div>
             </div>
-        </annet>
+        </div>
     );
 };
 

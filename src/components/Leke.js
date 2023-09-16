@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 import React from "react";
 const Leke = () => {
     return (
-        <leke>
+        <div>
             <div className="leke-content">
                 <div className="card">
                     <div className="card-lone-content">
@@ -27,7 +27,7 @@ const Leke = () => {
                     </div>
                 </div>
             </div>
-        </leke>
+        </div>
     );
 };
 

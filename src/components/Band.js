@@ -4,7 +4,7 @@ import React from "react";
 import {NavLink} from "react-router-dom";
 const Band = () => {
     return (
-        <band>
+        <div>
             <div className="band-content">
                 <div className="card">
                     <div className="carousel-container">
@@ -119,7 +119,7 @@ const Band = () => {
                 </div>
             </div>
             </div>
-        </band>
+        </div>
     );
 };
 

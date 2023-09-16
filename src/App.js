@@ -14,6 +14,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './fonts.css';
 import Font from "./components/Font";
 import Meny from "./components/Meny";
+import Handlekurv from "./components/Handlekurv";
 {/* import Banner from "./components/Banner";*/ }
 
 
@@ -33,6 +34,7 @@ function App() {
                     <Route path="/annet" element={<Annet />} />
                     <Route path="/fargekart" element={<Fargekart />} />
                     <Route path="/font" element={<Font />} />
+                    <Route path="/handlekurv" element={<Handlekurv />} />
                 </Routes>
                 <Footer />
             </div>
