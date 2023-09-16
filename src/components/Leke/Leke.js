@@ -1,10 +1,10 @@
-import strings from '../strings.json';
+import strings from '../../strings.json';
 import {NavLink} from "react-router-dom";
 import React from "react";
-const Sele = () => {
+const Leke = () => {
     return (
         <div>
-            <div className="sele-content">
+            <div className="leke-content">
                 <div className="card">
                     <div className="card-lone-content">
                         <div>
@@ -31,4 +31,4 @@ const Sele = () => {
     );
 };
 
-export default Sele;
+export default Leke;

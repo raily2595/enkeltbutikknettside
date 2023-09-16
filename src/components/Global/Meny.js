@@ -1,4 +1,4 @@
-import strings from '../strings.json';
+import strings from '../../strings.json';
 import {NavLink} from "react-router-dom";
 import React from "react";
 const Meny = () => {
@@ -30,11 +30,6 @@ const Meny = () => {
                     activeclassname="nav-link-active"
                     exact="true"
                     to="/annet">{strings.menytekst5}</NavLink>
-                <NavLink
-                    className="handlekurv"
-                    activeclassname="nav-link-active"
-                    exact="true"
-                    to="/handlekurv">{strings.menytekst6}</NavLink>
             </div>
         </div>
     );
