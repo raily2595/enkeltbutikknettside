@@ -3,15 +3,15 @@ import axios from 'axios';
 
 function Kasse() {
     const [bestillingsforesporsel, setBestillingsforesporsel] = useState({
-        Navn: '',
-        Epost: '',
-        Adresse: '',
-        Postnr: '',
-        Telefon: '',
-        Poststed: '',
-        Produkter: [],
-        Betalingsmetode: '',
-        Totalt: 600,
+        navn: '',
+        epost: '',
+        adresse: '',
+        postnr: 0,
+        telefon: '',
+        poststed: '',
+        produkter: [],
+        betalingsmetode: '',
+        totalt: 600,
     });
     const [feilmelding, setFeilmelding] = useState('');
 
@@ -20,7 +20,7 @@ function Kasse() {
         const productConfigurations = JSON.parse(localStorage.getItem('productConfigurations')) || [];
         setBestillingsforesporsel((prevState) => ({
             ...prevState,
-            Produkter: productConfigurations,
+            produkter: productConfigurations,
         }));
     }, []);
 
@@ -42,15 +42,15 @@ function Kasse() {
                 console.log('Bestilling opprettet:', response.data);
                 // Tilbakestill skjemaet etter en vellykket bestilling om nødvendig
                 setBestillingsforesporsel({
-                    Navn: '',
-                    Epost: '',
-                    Adresse: '',
-                    Postnr: '',
-                    Telefon: '',
-                    Poststed: '',
-                    Produkter: [],
-                    Betalingsmetode: '',
-                    Totalt: 600,
+                    navn: '',
+                    epost: '',
+                    adresse: '',
+                    postnr: 0,
+                    telefon: '',
+                    poststed: '',
+                    produkter: [],
+                    betalingsmetode: '',
+                    totalt: 600,
                     // Tilbakestill andre felt om nødvendig
                 });
                 // Fjern produktinformasjonen fra localStorage etter bestilling hvis nødvendig
@@ -79,8 +79,8 @@ function Kasse() {
                     <input
                         type="text"
                         id="navn"
-                        name="Navn"
-                        value={bestillingsforesporsel.Navn}
+                        name="navn"
+                        value={bestillingsforesporsel.navn}
                         onChange={handleInputChange}
                         autoComplete="name"
                         required
@@ -91,8 +91,8 @@ function Kasse() {
                     <input
                         type="email"
                         id="epost"
-                        name="Epost"
-                        value={bestillingsforesporsel.Epost}
+                        name="epost"
+                        value={bestillingsforesporsel.epost}
                         onChange={handleInputChange}
                         autoComplete="email"
                         required
@@ -103,8 +103,8 @@ function Kasse() {
                     <input
                         type="text"
                         id="gateadresse"
-                        name="Adresse"
-                        value={bestillingsforesporsel.Adresse}
+                        name="adresse"
+                        value={bestillingsforesporsel.adresse}
                         onChange={handleInputChange}
                         autoComplete="address-line1"
                         required
@@ -115,8 +115,8 @@ function Kasse() {
                     <input
                         type="number"
                         id="postnr"
-                        name="Postnr"
-                        value={bestillingsforesporsel.Postnr}
+                        name="postnr"
+                        value={bestillingsforesporsel.postnr}
                         onChange={handleInputChange}
                         autoComplete="postal-code"
                         required
@@ -127,8 +127,8 @@ function Kasse() {
                     <input
                         type="text"
                         id="poststed"
-                        name="Poststed"
-                        value={bestillingsforesporsel.Poststed}
+                        name="poststed"
+                        value={bestillingsforesporsel.poststed}
                         onChange={handleInputChange}
                         autoComplete="address-level2"
                         required
@@ -139,8 +139,8 @@ function Kasse() {
                     <input
                         type="tel"
                         id="telefon"
-                        name="Telefon"
-                        value={bestillingsforesporsel.Telefon}
+                        name="telefon"
+                        value={bestillingsforesporsel.telefon}
                         onChange={handleInputChange}
                         autoComplete="tel"
                         required
