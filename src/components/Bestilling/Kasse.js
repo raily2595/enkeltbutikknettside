@@ -11,7 +11,7 @@ function Kasse() {
         Poststed: '',
         Produkter: [],
         Betalingsmetode: '',
-        Totalt: '',
+        Totalt: 600,
     });
     const [feilmelding, setFeilmelding] = useState('');
 
@@ -36,7 +36,7 @@ function Kasse() {
         event.preventDefault();
 
         axios
-            .post('/api/Nettside', bestillingsforesporsel)
+            .post('https://localhost:7123/api/Nettside', bestillingsforesporsel)
             .then((response) => {
                 // Håndter suksessrespons her
                 console.log('Bestilling opprettet:', response.data);
@@ -50,7 +50,7 @@ function Kasse() {
                     Poststed: '',
                     Produkter: [],
                     Betalingsmetode: '',
-                    Totalt: '',
+                    Totalt: 600,
                     // Tilbakestill andre felt om nødvendig
                 });
                 // Fjern produktinformasjonen fra localStorage etter bestilling hvis nødvendig
@@ -58,6 +58,13 @@ function Kasse() {
             })
             .catch((error) => {
                 // Håndter feilrespons her
+                if (error.response) {
+                    // Feilmelding fra serveren
+                    console.error('Feilmelding fra server:', error.response.data);
+                } else {
+                    // Annet feil, for eksempel nettverksfeil
+                    console.error('Annet feil:', error.message);
+                }
                 console.error('Feil ved opprettelse av bestilling:', error);
                 setFeilmelding('Feil ved opprettelse av bestilling');
             });
@@ -106,7 +113,7 @@ function Kasse() {
                 <div>
                     <label htmlFor="postnr">Postnr:</label>
                     <input
-                        type="text"
+                        type="number"
                         id="postnr"
                         name="Postnr"
                         value={bestillingsforesporsel.Postnr}

@@ -1,7 +1,7 @@
 // ColorSelector.js
 import React from "react";
 
-const ColorSelector = ({ selectedColor, onColorChange }) => {
+const ColorSelector = ({ Farge, onColorChange }) => {
     const colors = ["red", "blue", "green"];
 
     return (
@@ -12,7 +12,7 @@ const ColorSelector = ({ selectedColor, onColorChange }) => {
                     <input
                         type="radio"
                         value={color}
-                        checked={selectedColor === color}
+                        checked={Farge === color}
                         onChange={() => onColorChange(color)}
                     />
                     {color}

@@ -7,12 +7,17 @@ import SubmitButton from "./../Konfigurator/SubmitButton";
 import ConfigList from "./ConfigList";
 
 const ProductConfigurator = () => {
-    const [selectedColor, setSelectedColor] = useState("red");
-    const [text, setText] = useState("Custom Text");
-    const [textColor, setTextColor] = useState("#000000");
-    const [font, setFont] = useState("Arial");
+    const [Farge, setFarge] = useState("red");
+    const [Vinyltekst, setVinyltekst] = useState("Custom Text");
+    const [Fontfarge, setFontfarge] = useState("#000000");
+    const [Font, setFont] = useState("Arial");
     const [configurations, setConfigurations] = useState([]);
     const [selectedConfigIndex, setSelectedConfigIndex] = useState(null);
+    const Produktnavn = "Leiebånd";
+    const Lengde = 2;
+    const Bredde = 16;
+    const Detaljefarger = "sølv";
+    const Pris = 200;
 
     useEffect(() => {
         // Load configurations from localStorage when the component mounts
@@ -28,15 +33,15 @@ const ProductConfigurator = () => {
     }, [configurations]);
 
     const handleColorChange = (color) => {
-        setSelectedColor(color);
+        setFarge(color);
     };
 
     const handleTextChange = (newText) => {
-        setText(newText);
+        setVinyltekst(newText);
     };
 
     const handleTextColorChange = (newColor) => {
-        setTextColor(newColor);
+        setFontfarge(newColor);
     };
 
     const handleFontChange = (newFont) => {
@@ -45,10 +50,15 @@ const ProductConfigurator = () => {
 
     const handleAddConfig = () => {
         const newConfig = {
-            selectedColor,
-            text,
-            textColor,
-            font,
+            Farge,
+            Vinyltekst,
+            Fontfarge,
+            Font,
+            Produktnavn,
+            Lengde,
+            Bredde,
+            Detaljefarger,
+            Pris,
         };
         setConfigurations([...configurations, newConfig]);
         setSelectedConfigIndex(null);
@@ -58,9 +68,9 @@ const ProductConfigurator = () => {
     const handleEditConfig = (index) => {
         setSelectedConfigIndex(index);
         const selectedConfig = configurations[index];
-        setSelectedColor(selectedConfig.selectedColor);
-        setText(selectedConfig.text);
-        setTextColor(selectedConfig.textColor);
+        setFarge(selectedConfig.selectedColor);
+        setVinyltekst(selectedConfig.text);
+        setFontfarge(selectedConfig.textColor);
         setFont(selectedConfig.font);
     };
 
@@ -74,16 +84,16 @@ const ProductConfigurator = () => {
     return (
         <div>
             <h2>Product Configurator</h2>
-            <ColorSelector selectedColor={selectedColor} onColorChange={handleColorChange} />
+            <ColorSelector Farge={Farge} onColorChange={handleColorChange} />
             <TextSettings
-                text={text}
+                Vinyltekst={Vinyltekst}
                 onTextChange={handleTextChange}
-                textColor={textColor}
+                Fontfarge={Fontfarge}
                 onTextColorChange={handleTextColorChange}
-                font={font}
+                Font={Font}
                 onFontChange={handleFontChange}
             />
-            <ProductDisplay selectedColor={selectedColor} text={text} textColor={textColor} font={font} />
+            <ProductDisplay Farge={Farge} Vinyltekst={Vinyltekst} Fontfarge={Fontfarge} Font={Font} />
             <SubmitButton
                 onSaveConfig={selectedConfigIndex !== null ? handleEditConfig : handleAddConfig}
                 onDeleteConfig={selectedConfigIndex !== null ? () => handleDeleteConfig(selectedConfigIndex) : null}

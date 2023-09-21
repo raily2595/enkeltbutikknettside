@@ -1,7 +1,7 @@
 // ProductDisplay.js
 import React from "react";
 
-const ProductDisplay = ({ selectedColor, text, textColor, font }) => {
+const ProductDisplay = ({ Farge, Vinyltekst, Fontfarge, Font }) => {
     return (
         <div>
             <h3>Product Preview</h3>
@@ -9,12 +9,12 @@ const ProductDisplay = ({ selectedColor, text, textColor, font }) => {
                 style={{
                     width: "200px",
                     height: "200px",
-                    backgroundColor: selectedColor,
-                    color: textColor,
-                    fontFamily: font,
+                    backgroundColor: Farge,
+                    color: Fontfarge,
+                    fontFamily: Font,
                 }}
             >
-                {text}
+                {Vinyltekst}
             </div>
         </div>
     );
