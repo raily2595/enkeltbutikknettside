@@ -6,7 +6,7 @@ function Kasse() {
         navn: '',
         epost: '',
         adresse: '',
-        postnr: 0,
+        postnr: '',
         telefon: '',
         poststed: '',
         produkter: [],
@@ -45,7 +45,7 @@ function Kasse() {
                     navn: '',
                     epost: '',
                     adresse: '',
-                    postnr: 0,
+                    postnr: '',
                     telefon: '',
                     poststed: '',
                     produkter: [],
@@ -113,7 +113,7 @@ function Kasse() {
                 <div>
                     <label htmlFor="postnr">Postnr:</label>
                     <input
-                        type="number"
+                        type="text"
                         id="postnr"
                         name="postnr"
                         value={bestillingsforesporsel.postnr}
