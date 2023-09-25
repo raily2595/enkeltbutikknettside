@@ -36,7 +36,7 @@ function App() {
                     <Route path="/font" element={<Font />} />
                     <Route path="/band/leieband" element={<Leieband />} />
                     <Route path="/kasse" element={<Kasse />} />
-                    <Route path="/kasse/bekreftelse" element={< Bekreftelse />} />
+                    <Route path="/bekreftelse" element={< Bekreftelse />} />
                 </Routes>
                 <Footer />
             </div>

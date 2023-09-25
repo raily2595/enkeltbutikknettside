@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Kasse() {
+    const navigate = useNavigate();
+    const [harDataILocalStorage, setHarDataILocalStorage] = useState(false);
     const [bestillingsforesporsel, setBestillingsforesporsel] = useState({
         navn: '',
         epost: '',
@@ -14,6 +17,14 @@ function Kasse() {
         totalt: 600,
     });
     const [feilmelding, setFeilmelding] = useState('');
+
+    // Sjekk localstorage ved oppstart av komponenten
+    useEffect(() => {
+        const dataILocalStorage = localStorage.getItem('productConfigurations'); // Endre 'dinNokkel' til nøkkelen du bruker i localstorage
+        if (dataILocalStorage) {
+            setHarDataILocalStorage(true);
+        }
+    }, []);
 
     useEffect(() => {
         // Hent produktinformasjon fra localStorage og legg den til i bestillingsforespørselen
@@ -55,6 +66,10 @@ function Kasse() {
                 });
                 // Fjern produktinformasjonen fra localStorage etter bestilling hvis nødvendig
                 localStorage.removeItem('productConfigurations');
+
+                // Naviger til en ny side
+                navigate('/bekreftelse'); // Bytt ut '/ny-side' med den faktiske URLen til den nye siden
+
             })
             .catch((error) => {
                 // Håndter feilrespons her
@@ -165,9 +180,10 @@ function Kasse() {
                         onChange={handleInputChange}
                         required
                     />
-                    <label htmlFor="vippsfaktura">Faktura på vipps:</label>
+                    <label htmlFor="vippsfaktura">eFaktura:</label>
                 </div>
-                <button type="submit">Send bestilling</button>
+                {harDataILocalStorage && (
+                <button type="submit">Send bestilling</button>)}
             </form>
             {feilmelding && <p>{feilmelding}</p>}
         </div>
