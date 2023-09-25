@@ -5,7 +5,10 @@ const Leieband = () => {
         <div>
             <div className="leieband-content">
                 <h1>Leieband</h1>
-                <ProductConfigurator />
+                <ProductConfigurator
+                    navn={"leiebånd"}
+                    produktpris={200}
+                />
             </div>
         </div>
     );

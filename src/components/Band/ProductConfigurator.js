@@ -6,18 +6,18 @@ import TextSettings from "./../Konfigurator/TextSettings";
 import SubmitButton from "./../Konfigurator/SubmitButton";
 import ConfigList from "./ConfigList";
 
-const ProductConfigurator = () => {
+const ProductConfigurator = (navn, produktpris) => {
     const [farge, setFarge] = useState("red");
     const [vinyltekst, setVinyltekst] = useState("Custom Text");
     const [fontfarge, setFontfarge] = useState("#000000");
     const [font, setFont] = useState("Arial");
     const [configurations, setConfigurations] = useState([]);
     const [selectedConfigIndex, setSelectedConfigIndex] = useState(null);
-    const produktnavn = "Leiebånd";
+    const produktnavn = navn;
     const lengde = 2;
     const bredde = 16;
     const detaljefarger = "sølv";
-    const pris = 200;
+    const pris = produktpris;
 
     useEffect(() => {
         // Load configurations from localStorage when the component mounts
