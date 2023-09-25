@@ -2,7 +2,7 @@
 import React from "react";
 
 const ColorSelector = ({ farge, onColorChange }) => {
-    const colors = ["red", "blue", "green"];
+    const colors = ["Lysblå", "Rødbrun", "Korall", "Beige", "Karibigrønn", "Eplegrønn", "Laguneblå", "Ferskenorange", "Neonrosa", "Ametyst", "Rød", "Vinrød"];
 
     return (
         <div>
@@ -12,7 +12,7 @@ const ColorSelector = ({ farge, onColorChange }) => {
                     <input
                         type="radio"
                         value={color}
-                        checked={farge === color}
+                        checked={farge === color || ( color === "Lysblå" )}
                         onChange={() => onColorChange(color)}
                     />
                     {color}
