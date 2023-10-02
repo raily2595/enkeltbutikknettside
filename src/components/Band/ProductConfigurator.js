@@ -9,7 +9,7 @@ import ConfigList from "./ConfigList";
 const ProductConfigurator = (navn, produktpris) => {
     const [farge, setFarge] = useState("red");
     const [vinyltekst, setVinyltekst] = useState("Custom Text");
-    const [fontfarge, setFontfarge] = useState("#000000");
+    const [fontfarge, setFontfarge] = useState("#c0c0c0");
     const [font, setFont] = useState("Arial");
     const [configurations, setConfigurations] = useState([]);
     const [selectedConfigIndex, setSelectedConfigIndex] = useState(null);

@@ -36,6 +36,50 @@ const ProductDisplay = ({ farge, vinyltekst, fontfarge, font }) => {
 
     const backgroundColor = calculateBackgroundColor(farge);
 
+    const calculateTextColor = (inputColor) => {
+        // Mapp inngangsfargen til ønsket bakgrunnsfarge
+        switch (inputColor) {
+            case "Sølv":
+                return "#c0c0c0";
+            case "Gull":
+                return "#FFD700";
+            case "Hvit":
+                return "#FFFFFF";
+            case "Svart":
+                return "#010101";
+            case "Lys grønn":
+                return "#c8da2f";
+            case "Mørk grønn":
+                return "#12713d";
+            case "Neon gull":
+                return "#f3eb03";
+            case "Neon orange":
+                return "#f89721";
+            case "Lys blå":
+                return "#99dbf6";
+            case "Mørk blå":
+                return "#1796d4";
+            case "Rød":
+                return "#ce2229";
+            case "Brun":
+                return "#4e2022";
+            case "Turkis":
+                return "#c5e4cb";
+            case "Lys rosa":
+                return "#facfd9";
+            case "Mørk rosa":
+                return "#f15377";
+            case "Lilla":
+                return "#cfb4d3";
+            case "Beige":
+                return "#eed4b3";
+            default:
+                return "#c0c0c0"; // Bruk inngangsfargen hvis den ikke matcher noen av de definerte fargene
+        }
+    };
+
+    const TextColor = calculateTextColor(fontfarge);
+
     return (
         <div>
             <h3>Product Preview</h3>
@@ -44,7 +88,7 @@ const ProductDisplay = ({ farge, vinyltekst, fontfarge, font }) => {
                     width: "400px",
                     height: "200px",
                     backgroundColor: backgroundColor,
-                    color: fontfarge,
+                    color: TextColor,
                     fontFamily: font,
                 }}
             >
