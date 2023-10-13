@@ -6,18 +6,28 @@ import TextSettings from "./../Konfigurator/TextSettings";
 import SubmitButton from "./../Konfigurator/SubmitButton";
 import ConfigList from "./ConfigList";
 
-const ProductConfigurator = (navn, produktpris) => {
-    const [farge, setFarge] = useState("red");
+const ProductConfigurator = ({ navn, produktpris, harLengdemeter, harLengdecm, harBredde, harKrokband, harHandtak, harKrok, harTekst, harKlips, harRing }) => {
+    const [farge, setFarge] = useState("Lysblå");
+    const [farge2, setFarge2] = useState("");
     const [vinyltekst, setVinyltekst] = useState("Custom Text");
     const [fontfarge, setFontfarge] = useState("#c0c0c0");
     const [font, setFont] = useState("Arial");
     const [configurations, setConfigurations] = useState([]);
     const [selectedConfigIndex, setSelectedConfigIndex] = useState(null);
     const produktnavn = navn;
-    const lengde = 2;
-    const bredde = 16;
+    const [lengde, setLengde] = useState(0);
+    const [bredde, setBredde] = useState(16);
     const detaljefarger = "sølv";
     const pris = produktpris;
+    const harLengdemeterbool = harLengdemeter;
+    const harLengdecmbool = harLengdecm;
+    const harBreddebool = harBredde;
+    const harKrokbandbool = harKrokband;
+    const harHandtakbool = harHandtak;
+    const harKrokbool = harKrok;
+    const harTekstbool = harTekst;
+    const harKlipsbool = harKlips;
+    const harRingbool = harRing;
 
     useEffect(() => {
         // Load configurations from localStorage when the component mounts
@@ -36,6 +46,10 @@ const ProductConfigurator = (navn, produktpris) => {
         setFarge(color);
     };
 
+    const handleColorChange2 = (e) => {
+        setFarge2(e.target.value);
+    }
+
     const handleTextChange = (newText) => {
         setVinyltekst(newText);
     };
@@ -48,9 +62,18 @@ const ProductConfigurator = (navn, produktpris) => {
         setFont(newFont);
     };
 
+    const handleLengdeChange = (e) => {
+        setLengde(e.target.value);
+    }
+
+    const handleBreddeChange = (e) => {
+        setBredde(e.target.value);
+    }
+
     const handleAddConfig = () => {
         const newConfig = {
             farge,
+            farge2,
             vinyltekst,
             fontfarge,
             font,
@@ -85,6 +108,28 @@ const ProductConfigurator = (navn, produktpris) => {
         <div>
             <h2>Product Configurator</h2>
             <ColorSelector farge={farge} onColorChange={handleColorChange} />
+            {harLengdecmbool && (
+                <>
+                    <label htmlFor="lengdecminput">Lengde i cm:</label>
+                    <input type="number" id="lengdecminput" className="brukerinput" value={lengde} onChange={handleLengdeChange}/>
+                </>
+            )}
+            {harLengdemeterbool && (
+                <>
+                    <label htmlFor="lengdemeterinput">Lengde i meter:</label>
+                    <input type="number" id="lengdecminput" className="brukerinput" value={lengde} onChange={handleLengdeChange}/>
+                </>
+            )}
+            {harBreddebool && (
+                <>
+                    <p>Bredde:</p>
+                    <input type="radio" id="16" name="bredde" value={bredde} onChange={handleBreddeChange} />
+                    <label htmlFor="16">16 mm</label>
+                    <input type="radio" id="25" name="bredde" value={bredde} onChange={handleBreddeChange}/>
+                    <label htmlFor="25">25 mm</label>
+                </>
+            )}
+            {harTekstbool && (
             <TextSettings
                 vinyltekst={vinyltekst}
                 onTextChange={handleTextChange}
@@ -92,7 +137,7 @@ const ProductConfigurator = (navn, produktpris) => {
                 onTextColorChange={handleTextColorChange}
                 font={font}
                 onFontChange={handleFontChange}
-            />
+            />)}
             <ProductDisplay farge={farge} vinyltekst={vinyltekst} fontfarge={fontfarge} font={font} />
             <SubmitButton
                 onSaveConfig={selectedConfigIndex !== null ? handleEditConfig : handleAddConfig}
