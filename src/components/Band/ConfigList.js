@@ -20,6 +20,7 @@ const ConfigList = ({ configurations, onEditConfig, onDeleteConfig }) => {
                         <div>Text: {config.vinyltekst}</div>
                         <div>Text Color: {config.fontfarge}</div>
                         <div>Font: {config.font}</div>
+                        <div>Pris: {config.pris}</div>
                         <div>
                             <button onClick={() => onEditConfig(index)}>Edit</button>
                             {onDeleteConfig && <button onClick={() => onDeleteConfig(index)}>Delete</button>}

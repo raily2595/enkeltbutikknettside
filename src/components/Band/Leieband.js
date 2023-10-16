@@ -8,6 +8,7 @@ const Leieband = () => {
                 <ProductConfigurator
                     navn={"leiebånd"}
                     produktpris={200}
+                    prismeter={50}
                     harLengdemeter={true}
                     harLengdecm={false}
                     harBredde={false}
@@ -17,6 +18,7 @@ const Leieband = () => {
                     harTekst={true}
                     harKlips={false}
                     harRing={false}
+                    harFarge2={true}
                 />
             </div>
         </div>
