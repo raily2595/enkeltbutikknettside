@@ -2,6 +2,9 @@ import React from "react";
 import {NavLink} from "react-router-dom";
 
 const ConfigList = ({ configurations, onEditConfig, onDeleteConfig }) => {
+    // Calculate the total sum of prices
+    const totalSum = configurations.reduce((sum, config) => sum + config.pris, 0);
+
     return (
         <div>
             <h3>Configurations:</h3>
@@ -28,6 +31,10 @@ const ConfigList = ({ configurations, onEditConfig, onDeleteConfig }) => {
                     </li>
                 ))}
             </ul>
+            {/* Display the total sum of prices at the bottom */}
+            <div>
+                <strong>Total Sum:</strong> {totalSum}
+            </div>
         </div>
     );
 };
