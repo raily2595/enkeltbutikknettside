@@ -53,7 +53,7 @@ const TextSettings = ({ text, onTextChange, onTextColorChange, font, onFontChang
             <div>
                 <label>
                     Text:
-                    <input type="text" value={text} onChange={(e) => onTextChange(e.target.value)} />
+                    <input type="text" value={text} placeholder="Nila" onChange={(e) => onTextChange(e.target.value)} />
                 </label>
             </div>
             <div>

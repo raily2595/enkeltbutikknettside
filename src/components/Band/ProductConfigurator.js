@@ -5,21 +5,23 @@ import ColorSelector from "./../Konfigurator/ColorSelector";
 import TextSettings from "./../Konfigurator/TextSettings";
 import SubmitButton from "./../Konfigurator/SubmitButton";
 import ConfigList from "./ConfigList";
+import KlipsSelector from "../Konfigurator/KlipsSelector";
 
 const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, harLengdecm, harBredde, harKrokband, harHandtak, harKrok, harTekst, harKlips, harRing, harFarge2 }) => {
     const [farge, setFarge] = useState("Lysblå");
     const [farge2, setFarge2] = useState("");
-    const [vinyltekst, setVinyltekst] = useState("Custom Text");
+    const [vinyltekst, setVinyltekst] = useState("Hundenavn");
     const [fontfarge, setFontfarge] = useState("#c0c0c0");
     const [font, setFont] = useState("Arial");
     const [configurations, setConfigurations] = useState([]);
     const [selectedConfigIndex, setSelectedConfigIndex] = useState(null);
-    const produktnavn = navn;
     const [lengde, setLengde] = useState(0);
     const [bredde, setBredde] = useState(16);
     const [detaljefarger, setDetaljefarger] = useState("sølv");
+    const [klips, setKlips] = useState("");
     const [pris, setPris] = useState(produktpris);
     const meterpris = prismeter;
+    const produktnavn = navn;
     const harLengdemeterbool = harLengdemeter;
     const harLengdecmbool = harLengdecm;
     const harBreddebool = harBredde;
@@ -40,12 +42,14 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     }, []);
 
     useEffect(() => {
-        // Add a new useEffect to update the price when either harLengdemeterbool or harLengdecmbool is true
-        if (harLengdemeterbool || harLengdecmbool) {
-            const calculatedPrice = produktpris + (lengde * prismeter);
+        if (harLengdemeterbool) {
+            const calculatedPrice = produktpris + (lengde * meterpris);
             setPris(calculatedPrice);
         }
-    }, [lengde, harLengdemeterbool, harLengdecmbool, produktpris, prismeter]);
+        else {
+            setPris(produktpris);
+        }
+    }, [lengde, harLengdemeterbool, produktpris, meterpris]);
 
 
     useEffect(() => {
@@ -60,6 +64,10 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     const handleColorChange2 = (e) => {
         setFarge2(e.target.value);
     }
+
+    const handleKlipsChange = (color) => {
+        setKlips(color);
+    };
 
     const handleDetaljefarger = (e) => {
         setDetaljefarger(e.target.value);
@@ -86,8 +94,6 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     }
 
     const handleAddConfig = () => {
-        // Calculate the price based on the formula: ProductPrice + (Length * PricePerMeter)
-        const calculatedPrice = pris + (lengde * meterpris);
 
         const newConfig = {
             farge,
@@ -99,7 +105,8 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
             lengde,
             bredde,
             detaljefarger,
-            pris: calculatedPrice, // Include the calculated price in the configuration
+            klips,
+            pris // Include the calculated price in the configuration
         };
 
         setConfigurations([...configurations, newConfig]);
@@ -145,11 +152,17 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
             {harBreddebool && (
                 <>
                     <p>Bredde:</p>
-                    <input type="radio" id="16" name="bredde" value={bredde} onChange={handleBreddeChange} />
-                    <label htmlFor="16">16 mm</label>
-                    <input type="radio" id="25" name="bredde" value={bredde} onChange={handleBreddeChange}/>
-                    <label htmlFor="25">25 mm</label>
+                    <label><input type="radio" value="16" onChange={handleBreddeChange} />16 mm</label>
+                    <label><input type="radio" value="25" onChange={handleBreddeChange}/>25 mm</label>
                 </>
+            )}
+            <div>
+                <p>Metallfarge(skruer,kroker,d-ring):</p>
+                <label><input type="radio" value="sølv" checked={detaljefarger === 'sølv'} onChange={handleDetaljefarger} />Sølv</label>
+                <label><input type="radio" value="gull" checked={detaljefarger === 'gull'} onChange={handleDetaljefarger}/>Gull</label>
+            </div>
+            {harKlipsbool && (
+                <KlipsSelector farge={klips} onColorChange={handleKlipsChange}/>
             )}
             {harTekstbool && (
             <TextSettings
