@@ -116,7 +116,9 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
             bredde,
             detaljefarger,
             klips,
-            pris
+            pris,
+            onskerTekst,
+            onskerFarge2,
         };
 
         setConfigurations([...configurations, newConfig]);
@@ -127,10 +129,19 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     const handleEditConfig = (index) => {
         setSelectedConfigIndex(index);
         const selectedConfig = configurations[index];
-        setFarge(selectedConfig.selectedColor);
+        setFarge(selectedConfig.farge);
+        setFarge2(selectedConfig.farge2);
         setVinyltekst(selectedConfig.vinyltekst);
         setFontfarge(selectedConfig.fontfarge);
         setFont(selectedConfig.font);
+        setLengde(selectedConfig.lengde);
+        setBredde(selectedConfig.bredde);
+        setDetaljefarger(selectedConfig.detaljefarger);
+        setKlips(selectedConfig.klips);
+        setPris(selectedConfig.pris);
+        setOnskerFarge2(selectedConfig.onskerTekst);
+        setOnskerTekst(selectedConfig.onskerFarge2);
+
     };
 
     const handleDeleteConfig = (index) => {
