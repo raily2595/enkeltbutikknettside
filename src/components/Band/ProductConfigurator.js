@@ -10,6 +10,8 @@ import KlipsSelector from "../Konfigurator/KlipsSelector";
 const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, harLengdecm, harBredde, harKrokband, harHandtak, harKrok, harTekst, harKlips, harRing, harFarge2 }) => {
     const [farge, setFarge] = useState("Lysblå");
     const [farge2, setFarge2] = useState("");
+    const [onskerFarge2, setOnskerFarge2] = useState(false);
+    const [onskerTekst, setOnskerTekst] = useState(false);
     const [vinyltekst, setVinyltekst] = useState("Hundenavn");
     const [fontfarge, setFontfarge] = useState("#c0c0c0");
     const [font, setFont] = useState("Arial");
@@ -57,6 +59,13 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
       if(configurations.length > 0) localStorage.setItem("productConfigurations", JSON.stringify(configurations));
     }, [configurations]);
 
+    const handleOnskerTekstChange = (e) => {
+        setOnskerTekst(e.target.checked);
+    };
+
+    const handleOnskerFarge2Change = (e) => {
+        setOnskerFarge2(e.target.checked);
+    };
     const handleColorChange = (color) => {
         setFarge(color);
     };
@@ -106,7 +115,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
             bredde,
             detaljefarger,
             klips,
-            pris // Include the calculated price in the configuration
+            pris
         };
 
         setConfigurations([...configurations, newConfig]);
@@ -135,7 +144,21 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
             <h2>Product Configurator</h2>
             <ColorSelector farge={farge} onColorChange={handleColorChange} />
             {harFarge2bool && (
-                <ColorSelector farge={farge2} onColorChange={handleColorChange2} />
+                <>
+                    <div>
+                        <label>
+                            <input
+                                type="checkbox"
+                                checked={onskerFarge2}
+                                onChange={handleOnskerFarge2Change}
+                            />
+                            Ønsker du en farge til?
+                        </label>
+                    </div>
+                    {onskerFarge2 && (
+                        <ColorSelector farge={farge2} onColorChange={handleColorChange2} />
+                    )}
+                </>
             )}
             {harLengdecmbool && (
                 <>
@@ -165,15 +188,32 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                 <KlipsSelector farge={klips} onColorChange={handleKlipsChange}/>
             )}
             {harTekstbool && (
-            <TextSettings
-                vinyltekst={vinyltekst}
-                onTextChange={handleTextChange}
-                fontfarge={fontfarge}
-                onTextColorChange={handleTextColorChange}
-                font={font}
-                onFontChange={handleFontChange}
-            />)}
-            <ProductDisplay farge={farge} vinyltekst={vinyltekst} fontfarge={fontfarge} font={font} pris={pris} />
+                <>
+                <div>
+                    <label>
+                        <input
+                            type="checkbox"
+                            checked={onskerTekst}
+                            onChange={handleOnskerTekstChange}
+                        />
+                        Ønsker du tekst?
+                    </label>
+                </div>
+                {onskerTekst && (
+                    <>
+                    <TextSettings
+                        vinyltekst={vinyltekst}
+                        onTextChange={handleTextChange}
+                        fontfarge={fontfarge}
+                        onTextColorChange={handleTextColorChange}
+                        font={font}
+                        onFontChange={handleFontChange}
+                    />
+                        <ProductDisplay farge={farge} vinyltekst={vinyltekst} fontfarge={fontfarge} font={font} pris={pris} />
+                    </>
+                )}
+                </>
+            )}
             <SubmitButton
                 onSaveConfig={selectedConfigIndex !== null ? handleEditConfig : handleAddConfig}
                 onDeleteConfig={selectedConfigIndex !== null ? () => handleDeleteConfig(selectedConfigIndex) : null}
