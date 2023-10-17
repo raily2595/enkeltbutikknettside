@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductDisplay = ({ farge, vinyltekst, fontfarge, font, pris }) => {
+const ProductDisplay = ({ farge, vinyltekst, fontfarge, font }) => {
     // Funksjon for å beregne bakgrunnsfargen basert på inngangsverdien
     const calculateBackgroundColor = (inputColor) => {
         // Mapp inngangsfargen til ønsket bakgrunnsfarge

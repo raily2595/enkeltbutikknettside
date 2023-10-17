@@ -34,6 +34,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     const harKlipsbool = harKlips;
     const harRingbool = harRing;
     const harFarge2bool = harFarge2;
+    const [harDataILocalStorage, setHarDataILocalStorage] = useState(false);
 
     useEffect(() => {
         // Load configurations from localStorage when the component mounts
@@ -120,7 +121,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
 
         setConfigurations([...configurations, newConfig]);
         setSelectedConfigIndex(null);
-        alert("Configuration added!");
+        setHarDataILocalStorage(true);
     };
 
     const handleEditConfig = (index) => {
@@ -136,7 +137,10 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         const updatedConfigurations = [...configurations];
         updatedConfigurations.splice(index, 1);
         setConfigurations(updatedConfigurations);
-        alert("Configuration deleted!");
+        const dataILocalStorage = localStorage.getItem('productConfigurations'); // Endre 'dinNokkel' til nøkkelen du bruker i localstorage
+        if (!dataILocalStorage) {
+            setHarDataILocalStorage(false);
+        }
     };
 
     return (
@@ -219,11 +223,13 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                 onSaveConfig={selectedConfigIndex !== null ? handleEditConfig : handleAddConfig}
                 onDeleteConfig={selectedConfigIndex !== null ? () => handleDeleteConfig(selectedConfigIndex) : null}
             />
+            {harDataILocalStorage && (
             <ConfigList
                 configurations={configurations}
                 onEditConfig={handleEditConfig}
                 onDeleteConfig={handleDeleteConfig}
             />
+            )}
         </div>
     );
 };
