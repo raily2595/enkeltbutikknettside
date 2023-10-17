@@ -71,8 +71,8 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         setFarge(color);
     };
 
-    const handleColorChange2 = (e) => {
-        setFarge2(e.target.value);
+    const handleColorChange2 = (color) => {
+        setFarge2(color);
     }
 
     const handleKlipsChange = (color) => {
