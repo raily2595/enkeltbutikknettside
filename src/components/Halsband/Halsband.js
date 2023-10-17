@@ -40,16 +40,6 @@ const Halsband = () => {
                             <p>{strings.infotext3}</p>
                             <p>{strings.infotext4}</p>
                         </div>
-                        <NavLink
-                            className="card-button"
-                            activeclassname="nav-link-active"
-                            exact="true"
-                            to="/fargekart">Fargekart</NavLink>
-                        <NavLink
-                            className="card-button"
-                            activeclassname="nav-link-active"
-                            exact="true"
-                            to="/font">Font</NavLink>
                     </div>
                 </div>
             </div>
