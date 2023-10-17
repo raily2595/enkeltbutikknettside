@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 
 const Fargekart = () => {
     return (
-        <main>
+        <div>
             <div className="fargekart">
                 <img src={`${process.env.PUBLIC_URL}fargekart/Blue521.jpg`} alt="Lysblå" />
 
@@ -36,7 +36,7 @@ const Fargekart = () => {
                     exact="true"
                     to="/">Startside</NavLink>
             </div>
-        </main>
+        </div>
     );
 };
 

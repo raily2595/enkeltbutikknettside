@@ -1,4 +1,4 @@
-import strings from '../strings.json';
+import strings from '../../strings.json';
 const Banner = () => {
     return (
         <banner>

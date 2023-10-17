@@ -1,12 +1,12 @@
-blue 521 - Lysblå
-brown 522 - Rødbrun
-coral 521 - Korall
-gold-leaf 522 - Beige
-green 52K - Karibigrønn
-green 525 - Eplegrønn
-lagune 52F - Laguneblå
-orange 529 - Ferskenorange
-Pink 521 - Neonrosa
-Purple 524 - Ametyst
-Red 522 - Rød
-Wine 521 - Vinrød
+blue 521 - Lysblå background-color: #5391FE
+brown 522 - Rødbrun background-color: #7C4E34
+coral 521 - Korall background-color: #e0584c
+gold-leaf 522 - Beige background-color: #f6b96b
+green 52K - Karibigrønn background-color: #85E2BA
+green 525 - Eplegrønn background-color: #6BEC85
+lagune 52F - Laguneblå background-color: #1D97AC
+orange 529 - Ferskenorange background-color: #FF9849
+Pink 521 - Neonrosa background-color: #FE5DA3
+Purple 524 - Ametyst background-color: #966EAB
+Red 522 - Rød background-color: #D72C35
+Wine 521 - Vinrød background-color: #893149
