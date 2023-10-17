@@ -209,11 +209,12 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                         font={font}
                         onFontChange={handleFontChange}
                     />
-                        <ProductDisplay farge={farge} vinyltekst={vinyltekst} fontfarge={fontfarge} font={font} pris={pris} />
+                        <ProductDisplay farge={farge} vinyltekst={vinyltekst} fontfarge={fontfarge} font={font} />
                     </>
                 )}
                 </>
             )}
+            <p>Price: {pris} NOK</p>
             <SubmitButton
                 onSaveConfig={selectedConfigIndex !== null ? handleEditConfig : handleAddConfig}
                 onDeleteConfig={selectedConfigIndex !== null ? () => handleDeleteConfig(selectedConfigIndex) : null}

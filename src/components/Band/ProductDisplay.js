@@ -83,7 +83,6 @@ const ProductDisplay = ({ farge, vinyltekst, fontfarge, font, pris }) => {
     return (
         <div>
             <h3>Product Preview</h3>
-            <p>Price: {pris} NOK</p>
             <div
                 style={{
                     width: "400px",
