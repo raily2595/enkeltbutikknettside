@@ -10,7 +10,7 @@ const ConfigList = ({ configurations, onEditConfig, onDeleteConfig }) => {
             <h3>Configurations:</h3>
             <NavLink
                 className="card-button"
-                activeClassName="nav-link-active" // Corrected typo
+                activeClassName="nav-link-active"
                 exact="true"
                 to="/kasse"
             >
