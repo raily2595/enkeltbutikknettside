@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-header {
-  background-color: whitesmoke;
-  padding: 12px;
-}
-
 .header-content {
   display: flex;
   flex-wrap: wrap;
@@ -16,7 +11,6 @@ header {
 
 .banner-content {
   background-color: palegreen;
-  padding: 1px;
 }
 
 .banner-content h2 {
@@ -30,8 +24,7 @@ header {
 }
 
 .logo img {
-  height: 240px;
-  margin: 12px;
+  height: 180px;
 }
 
 .media {
@@ -54,6 +47,31 @@ header h1 {
   margin: 12px;
 }
 
+.menu-content {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 12px;
+  width: 100%;
+  background-color: whitesmoke;
+  border: 1px solid grey;
+}
+
+.menu-button {
+  width: 150px;
+  margin: 3px;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #48CFC8;
+  color: black;
+  text-decoration: none;
+  font-size: large;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
 main {
   padding: 12px;
 }
@@ -73,7 +91,7 @@ main {
   border: 1px solid grey;
   border-radius: 12px;
   padding: 12px;
-  width: 30%;
+  width: 22%;
   background-color: whitesmoke;
 }
 
@@ -127,9 +145,10 @@ main {
 footer {
   background-color: whitesmoke;
   padding: 12px;
+  border: 1px solid grey;
 }
 
-@media (max-width: 2300px) {
+@media (max-width: 2800px) {
   .card {
     width: 45%;
   }
