@@ -16,16 +16,6 @@ const Meny = () => {
                     exact="true"
                     to="/band">{strings.menytekst2}</NavLink>
                 <NavLink
-                    className="sele"
-                    activeclassname="nav-link-active"
-                    exact="true"
-                    to="/sele">{strings.menytekst3}</NavLink>
-                <NavLink
-                    className="leke"
-                    activeclassname="nav-link-active"
-                    exact="true"
-                    to="/leke">{strings.menytekst4}</NavLink>
-                <NavLink
                     className="annet"
                     activeclassname="nav-link-active"
                     exact="true"
