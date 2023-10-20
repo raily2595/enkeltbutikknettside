@@ -161,4 +161,17 @@ footer {
   .carousel-container {
     width: 90%;
   }
+  
+  .font-tabell {
+    margin: 12px;
+    text-align: left;
+  }
+  
+  .font-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 24px;
+    padding: 24px;
+  }
 }
