@@ -10,6 +10,8 @@ import KlipsSelector from "../Konfigurator/KlipsSelector";
 const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, harLengdecm, harBredde, harKrokband, harHandtak, harKrok, harTekst, harKlips, harRing, harFarge2 }) => {
     const [farge, setFarge] = useState("Lysblå");
     const [farge2, setFarge2] = useState("");
+    const [onskerFarge2, setOnskerFarge2] = useState(false);
+    const [onskerTekst, setOnskerTekst] = useState(false);
     const [vinyltekst, setVinyltekst] = useState("Hundenavn");
     const [fontfarge, setFontfarge] = useState("#c0c0c0");
     const [font, setFont] = useState("Arial");
@@ -32,6 +34,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     const harKlipsbool = harKlips;
     const harRingbool = harRing;
     const harFarge2bool = harFarge2;
+    const [harDataILocalStorage, setHarDataILocalStorage] = useState(false);
 
     useEffect(() => {
         // Load configurations from localStorage when the component mounts
@@ -57,12 +60,19 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
       if(configurations.length > 0) localStorage.setItem("productConfigurations", JSON.stringify(configurations));
     }, [configurations]);
 
+    const handleOnskerTekstChange = (e) => {
+        setOnskerTekst(e.target.checked);
+    };
+
+    const handleOnskerFarge2Change = (e) => {
+        setOnskerFarge2(e.target.checked);
+    };
     const handleColorChange = (color) => {
         setFarge(color);
     };
 
-    const handleColorChange2 = (e) => {
-        setFarge2(e.target.value);
+    const handleColorChange2 = (color) => {
+        setFarge2(color);
     }
 
     const handleKlipsChange = (color) => {
@@ -106,28 +116,42 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
             bredde,
             detaljefarger,
             klips,
-            pris // Include the calculated price in the configuration
+            pris,
+            onskerTekst,
+            onskerFarge2,
         };
 
         setConfigurations([...configurations, newConfig]);
         setSelectedConfigIndex(null);
-        alert("Configuration added!");
+        setHarDataILocalStorage(true);
     };
 
     const handleEditConfig = (index) => {
         setSelectedConfigIndex(index);
         const selectedConfig = configurations[index];
-        setFarge(selectedConfig.selectedColor);
+        setFarge(selectedConfig.farge);
+        setFarge2(selectedConfig.farge2);
         setVinyltekst(selectedConfig.vinyltekst);
         setFontfarge(selectedConfig.fontfarge);
         setFont(selectedConfig.font);
+        setLengde(selectedConfig.lengde);
+        setBredde(selectedConfig.bredde);
+        setDetaljefarger(selectedConfig.detaljefarger);
+        setKlips(selectedConfig.klips);
+        setPris(selectedConfig.pris);
+        setOnskerFarge2(selectedConfig.onskerTekst);
+        setOnskerTekst(selectedConfig.onskerFarge2);
+
     };
 
     const handleDeleteConfig = (index) => {
         const updatedConfigurations = [...configurations];
         updatedConfigurations.splice(index, 1);
         setConfigurations(updatedConfigurations);
-        alert("Configuration deleted!");
+        const dataILocalStorage = localStorage.getItem('productConfigurations'); // Endre 'dinNokkel' til nøkkelen du bruker i localstorage
+        if (!dataILocalStorage) {
+            setHarDataILocalStorage(false);
+        }
     };
 
     return (
@@ -135,7 +159,21 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
             <h2>Product Configurator</h2>
             <ColorSelector farge={farge} onColorChange={handleColorChange} />
             {harFarge2bool && (
-                <ColorSelector farge={farge2} onColorChange={handleColorChange2} />
+                <>
+                    <div>
+                        <label>
+                            <input
+                                type="checkbox"
+                                checked={onskerFarge2}
+                                onChange={handleOnskerFarge2Change}
+                            />
+                            Ønsker du en farge til?
+                        </label>
+                    </div>
+                    {onskerFarge2 && (
+                        <ColorSelector farge={farge2} onColorChange={handleColorChange2} />
+                    )}
+                </>
             )}
             {harLengdecmbool && (
                 <>
@@ -165,24 +203,44 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                 <KlipsSelector farge={klips} onColorChange={handleKlipsChange}/>
             )}
             {harTekstbool && (
-            <TextSettings
-                vinyltekst={vinyltekst}
-                onTextChange={handleTextChange}
-                fontfarge={fontfarge}
-                onTextColorChange={handleTextColorChange}
-                font={font}
-                onFontChange={handleFontChange}
-            />)}
-            <ProductDisplay farge={farge} vinyltekst={vinyltekst} fontfarge={fontfarge} font={font} pris={pris} />
+                <>
+                <div>
+                    <label>
+                        <input
+                            type="checkbox"
+                            checked={onskerTekst}
+                            onChange={handleOnskerTekstChange}
+                        />
+                        Ønsker du tekst?
+                    </label>
+                </div>
+                {onskerTekst && (
+                    <>
+                    <TextSettings
+                        vinyltekst={vinyltekst}
+                        onTextChange={handleTextChange}
+                        fontfarge={fontfarge}
+                        onTextColorChange={handleTextColorChange}
+                        font={font}
+                        onFontChange={handleFontChange}
+                    />
+                        <ProductDisplay farge={farge} vinyltekst={vinyltekst} fontfarge={fontfarge} font={font} />
+                    </>
+                )}
+                </>
+            )}
+            <p>Price: {pris} NOK</p>
             <SubmitButton
                 onSaveConfig={selectedConfigIndex !== null ? handleEditConfig : handleAddConfig}
                 onDeleteConfig={selectedConfigIndex !== null ? () => handleDeleteConfig(selectedConfigIndex) : null}
             />
+            {harDataILocalStorage && (
             <ConfigList
                 configurations={configurations}
                 onEditConfig={handleEditConfig}
                 onDeleteConfig={handleDeleteConfig}
             />
+            )}
         </div>
     );
 };
