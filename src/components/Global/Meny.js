@@ -20,6 +20,11 @@ const Meny = () => {
                     activeclassname="nav-link-active"
                     exact="true"
                     to="/annet">{strings.menytekst5}</NavLink>
+                <NavLink
+                    className="menu-button"
+                    activeclassname="nav-link-active"
+                    exact="true"
+                    to="/leke">{strings.menytekst3}</NavLink>
             </div>
         </div>
     );

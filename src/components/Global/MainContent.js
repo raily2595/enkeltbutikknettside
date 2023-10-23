@@ -10,6 +10,8 @@ const MainContent = () => {
                 <div className="card">
                     <div className="carousel-container">
                         <Carousel>
+                            <img src={`${process.env.PUBLIC_URL}bilder/leiebåndhvit.png`} alt="Nila" />
+                            <img src={`${process.env.PUBLIC_URL}bilder/leiebånd.jpg`} alt="Nila" />
                             <img src={`${process.env.PUBLIC_URL}bilder/leieband1.jpg`} alt="Nila" />
                             <img src={`${process.env.PUBLIC_URL}bilder/leieband2.jpg`} alt="Nila" />
                         </Carousel>
@@ -37,6 +39,8 @@ const MainContent = () => {
                 <div className="card">
                     <div className="carousel-container">
                         <Carousel>
+                            <img src={`${process.env.PUBLIC_URL}bilder/halsbåndhvit.png`} alt="Nila" />
+                            <img src={`${process.env.PUBLIC_URL}bilder/halsbånd.jpg`} alt="Nila" />
                             <img src={`${process.env.PUBLIC_URL}bilder/halsband1.jpg`} alt="Nila" />
                             <img src={`${process.env.PUBLIC_URL}bilder/halsband2.jpg`} alt="Nila" />
                             <img src={`${process.env.PUBLIC_URL}bilder/halsband3.jpg`} alt="Nila" />

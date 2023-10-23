@@ -1,29 +1,52 @@
 import strings from '../../strings.json';
-import {NavLink} from "react-router-dom";
 import React from "react";
+import {Carousel} from "react-responsive-carousel";
 const Leke = () => {
     return (
         <div>
-            <div className="leke-content">
+            <div className="main-content">
                 <div className="card">
-                    <div className="card-lone-content">
+                    <div className="carousel-container">
+                        <Carousel>
+                            <img src={`${process.env.PUBLIC_URL}bilder/leke.jpg`} alt="Nila" />
+                            <img src={`${process.env.PUBLIC_URL}bilder/leke1.jpg`} alt="Nila" />
+                        </Carousel>
+                    </div>
+                    <div className="card-content">
                         <div>
-                            <h2>{strings.info}</h2>
-                            <p>{strings.infotext1}</p>
-                            <p>{strings.infotext2}</p>
-                            <p>{strings.infotext3}</p>
-                            <p>{strings.infotext4}</p>
+                            <h2>{strings.leke}</h2>
+                            <p>{strings.leketekst}</p>
                         </div>
-                        <NavLink
-                            className="card-button"
-                            activeclassname="nav-link-active"
-                            exact="true"
-                            to="/fargekart">Fargekart</NavLink>
-                        <NavLink
-                            className="card-button"
-                            activeclassname="nav-link-active"
-                            exact="true"
-                            to="/font">Font</NavLink>
+                        <div>
+                            <p>{strings.fargetekst}</p>
+                            <p>{strings.lengdetekst}</p>
+                        </div>
+                        <div>
+                            <p>{strings.prisinfoleke}</p>
+                        </div>
+                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
+                    </div>
+                </div>
+                <div className="card">
+                    <div className="carousel-container">
+                        <Carousel>
+                            <img src={`${process.env.PUBLIC_URL}bilder/leke.jpg`} alt="Nila" />
+                            <img src={`${process.env.PUBLIC_URL}bilder/leke1.jpg`} alt="Nila" />
+                        </Carousel>
+                    </div>
+                    <div className="card-content">
+                        <div>
+                            <h2>{strings.lekeuten}</h2>
+                            <p>{strings.leketekst}</p>
+                        </div>
+                        <div>
+                            <p>{strings.fargetekst}</p>
+                            <p>{strings.lengdetekst}</p>
+                        </div>
+                        <div>
+                            <p>{strings.prisinfolekeuten}</p>
+                        </div>
+                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
                     </div>
                 </div>
             </div>
