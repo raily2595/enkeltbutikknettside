@@ -1,7 +1,7 @@
 import React from 'react';
-import {Carousel} from "react-responsive-carousel";
+import { Carousel } from "react-responsive-carousel";
 import strings from "../../strings.json";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const MainContent = () => {
     return (
@@ -57,6 +57,17 @@ const MainContent = () => {
                             <p>{strings.vinylinfo}</p>
                         </div>
                         <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
+                    </div>
+                </div>
+                <div className="card">
+                    <div className="card-lone-content">
+                        <div>
+                            <h2>{strings.info}</h2>
+                            <p>{strings.infotext1}</p>
+                            <p>{strings.infotext2}</p>
+                            <p>{strings.infotext3}</p>
+                            <p>{strings.infotext4}</p>
+                        </div>
                     </div>
                 </div>
             </div>
