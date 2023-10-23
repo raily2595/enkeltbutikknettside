@@ -2,7 +2,7 @@
 import React from "react";
 
 const TextSettings = ({ text, onTextChange, onTextColorChange, font, onFontChange }) => {
-    const fonts = ["Arial", "Tøff", "Courier New", "Calibri", "Comic Sans", "Stjernekrig", "Times New Roman", "Magisk", "Handskrevet", "Skog", "Tegnefilm", "Barnebok"];
+    const fonts = ["Handskrevet", "Arial", "Tøff", "Courier New", "Calibri", "Comic Sans", "Stjernekrig", "Times New Roman", "Magisk", "Skog", "Tegnefilm", "Barnebok"];
     const tekstfarger = ["Sølv", "Gull", "Hvit", "Svart", "Lys grønn", "Mørk grønn", "Neon gull", "Neon orange", "Lys blå", "Mørk blå", "Rød", "Brun", "Turkis", "Lys rosa", "Mørk rosa", "Lilla","Beige"];
 
     const calculateTextColor = (inputColor) => {
@@ -72,7 +72,7 @@ const TextSettings = ({ text, onTextChange, onTextColorChange, font, onFontChang
             </div>
             <div>
                 <label>
-                    Font:
+                    Skrifttype:
                     <select value={font} onChange={(e) => onFontChange(e.target.value)}>
                         {fonts.map((fontOption) => (
                             <option key={fontOption} value={fontOption}>
