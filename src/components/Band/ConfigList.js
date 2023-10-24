@@ -1,5 +1,5 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const ConfigList = ({ configurations, onEditConfig, onDeleteConfig }) => {
     // Calculate the total sum of prices
@@ -7,14 +7,13 @@ const ConfigList = ({ configurations, onEditConfig, onDeleteConfig }) => {
 
     return (
         <div>
-            <h3>Configurations:</h3>
+            <h3>Handlekurv</h3>
             <NavLink
                 className="card-button"
-                activeClassName="nav-link-active"
                 exact="true"
                 to="/kasse"
             >
-                Kasse
+                Til kassen
             </NavLink>
             <ul>
                 {configurations.map((config, index) => (
@@ -39,6 +38,7 @@ const ConfigList = ({ configurations, onEditConfig, onDeleteConfig }) => {
                             <button onClick={() => onEditConfig(index)}>Edit</button>
                             {onDeleteConfig && <button onClick={() => onDeleteConfig(index)}>Delete</button>}
                         </div>
+                        <hr />
                     </li>
                 ))}
             </ul>

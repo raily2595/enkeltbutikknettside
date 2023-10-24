@@ -36,12 +36,17 @@ const calculateBackgroundColor = (inputColor) => {
 
 const ColorButtons = ({ onColorChange }) => {
     return (
-        <div>
-            <h3>Select Color</h3>
+        <div className='konfigurator-fargeboks'>
             {colors.map((color) => (
                 <button
                     key={color}
-                    style={{ backgroundColor: calculateBackgroundColor(color) }}
+                    style={{
+                        backgroundColor: calculateBackgroundColor(color),
+                        padding: 6,
+                        width: 180,
+                        fontSize: 16,
+                        fontWeight: 'bold',
+                    }}
                     onClick={() => onColorChange(color)}
                 >
                     {color}
