@@ -3,7 +3,7 @@ import React from "react";
 
 const TextSettings = ({ text, onTextChange, onTextColorChange, font, onFontChange }) => {
     const fonts = ["Handskrevet", "Arial", "Tøff", "Courier New", "Calibri", "Comic Sans", "Stjernekrig", "Times New Roman", "Magisk", "Skog", "Tegnefilm", "Barnebok"];
-    const tekstfarger = ["Sølv", "Gull", "Hvit", "Svart", "Lys grønn", "Mørk grønn", "Neon gull", "Neon orange", "Lys blå", "Mørk blå", "Rød", "Brun", "Turkis", "Lys rosa", "Mørk rosa", "Lilla","Beige"];
+    const tekstfarger = ["Sølv", "Gull", "Hvit", "Svart", "Lys grønn", "Mørk grønn", "Neon gull", "Neon orange", "Lys blå", "Mørk blå", "Rød", "Brun", "Turkis", "Lys rosa", "Mørk rosa", "Lilla", "Beige"];
 
     const calculateTextColor = (inputColor) => {
         // Mapp inngangsfargen til ønsket bakgrunnsfarge
@@ -49,38 +49,42 @@ const TextSettings = ({ text, onTextChange, onTextColorChange, font, onFontChang
 
     return (
         <div>
-            <h3>Text Settings</h3>
-            <div>
-                <label>
-                    Text:
-                    <input type="text" value={text} placeholder="Nila" onChange={(e) => onTextChange(e.target.value)} />
-                </label>
+            <div className="konfigurator-tekst">
+                <input
+                    type="text" value={text}
+                    placeholder="Hundenavn"
+                    onChange={(e) => onTextChange(e.target.value)}
+                    style={{ fontSize: 16, }} />
             </div>
-            <div>
-                <label>
-                    Text Color:
-                    {tekstfarger.map((tekstfarge) => (
-                        <button
-                            key={tekstfarge}
-                            style={{ backgroundColor: calculateTextColor(tekstfarge) }}
-                            onClick={() => onTextColorChange(tekstfarge)}
-                        >
-                            {tekstfarge}
-                        </button>
+            <div className="konfigurator-tekst">
+                <label>Skrifttype: </label>
+                <select
+                    value={font}
+                    onChange={(e) => onFontChange(e.target.value)}
+                    style={{ fontSize: 16, }}  >
+                    {fonts.map((fontOption) => (
+                        <option key={fontOption} value={fontOption} style={{ fontSize: 16, }}>
+                            {fontOption}
+                        </option>
                     ))}
-                </label>
+                </select>
             </div>
-            <div>
-                <label>
-                    Skrifttype:
-                    <select value={font} onChange={(e) => onFontChange(e.target.value)}>
-                        {fonts.map((fontOption) => (
-                            <option key={fontOption} value={fontOption}>
-                                {fontOption}
-                            </option>
-                        ))}
-                    </select>
-                </label>
+            <div className='konfigurator-fargeboks'>
+                {tekstfarger.map((tekstfarge) => (
+                    <button
+                        key={tekstfarge}
+                        style={{
+                            backgroundColor: calculateTextColor(tekstfarge),
+                            padding: 6,
+                            width: 180,
+                            fontSize: 16,
+                            fontWeight: 'bold',
+                        }}
+                        onClick={() => onTextColorChange(tekstfarge)}
+                    >
+                        {tekstfarge}
+                    </button>
+                ))}
             </div>
         </div>
     );

@@ -8,7 +8,7 @@ const SubmitButton = ({ onSaveConfig }) => {
 
     return (
         <div>
-            <button onClick={handleSave}>Save Configuration</button>
+            <button className="konfigurator-button" onClick={handleSave}>Legg i handlekurv</button>
         </div>
     );
 };

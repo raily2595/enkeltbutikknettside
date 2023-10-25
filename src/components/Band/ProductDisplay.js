@@ -81,17 +81,15 @@ const ProductDisplay = ({ farge, vinyltekst, fontfarge, font }) => {
     const TextColor = calculateTextColor(fontfarge);
 
     return (
-        <div>
-            <h3>Product Preview</h3>
-            <div
-                style={{
-                    width: "400px",
-                    height: "200px",
-                    backgroundColor: backgroundColor,
-                    color: TextColor,
-                    fontFamily: font,
-                }}
-            >
+        <div
+            style={{
+                backgroundColor: backgroundColor,
+                color: TextColor,
+                fontFamily: font,
+                fontSize: "56px",
+                padding: "12px",
+            }}>
+            <div>
                 {vinyltekst}
             </div>
         </div>

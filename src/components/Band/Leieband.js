@@ -2,9 +2,9 @@ import React from "react";
 import ProductConfigurator from "./ProductConfigurator";
 const Leieband = () => {
     return (
-        <div>
-            <div className="leieband-content">
-                <h1>Leieband</h1>
+        <div className="main-content">
+            <div>
+                <h1>Leiebånd</h1>
                 <ProductConfigurator
                     navn={"leiebånd"}
                     produktpris={200}
