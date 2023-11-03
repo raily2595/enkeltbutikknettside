@@ -1,5 +1,5 @@
 import React from "react";
-import ProductConfigurator from "./ProductConfigurator";
+import ProductConfigurator from "../Global/ProductConfigurator";
 const Leieband = () => {
     return (
         <div className="main-content">

@@ -1,9 +1,9 @@
 // ProductConfigurator.js
 import React, { useState, useEffect } from "react";
 import ProductDisplay from "./ProductDisplay";
-import ColorSelector from "./../Konfigurator/ColorSelector";
-import TextSettings from "./../Konfigurator/TextSettings";
-import SubmitButton from "./../Konfigurator/SubmitButton";
+import ColorSelector from "../Konfigurator/ColorSelector";
+import TextSettings from "../Konfigurator/TextSettings";
+import SubmitButton from "../Konfigurator/SubmitButton";
 import ConfigList from "./ConfigList";
 import KlipsSelector from "../Konfigurator/KlipsSelector";
 

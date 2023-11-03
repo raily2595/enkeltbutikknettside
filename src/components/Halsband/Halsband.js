@@ -1,6 +1,7 @@
 import strings from '../../strings.json';
 import { Carousel } from "react-responsive-carousel";
 import React from "react";
+import {NavLink} from "react-router-dom";
 const Halsband = () => {
     return (
         <div>
@@ -29,7 +30,11 @@ const Halsband = () => {
                             <p>{strings.prisinfohalsband}</p>
                             <p>{strings.vinylinfo}</p>
                         </div>
-                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
+                        <NavLink
+                            className="card-button"
+                            activeclassname="nav-link-active"
+                            exact="true"
+                            to="/halsband/klipsband">Halsbånd</NavLink>
                     </div>
                 </div>
             </div>
