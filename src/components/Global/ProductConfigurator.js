@@ -202,8 +202,8 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                 )}
                 <div>
                     <p>Metallfarge(skruer,kroker,d-ring):</p>
-                    <label><input type="radio" value="sølv" checked={detaljefarger === 'sølv'} onChange={handleDetaljefarger} />Sølv</label>
-                    <label><input type="radio" value="gull" checked={detaljefarger === 'gull'} onChange={handleDetaljefarger} />Gull</label>
+                    <label><input type="radio" value="sølv" checked={detaljefarger === 'sølv'} onChange={handleDetaljefarger} /><img src={`${process.env.PUBLIC_URL}metall/sølvmetall.png`} alt="Sølv"/></label>
+                    <label><input type="radio" value="gull" checked={detaljefarger === 'gull'} onChange={handleDetaljefarger} /><img src={`${process.env.PUBLIC_URL}metall/gullmetall.png`} alt="Gull"/></label>
                     <hr />
                 </div>
                 {harKlipsbool && (

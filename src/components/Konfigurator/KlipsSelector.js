@@ -1,38 +1,29 @@
 import React from 'react';
 
-const colors = ["Svart", "Armygrønn", "Fiolett", "Aquablå", "Hvit", "Beige"];
-
-const calculateBackgroundColor = (inputColor) => {
-    // Mapp inngangsfargen til ønsket bakgrunnsfarge
-    switch (inputColor) {
-        case "Svart":
-            return "#010101";
-        case "Armygrønn":
-            return "#5d5c40";
-        case "Fiolett":
-            return "#cb95bd";
-        case "Aquablå":
-            return "#9fc1bf";
-        case "Hvit":
-            return "#f6f7f5";
-        case "Beige":
-            return "#d3b284";
-        default:
-            return "#5391FE"; // Bruk inngangsfargen hvis den ikke matcher noen av de definerte fargene
-    }
+// Define an object that maps color names to image URLs
+const colorImages = {
+    Svart: `${process.env.PUBLIC_URL}klips/svart.jpg`,
+    Armygrønn: `${process.env.PUBLIC_URL}klips/armygrønn.jpg`,
+    Fiolett: `${process.env.PUBLIC_URL}klips/fiolett.jpg`,
+    Aquablå: `${process.env.PUBLIC_URL}klips/aquablå.jpg`,
+    Hvit: `${process.env.PUBLIC_URL}klips/hvit.jpg`,
+    Beige: `${process.env.PUBLIC_URL}klips/beige.jpg`,
 };
 
 const KlipsButtons = ({ onColorChange }) => {
     return (
         <div>
             <h3>Select Color</h3>
-            {colors.map((color) => (
+            {Object.entries(colorImages).map(([color, imageUrl]) => (
                 <button
                     key={color}
-                    style={{ backgroundColor: calculateBackgroundColor(color) }}
                     onClick={() => onColorChange(color)}
                 >
-                    {color}
+                    <img
+                        src={imageUrl}
+                        alt={color}
+                        style={{ width: '100px', height: '100px' }} // Adjust the dimensions as needed
+                    />
                 </button>
             ))}
         </div>
