@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const colors = ["Lysblå", "Laguneblå", "Karibigrønn", "Eplegrønn", "Ferskenorange", "Beige", "Neonrosa", "Ametyst", "Korall", "Rød", "Vinrød", "Rødbrun"];
 
@@ -35,6 +35,7 @@ const calculateBackgroundColor = (inputColor) => {
 };
 
 const ColorButtons = ({ onColorChange }) => {
+    const [selectedColor, setSelectedColor] = useState("Lysblå"); // Initialize it with a default color
     return (
         <div className='konfigurator-fargeboks'>
             {colors.map((color) => (
@@ -46,8 +47,12 @@ const ColorButtons = ({ onColorChange }) => {
                         width: 180,
                         fontSize: 16,
                         fontWeight: 'bold',
+                        border: color === selectedColor ? "2px solid #000" : "none", // Add a border to the selected color
                     }}
-                    onClick={() => onColorChange(color)}
+                    onClick={() => {
+                        onColorChange(color);
+                        setSelectedColor(color); // Update the selected color state
+                    }}
                 >
                     {color}
                 </button>
@@ -55,5 +60,6 @@ const ColorButtons = ({ onColorChange }) => {
         </div>
     );
 };
+
 
 export default ColorButtons;
