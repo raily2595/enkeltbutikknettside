@@ -1,6 +1,7 @@
 import strings from '../../strings.json';
 import { NavLink } from "react-router-dom";
 import React from "react";
+import ToggleDrawerButton from "./ToggleDrawerButton";
 const Meny = () => {
     return (
         <div>
@@ -25,6 +26,9 @@ const Meny = () => {
                     activeclassname="nav-link-active"
                     exact="true"
                     to="/leke">{strings.menytekst3}</NavLink>
+            </div>
+            <div>
+                <ToggleDrawerButton/>
             </div>
         </div>
     );
