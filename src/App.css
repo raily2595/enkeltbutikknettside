@@ -210,4 +210,16 @@ footer {
   .carousel-container {
     width: 90%;
   }
+
+  .close-button {
+    position: absolute;
+    top: 10px; /* Adjust the top position as needed */
+    right: 10px; /* Adjust the right position as needed */
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #000; /* Adjust the color as needed */
+    outline: none;
+  }
 }

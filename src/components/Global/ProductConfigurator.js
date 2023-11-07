@@ -6,6 +6,7 @@ import TextSettings from "../Konfigurator/TextSettings";
 import SubmitButton from "../Konfigurator/SubmitButton";
 import ConfigList from "./ConfigList";
 import KlipsSelector from "../Konfigurator/KlipsSelector";
+import SubmissionWindow from "./SubmissionWindow";
 
 const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, harLengdecm, harBredde, harKrokband, harHandtak, harKrok, harTekst, harKlips, harRing, harFarge2 }) => {
     const [farge, setFarge] = useState("Lysblå");
@@ -35,6 +36,8 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     const harRingbool = harRing;
     const harFarge2bool = harFarge2;
     const [harDataILocalStorage, setHarDataILocalStorage] = useState(false);
+    const [showSubmissionWindow, setShowSubmissionWindow] = useState(false); // Track whether to show the submission window
+    const [submissionSummary, setSubmissionSummary] = useState(""); // Summary of choices for the submission window
 
     useEffect(() => {
         // Load configurations from localStorage when the component mounts
@@ -124,6 +127,26 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         setConfigurations([...configurations, newConfig]);
         setSelectedConfigIndex(null);
         setHarDataILocalStorage(true);
+        let summary = `Produkt: ${newConfig.produktnavn},Farge: ${newConfig.farge},`;
+        if (newConfig.onskerFarge2) {
+            summary += ` Farge 2: ${newConfig.farge2},`;
+        }
+        if (newConfig.onskerTekst) {
+            summary += ` VinylTekst: ${newConfig.vinyltekst},`;
+            summary += ` Fontfarge: ${newConfig.fontfarge},`;
+            summary += ` Font: ${newConfig.font},`;
+        }
+        summary += ` Lengde: ${newConfig.lengde}, Bredde: ${newConfig.bredde}, Detaljefarger: ${newConfig.detaljefarger},`
+        if (harKlipsbool) {
+            summary += ` Klips: ${newConfig.klips},`;
+        }
+        summary += ` Pris: ${newConfig.pris},`;
+        setSubmissionSummary(summary); // Set the summary
+        setShowSubmissionWindow(true); // Show the submission window
+    };
+
+    const handleClearSubmissionWindow = () => {
+        setShowSubmissionWindow(false); // Hide the submission window
     };
 
     const handleEditConfig = (index) => {
@@ -242,6 +265,13 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                     onSaveConfig={selectedConfigIndex !== null ? handleEditConfig : handleAddConfig}
                     onDeleteConfig={selectedConfigIndex !== null ? () => handleDeleteConfig(selectedConfigIndex) : null}
                 />
+                {showSubmissionWindow && (
+                    <SubmissionWindow
+                        onClose={handleClearSubmissionWindow}
+                        onContinueShopping={handleClearSubmissionWindow}
+                        summary={submissionSummary}
+                    />
+                )}
             </div>
             {harDataILocalStorage && (
                 <>
