@@ -17,6 +17,7 @@ import Leieband from "./components/Band/Leieband";
 import Kasse from "./components/Bestilling/Kasse";
 import Bekreftelse from "./components/Bestilling/Bekreftelse";
 import Klipsband from "./components/Halsband/Klipsband";
+import Handlekurv from "./components/Bestilling/Handlekurv";
 {/* import Banner from "./components/Banner";*/ }
 
 
@@ -39,6 +40,7 @@ function App() {
                     <Route path="/kasse" element={<Kasse />} />
                     <Route path="/bekreftelse" element={< Bekreftelse />} />
                     <Route path="/halsband/klipsband" element={<Klipsband />} />
+                    <Route path="/handlekurv" element={<Handlekurv />} />
                 </Routes>
                 <Footer />
             </div>
