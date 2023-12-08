@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 
-function Drawer({ isOpen, onClose }) {
+function Drawer({ isOpen }) {
     const hasLocalStorageData = localStorage.getItem('productConfigurations'); // Sjekker om det er data i localStorage
 
     return (
