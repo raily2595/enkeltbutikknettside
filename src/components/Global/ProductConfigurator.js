@@ -23,6 +23,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     const [detaljefarger, setDetaljefarger] = useState("sølv");
     const [klips, setKlips] = useState("");
     const [pris, setPris] = useState(produktpris);
+    const [kommentar, setKommentar] = useState('');
     const meterpris = prismeter;
     const produktnavn = navn;
     const harLengdemeterbool = harLengdemeter;
@@ -106,6 +107,10 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         setBredde(e.target.value);
     }
 
+    const handleKommentarChange = (event) => {
+        setKommentar(event.target.value);
+    };
+
     const handleAddConfig = () => {
 
         const newConfig = {
@@ -122,6 +127,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
             pris,
             onskerTekst,
             onskerFarge2,
+            kommentar,
         };
 
         setConfigurations([...configurations, newConfig]);
@@ -140,7 +146,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         if (harKlipsbool) {
             summary += ` Klips: ${newConfig.klips},`;
         }
-        summary += ` Pris: ${newConfig.pris},`;
+        summary += ` Pris: ${newConfig.pris}, Kommentar: ${newConfig.kommentar}`;
         setSubmissionSummary(summary); // Set the summary
         setShowSubmissionWindow(true); // Show the submission window
     };
@@ -149,29 +155,11 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         setShowSubmissionWindow(false); // Hide the submission window
     };
 
-    const handleEditConfig = (index) => {
-        setSelectedConfigIndex(index);
-        const selectedConfig = configurations[index];
-        setFarge(selectedConfig.farge);
-        setFarge2(selectedConfig.farge2);
-        setVinyltekst(selectedConfig.vinyltekst);
-        setFontfarge(selectedConfig.fontfarge);
-        setFont(selectedConfig.font);
-        setLengde(selectedConfig.lengde);
-        setBredde(selectedConfig.bredde);
-        setDetaljefarger(selectedConfig.detaljefarger);
-        setKlips(selectedConfig.klips);
-        setPris(selectedConfig.pris);
-        setOnskerFarge2(selectedConfig.onskerTekst);
-        setOnskerTekst(selectedConfig.onskerFarge2);
-
-    };
-
     const handleDeleteConfig = (index) => {
         const updatedConfigurations = [...configurations];
         updatedConfigurations.splice(index, 1);
         setConfigurations(updatedConfigurations);
-        const dataILocalStorage = localStorage.getItem('productConfigurations'); // Endre 'dinNokkel' til nøkkelen du bruker i localstorage
+        const dataILocalStorage = localStorage.getItem('productConfigurations');
         if (!dataILocalStorage) {
             setHarDataILocalStorage(false);
         }
@@ -261,8 +249,17 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                     </>
                 )}
                 <p>Pris: {pris} NOK</p>
+                <label>
+                    Kommentar:
+                    <textarea
+                        value={kommentar}
+                        onChange={handleKommentarChange}
+                        rows="4"
+                        cols="50"
+                    />
+                </label>
                 <SubmitButton
-                    onSaveConfig={selectedConfigIndex !== null ? handleEditConfig : handleAddConfig}
+                    onSaveConfig={handleAddConfig}
                     onDeleteConfig={selectedConfigIndex !== null ? () => handleDeleteConfig(selectedConfigIndex) : null}
                 />
                 {showSubmissionWindow && (
@@ -278,7 +275,6 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                     <div className="konfigurator-card">
                         <ConfigList
                             configurations={configurations}
-                            onEditConfig={handleEditConfig}
                             onDeleteConfig={handleDeleteConfig}
                         />
                     </div>

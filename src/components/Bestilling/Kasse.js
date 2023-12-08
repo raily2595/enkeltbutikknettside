@@ -20,7 +20,7 @@ function Kasse() {
 
     // Sjekk localstorage ved oppstart av komponenten
     useEffect(() => {
-        const dataILocalStorage = localStorage.getItem('productConfigurations'); // Endre 'dinNokkel' til nøkkelen du bruker i localstorage
+        const dataILocalStorage = localStorage.getItem('productConfigurations');
         if (dataILocalStorage) {
             setHarDataILocalStorage(true);
         }

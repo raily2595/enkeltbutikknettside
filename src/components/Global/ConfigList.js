@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const ConfigList = ({ configurations, onEditConfig, onDeleteConfig }) => {
+const ConfigList = ({ configurations, onDeleteConfig }) => {
     // Calculate the total sum of prices
     const totalSum = configurations.reduce((sum, config) => sum + config.pris, 0);
 
@@ -35,7 +35,6 @@ const ConfigList = ({ configurations, onEditConfig, onDeleteConfig }) => {
                         )}
                         <div>Pris: {config.pris}</div>
                         <div>
-                            <button onClick={() => onEditConfig(index)}>Edit</button>
                             {onDeleteConfig && <button onClick={() => onDeleteConfig(index)}>Delete</button>}
                         </div>
                         <hr />

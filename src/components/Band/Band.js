@@ -56,7 +56,11 @@ const Band = () => {
                             <p>{strings.prisinfoband}</p>
                             <p>{strings.vinylinfo}</p>
                         </div>
-                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
+                        <NavLink
+                            className="card-button"
+                            activeclassname="nav-link-active"
+                            exact="true"
+                            to="/band/sporline">Sporline</NavLink>
                     </div>
                 </div>
                 <div className="card">
@@ -81,7 +85,11 @@ const Band = () => {
                             <p>{strings.prisinfoband}</p>
                             <p>{strings.vinylinfo}</p>
                         </div>
-                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
+                        <NavLink
+                            className="card-button"
+                            activeclassname="nav-link-active"
+                            exact="true"
+                            to="/band/dobbeltkrok">Dobbeltkrok</NavLink>
                     </div>
                 </div>
                 <div className="card">
@@ -105,7 +113,11 @@ const Band = () => {
                             <p>{strings.prisinfohanefot}</p>
                             <p>{strings.vinylinfo}</p>
                         </div>
-                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
+                        <NavLink
+                            className="card-button"
+                            activeclassname="nav-link-active"
+                            exact="true"
+                            to="/band/hanefot">Hanefot</NavLink>
                     </div>
                 </div>
             </div>

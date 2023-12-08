@@ -18,6 +18,11 @@ import Kasse from "./components/Bestilling/Kasse";
 import Bekreftelse from "./components/Bestilling/Bekreftelse";
 import Klipsband from "./components/Halsband/Klipsband";
 import Handlekurv from "./components/Bestilling/Handlekurv";
+import Sporline from "./components/Band/Sporline";
+import Dobbeltkrok from "./components/Band/Dobbeltkrok";
+import Hanefot from "./components/Band/Hanefot";
+import Lekeuten from "./components/Leke/Lekeuten";
+import Lekemed from "./components/Leke/Lekemed";
 {/* import Banner from "./components/Banner";*/ }
 
 
@@ -34,13 +39,18 @@ function App() {
                     <Route path="/band" element={<Band />} />
                     <Route path="/sele" element={<Sele />} />
                     <Route path="/leke" element={<Leke />} />
+                    <Route path="/lekeuten" element={<Lekeuten />} />
+                    <Route path="/lekemed" element={<Lekemed />} />
                     <Route path="/fargekart" element={<Fargekart />} />
                     <Route path="/font" element={<Font />} />
                     <Route path="/band/leieband" element={<Leieband />} />
-                    <Route path="/kasse" element={<Kasse />} />
-                    <Route path="/bekreftelse" element={< Bekreftelse />} />
+                    <Route path="/band/sporline" element={<Sporline />} />
+                    <Route path="/band/dobbeltkrok" element={<Dobbeltkrok />} />
+                    <Route path="/band/hanefot" element={<Hanefot />} />
                     <Route path="/halsband/klipsband" element={<Klipsband />} />
                     <Route path="/handlekurv" element={<Handlekurv />} />
+                    <Route path="/kasse" element={<Kasse />} />
+                    <Route path="/bekreftelse" element={< Bekreftelse />} />
                 </Routes>
                 <Footer />
             </div>

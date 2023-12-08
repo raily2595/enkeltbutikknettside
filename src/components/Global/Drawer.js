@@ -12,9 +12,9 @@ function Drawer({ isOpen, onClose }) {
                         <NavLink
                             className="card-button"
                             exact="true"
-                            to="/kasse"
+                            to="/handlekurv"
                         >
-                            Til kassen
+                            Til Handlekurv
                         </NavLink>
                     )}
                 </div>

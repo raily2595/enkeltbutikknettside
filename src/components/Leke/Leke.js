@@ -1,6 +1,7 @@
 import strings from '../../strings.json';
 import React from "react";
 import {Carousel} from "react-responsive-carousel";
+import {NavLink} from "react-router-dom";
 const Leke = () => {
     return (
         <div>
@@ -24,7 +25,11 @@ const Leke = () => {
                         <div>
                             <p>{strings.prisinfoleke}</p>
                         </div>
-                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
+                        <NavLink
+                            className="card-button"
+                            activeclassname="nav-link-active"
+                            exact="true"
+                            to="/leke/lekemed">Håndtak og leke</NavLink>
                     </div>
                 </div>
                 <div className="card">
@@ -37,7 +42,7 @@ const Leke = () => {
                     <div className="card-content">
                         <div>
                             <h2>{strings.lekeuten}</h2>
-                            <p>{strings.leketekst}</p>
+                            <p>{strings.lekeutentekst}</p>
                         </div>
                         <div>
                             <p>{strings.fargetekst}</p>
@@ -46,7 +51,11 @@ const Leke = () => {
                         <div>
                             <p>{strings.prisinfolekeuten}</p>
                         </div>
-                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
+                        <NavLink
+                            className="card-button"
+                            activeclassname="nav-link-active"
+                            exact="true"
+                            to="/leke/lekeuten">Håndtak for leke</NavLink>
                     </div>
                 </div>
             </div>
