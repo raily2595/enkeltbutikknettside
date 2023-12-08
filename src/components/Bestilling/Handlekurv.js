@@ -53,6 +53,9 @@ const Handlekurv = () => {
                                         <div>Text: {item.vinyltekst} Text Color: {item.fontfarge} Font: {item.font}</div>
                                     </>
                                 )}
+                                {item.harLekebool && (
+                                    <div>Valgt Leke: {item.valgtLeke}</div>
+                                )}
                                 <div>Pris: {item.pris}</div>
                                 <hr />
                             </li>

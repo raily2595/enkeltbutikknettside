@@ -19,6 +19,7 @@ const Dobbeltkrok = () => {
                     harKlips={false}
                     harRing={false}
                     harFarge2={true}
+                    harLeke={false}
                 />
             </div>
         </div>

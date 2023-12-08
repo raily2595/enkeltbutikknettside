@@ -19,6 +19,7 @@ const Klipsband = () => {
                     harKlips={true}
                     harRing={false}
                     harFarge2={false}
+                    harLeke={false}
                 />
             </div>
         </div>

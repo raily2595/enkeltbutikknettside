@@ -19,6 +19,7 @@ const Leieband = () => {
                     harKlips={false}
                     harRing={false}
                     harFarge2={true}
+                    harLeke={false}
                 />
             </div>
         </div>

@@ -7,8 +7,9 @@ import SubmitButton from "../Konfigurator/SubmitButton";
 import ConfigList from "./ConfigList";
 import KlipsSelector from "../Konfigurator/KlipsSelector";
 import SubmissionWindow from "./SubmissionWindow";
+import Lekebutton from "./Lekebutton";
 
-const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, harLengdecm, harBredde, harKrokband, harHandtak, harKrok, harTekst, harKlips, harRing, harFarge2 }) => {
+const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, harLengdecm, harBredde, harKrokband, harHandtak, harKrok, harTekst, harKlips, harRing, harFarge2, harLeke }) => {
     const [farge, setFarge] = useState("Lysblå");
     const [farge2, setFarge2] = useState("");
     const [onskerFarge2, setOnskerFarge2] = useState(false);
@@ -25,6 +26,8 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     const [pris, setPris] = useState(produktpris);
     const [kommentar, setKommentar] = useState('');
     const meterpris = prismeter;
+    const [lekepris, setLekePris] = useState(0);
+    const [valgtLeke, setValgtLeke] = useState('');
     const produktnavn = navn;
     const harLengdemeterbool = harLengdemeter;
     const harLengdecmbool = harLengdecm;
@@ -36,6 +39,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     const harKlipsbool = harKlips;
     const harRingbool = harRing;
     const harFarge2bool = harFarge2;
+    const harLekebool = harLeke;
     const [harDataILocalStorage, setHarDataILocalStorage] = useState(false);
     const [showSubmissionWindow, setShowSubmissionWindow] = useState(false); // Track whether to show the submission window
     const [submissionSummary, setSubmissionSummary] = useState(""); // Summary of choices for the submission window
@@ -50,13 +54,13 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
 
     useEffect(() => {
         if (harLengdemeterbool) {
-            const calculatedPrice = produktpris + (lengde * meterpris);
+            const calculatedPrice = produktpris + (lengde * meterpris) + lekepris;
             setPris(calculatedPrice);
         }
         else {
             setPris(produktpris);
         }
-    }, [lengde, harLengdemeterbool, produktpris, meterpris]);
+    }, [lengde, harLengdemeterbool, produktpris, meterpris, lekepris]);
 
 
     useEffect(() => {
@@ -66,6 +70,17 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
 
     const handleOnskerTekstChange = (e) => {
         setOnskerTekst(e.target.checked);
+    };
+
+    const handleProductSelect = (type, pris) => {
+        if (valgtLeke === type) {
+            // Hvis brukeren klikker på knappen til en allerede valgt leke, fjern valget
+            setValgtLeke('');
+            setLekePris(0);
+        } else {
+            setValgtLeke(type);
+            setLekePris(pris);
+        }
     };
 
     const handleOnskerFarge2Change = (e) => {
@@ -128,6 +143,8 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
             onskerTekst,
             onskerFarge2,
             kommentar,
+            harLekebool,
+            valgtLeke,
         };
 
         setConfigurations([...configurations, newConfig]);
@@ -145,6 +162,9 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         summary += ` Lengde: ${newConfig.lengde}, Bredde: ${newConfig.bredde}, Detaljefarger: ${newConfig.detaljefarger},`
         if (harKlipsbool) {
             summary += ` Klips: ${newConfig.klips},`;
+        }
+        if (harLekebool) {
+            summary += ` Leke: ${newConfig.valgtLeke},`;
         }
         summary += ` Pris: ${newConfig.pris}, Kommentar: ${newConfig.kommentar}`;
         setSubmissionSummary(summary); // Set the summary
@@ -219,6 +239,42 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                 </div>
                 {harKlipsbool && (
                     <KlipsSelector farge={klips} onColorChange={handleKlipsChange} />
+                )}
+                {harLekebool && (
+                    <>
+                        <Lekebutton
+                            image='${process.env.PUBLIC_URL}leker/leke.png'
+                            type="lekeXS"
+                            pris={109}
+                            onSelect={handleProductSelect}
+                            selected={valgtLeke === 'lekeXS'}
+                            diameter={5}
+                        />
+                        <Lekebutton
+                            image="${process.env.PUBLIC_URL}leker/leke.png"
+                            type="lekeS"
+                            pris={149}
+                            onSelect={handleProductSelect}
+                            selected={valgtLeke === 'lekeS'}
+                            diameter={8}
+                        />
+                        <Lekebutton
+                            image="${process.env.PUBLIC_URL}leker/leke.png"
+                            type="lekeM"
+                            pris={169}
+                            onSelect={handleProductSelect}
+                            selected={valgtLeke === 'lekeM'}
+                            diameter={12}
+                        />
+                        <Lekebutton
+                            image="${process.env.PUBLIC_URL}leker/leke.png"
+                            type="lekeL"
+                            pris={229}
+                            onSelect={handleProductSelect}
+                            selected={valgtLeke === 'lekeL'}
+                            diameter={14}
+                        />
+                    </>
                 )}
                 {harTekstbool && (
                     <>

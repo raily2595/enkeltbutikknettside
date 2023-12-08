@@ -1,29 +1,29 @@
 import React from "react";
 import ProductConfigurator from "../Global/ProductConfigurator";
-const Lekemed = () => {
+const Handtak = () => {
     return (
         <div className="main-content">
             <div>
-                <h1>Håndtak og leke</h1>
+                <h1>Håndtak</h1>
                 <ProductConfigurator
-                    navn={"lekemed"}
-                    produktpris={100}
-                    prismeter={50}
-                    harLengdemeter={true}
+                    navn={"handtak"}
+                    produktpris={200}
+                    prismeter={0}
+                    harLengdemeter={false}
                     harLengdecm={false}
                     harBredde={false}
-                    harKrokband={false}
-                    harHandtak={false}
+                    harKrokband={true}
+                    harHandtak={true}
                     harKrok={true}
-                    harTekst={true}
+                    harTekst={false}
                     harKlips={false}
                     harRing={false}
-                    harFarge2={true}
-                    harLeke={true}
+                    harFarge2={false}
+                    harLeke={false}
                 />
             </div>
         </div>
     );
 };
 
-export default Lekemed;
+export default Handtak;
