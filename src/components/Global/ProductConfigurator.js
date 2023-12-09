@@ -6,6 +6,7 @@ import TextSettings from "../Konfigurator/TextSettings";
 import SubmitButton from "../Konfigurator/SubmitButton";
 import ConfigList from "./ConfigList";
 import KlipsSelector from "../Konfigurator/KlipsSelector";
+import MetallSelector from "../Konfigurator/MetallSelector";
 import SubmissionWindow from "./SubmissionWindow";
 import Lekebutton from "./Lekebutton";
 
@@ -98,8 +99,8 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         setKlips(color);
     };
 
-    const handleDetaljefarger = (e) => {
-        setDetaljefarger(e.target.value);
+    const handleDetaljefarger = (color) => {
+        setDetaljefarger(color);
     }
 
     const handleTextChange = (newText) => {
@@ -231,19 +232,14 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                         <hr />
                     </>
                 )}
-                <div>
-                    <p>Metallfarge(skruer,kroker,d-ring):</p>
-                    <label><input type="radio" value="sølv" checked={detaljefarger === 'sølv'} onChange={handleDetaljefarger} /><img src={`${process.env.PUBLIC_URL}metall/sølvmetall.png`} alt="Sølv"/></label>
-                    <label><input type="radio" value="gull" checked={detaljefarger === 'gull'} onChange={handleDetaljefarger} /><img src={`${process.env.PUBLIC_URL}metall/gullmetall.png`} alt="Gull"/></label>
-                    <hr />
-                </div>
+                <MetallSelector farge={detaljefarger} onColorChange={handleDetaljefarger} />
                 {harKlipsbool && (
                     <KlipsSelector farge={klips} onColorChange={handleKlipsChange} />
                 )}
                 {harLekebool && (
                     <>
                         <Lekebutton
-                            image='${process.env.PUBLIC_URL}leker/leke.png'
+                            image={`${process.env.PUBLIC_URL}/leker/leke.png`}
                             type="lekeXS"
                             pris={109}
                             onSelect={handleProductSelect}
@@ -251,7 +247,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                             diameter={5}
                         />
                         <Lekebutton
-                            image="${process.env.PUBLIC_URL}leker/leke.png"
+                            image={`${process.env.PUBLIC_URL}/leker/leke.png`}
                             type="lekeS"
                             pris={149}
                             onSelect={handleProductSelect}
@@ -259,7 +255,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                             diameter={8}
                         />
                         <Lekebutton
-                            image="${process.env.PUBLIC_URL}leker/leke.png"
+                            image={`${process.env.PUBLIC_URL}/leker/leke.png`}
                             type="lekeM"
                             pris={169}
                             onSelect={handleProductSelect}
@@ -267,7 +263,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                             diameter={12}
                         />
                         <Lekebutton
-                            image="${process.env.PUBLIC_URL}leker/leke.png"
+                            image={`${process.env.PUBLIC_URL}/leker/leke.png`}
                             type="lekeL"
                             pris={229}
                             onSelect={handleProductSelect}

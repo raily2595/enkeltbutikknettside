@@ -2,12 +2,8 @@ import React, { useState } from 'react';
 
 // Maps option names to image URLs
 const options = {
-    Svart: `${process.env.PUBLIC_URL}/klips/svartklips.jpg`,
-    Militærgrønn: `${process.env.PUBLIC_URL}/klips/armygrønnklips.jpg`,
-    Fiolett: `${process.env.PUBLIC_URL}/klips/fiolettklips.jpg`,
-    Aquablå: `${process.env.PUBLIC_URL}/klips/aquablåklips.jpg`,
-    Hvit: `${process.env.PUBLIC_URL}/klips/hvitklips.jpg`,
-    Beige: `${process.env.PUBLIC_URL}/klips/beigeklips.jpg`,
+    Sølv: `${process.env.PUBLIC_URL}/metall/sølvmetall.png`,
+    Gull: `${process.env.PUBLIC_URL}/metall/gullmetall.png`,
 };
 
 const Buttons = ({ onColorChange }) => {
@@ -15,7 +11,7 @@ const Buttons = ({ onColorChange }) => {
     const [selected, setSelected] = useState(defaultOption); // Initialize with a default selection
     return (
         <div>
-            <h3>Klipsfarge</h3>
+            <h3>Metallfarge (skruer, kroker, d-ring)</h3>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
                 {Object.entries(options).map(([option, imageUrl]) => (
                     <button
@@ -39,7 +35,7 @@ const Buttons = ({ onColorChange }) => {
                         <img
                             src={imageUrl}
                             alt={option}
-                            style={{ width: '180px', height: '106px', marginBottom: '10px' }}
+                            style={{ width: '180px', height: '180px', marginBottom: '10px' }}
                         />
                         <span>{option}</span>
                     </button>
