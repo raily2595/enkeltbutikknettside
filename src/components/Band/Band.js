@@ -38,6 +38,35 @@ const Band = () => {
                 <div className="card">
                     <div className="carousel-container">
                         <Carousel>
+                            <img src={`${process.env.PUBLIC_URL}bilder/leiebåndhvit.png`} alt="Nila" />
+                            <img src={`${process.env.PUBLIC_URL}bilder/leiebånd.jpg`} alt="Nila" />
+                            <img src={`${process.env.PUBLIC_URL}bilder/leieband1.jpg`} alt="Nila" />
+                            <img src={`${process.env.PUBLIC_URL}bilder/leieband2.jpg`} alt="Nila" />
+                        </Carousel>
+                    </div>
+                    <div className="card-content">
+                        <div>
+                            <h2>{strings.overraskileieband}</h2>
+                            <p>{strings.overraskleiebandtekst}</p>
+                        </div>
+                        <div>
+                            <p>{strings.fargetekst}</p>
+                            <p>{strings.lengdetekst}</p>
+                        </div>
+                        <div>
+                            <p>{strings.prisinfoband}</p>
+                            <p>{strings.vinylinfo}</p>
+                        </div>
+                        <NavLink
+                            className="card-button"
+                            activeclassname="nav-link-active"
+                            exact="true"
+                            to="/band/overraskband">Overraskelse Leiebånd</NavLink>
+                    </div>
+                </div>
+                <div className="card">
+                    <div className="carousel-container">
+                        <Carousel>
                             <img src={`${process.env.PUBLIC_URL}bilder/sporlinehvit.png`} alt="Nila" />
                             <img src={`${process.env.PUBLIC_URL}bilder/sporline1.jpg`} alt="Nila" />
                             <img src={`${process.env.PUBLIC_URL}bilder/sporline2.jpg`} alt="Nila" />

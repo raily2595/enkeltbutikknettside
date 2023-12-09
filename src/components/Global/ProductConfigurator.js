@@ -9,7 +9,7 @@ import KlipsSelector from "../Konfigurator/KlipsSelector";
 import SubmissionWindow from "./SubmissionWindow";
 import Lekebutton from "./Lekebutton";
 
-const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, harLengdecm, harBredde, harKrokband, harHandtak, harKrok, harTekst, harKlips, harRing, harFarge2, harLeke }) => {
+const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, harLengdecm, harBredde, harKrokband, harHandtak, harKrok, harTekst, harKlips, harRing, harFarge2, harLeke, overrask }) => {
     const [farge, setFarge] = useState("Lysblå");
     const [farge2, setFarge2] = useState("");
     const [onskerFarge2, setOnskerFarge2] = useState(false);
@@ -40,6 +40,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     const harRingbool = harRing;
     const harFarge2bool = harFarge2;
     const harLekebool = harLeke;
+    const overraskbool = overrask;
     const [harDataILocalStorage, setHarDataILocalStorage] = useState(false);
     const [showSubmissionWindow, setShowSubmissionWindow] = useState(false); // Track whether to show the submission window
     const [submissionSummary, setSubmissionSummary] = useState(""); // Summary of choices for the submission window
@@ -187,7 +188,8 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
 
     return (
         <div>
-            <div className="konfigurator-card">
+            {!overraskbool && (
+                <div className="konfigurator-card">
                 <div className="konfigurator-tekst">
                     <label>Hovedfarge</label>
                 </div>
@@ -299,6 +301,93 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                                     onFontChange={handleFontChange}
                                 />
                                 <ProductDisplay farge={farge} vinyltekst={vinyltekst} fontfarge={fontfarge} font={font} />
+                            </>
+                        )}
+                        <hr />
+                    </>
+                )}
+                <p>Pris: {pris} NOK</p>
+                <label>
+                    Kommentar:
+                    <textarea
+                        value={kommentar}
+                        onChange={handleKommentarChange}
+                        rows="4"
+                        cols="50"
+                    />
+                </label>
+                <SubmitButton
+                    onSaveConfig={handleAddConfig}
+                    onDeleteConfig={selectedConfigIndex !== null ? () => handleDeleteConfig(selectedConfigIndex) : null}
+                />
+                {showSubmissionWindow && (
+                    <SubmissionWindow
+                        onClose={handleClearSubmissionWindow}
+                        onContinueShopping={handleClearSubmissionWindow}
+                        summary={submissionSummary}
+                    />
+                )}
+            </div>
+            )}
+            <div className="konfigurator-card">
+                <div className="konfigurator-tekst">
+                    <label>Overraskelse</label>
+                </div>
+                {harLengdecmbool && (
+                    <>
+                        <label htmlFor="lengdecminput">Lengde i cm:</label>
+                        <input type="number" id="lengdecminput" className="brukerinput" value={lengde} onChange={handleLengdeChange} />
+                        <hr />
+                    </>
+                )}
+                {harLengdemeterbool && (
+                    <>
+                        <label htmlFor="lengdemeterinput">Lengde i meter:</label>
+                        <input type="number" id="lengdecminput" className="brukerinput" value={lengde} onChange={handleLengdeChange} />
+                        <hr />
+                    </>
+                )}
+                {harBreddebool && (
+                    <>
+                        <p>Bredde:</p>
+                        <label><input type="radio" value="16" onChange={handleBreddeChange} />16 mm</label>
+                        <label><input type="radio" value="25" onChange={handleBreddeChange} />25 mm</label>
+                        <hr />
+                    </>
+                )}
+                {harFarge2bool && (
+                    <>
+                        <div className="konfigurator-tekst">
+                            <label>
+                                <input type="checkbox" checked={onskerFarge2} onChange={handleOnskerFarge2Change} />
+                                Ønsker du 2 farget?
+                            </label>
+                        </div>
+                    </>
+                )}
+                {harTekstbool && (
+                    <>
+                        <div>
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    checked={onskerTekst}
+                                    onChange={handleOnskerTekstChange}
+                                />
+                                Ønsker du tekst?
+                            </label>
+                        </div>
+                        {onskerTekst && (
+                            <>
+                                <label>
+                                    Navn:
+                                    <textarea
+                                        value={kommentar}
+                                        onChange={handleTextChange}
+                                        rows="1"
+                                        cols="50"
+                                    />
+                                </label>
                             </>
                         )}
                         <hr />

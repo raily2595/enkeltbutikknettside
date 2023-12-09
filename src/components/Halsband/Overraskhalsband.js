@@ -1,30 +1,30 @@
 import React from "react";
 import ProductConfigurator from "../Global/ProductConfigurator";
-const Sporline = () => {
+const Overraskhalsband = () => {
     return (
         <div className="main-content">
             <div>
-                <h1>Sporline</h1>
+                <h1>Overraskelse Halsband</h1>
                 <ProductConfigurator
-                    navn={"sporline"}
-                    produktpris={200}
-                    prismeter={50}
-                    harLengdemeter={true}
-                    harLengdecm={false}
-                    harBredde={false}
+                    navn={"overraskhalsband"}
+                    produktpris={250}
+                    prismeter={0}
+                    harLengdemeter={false}
+                    harLengdecm={true}
+                    harBredde={true}
                     harKrokband={false}
                     harHandtak={false}
-                    harKrok={true}
+                    harKrok={false}
                     harTekst={true}
                     harKlips={false}
                     harRing={false}
-                    harFarge2={true}
+                    harFarge2={false}
                     harLeke={false}
-                    overrask={false}
+                    overrask={true}
                 />
             </div>
         </div>
     );
 };
 
-export default Sporline;
+export default Overraskhalsband;

@@ -23,7 +23,6 @@ const Halsband = () => {
                             <p>{strings.halsbandtekst}</p>
                         </div>
                         <div>
-                            <p>{strings.fargetekst}</p>
                             <p>{strings.lengdetekst}</p>
                         </div>
                         <div>
@@ -35,6 +34,34 @@ const Halsband = () => {
                             activeclassname="nav-link-active"
                             exact="true"
                             to="/halsband/klipsband">Halsbånd</NavLink>
+                    </div>
+                </div>
+                <div className="card">
+                    <div className="carousel-container">
+                        <Carousel>
+                            <img src={`${process.env.PUBLIC_URL}bilder/leiebåndhvit.png`} alt="Nila" />
+                            <img src={`${process.env.PUBLIC_URL}bilder/leiebånd.jpg`} alt="Nila" />
+                            <img src={`${process.env.PUBLIC_URL}bilder/leieband1.jpg`} alt="Nila" />
+                            <img src={`${process.env.PUBLIC_URL}bilder/leieband2.jpg`} alt="Nila" />
+                        </Carousel>
+                    </div>
+                    <div className="card-content">
+                        <div>
+                            <h2>{strings.overraskhalsband}</h2>
+                            <p>{strings.overraskhalsbandtekst}</p>
+                        </div>
+                        <div>
+                            <p>{strings.lengdetekst}</p>
+                        </div>
+                        <div>
+                            <p>{strings.prisinfooverraskhalsband}</p>
+                            <p>{strings.vinylinfo}</p>
+                        </div>
+                        <NavLink
+                            className="card-button"
+                            activeclassname="nav-link-active"
+                            exact="true"
+                            to="/halsband/overraskhalsband">Overraskelse Halsbånd</NavLink>
                     </div>
                 </div>
             </div>

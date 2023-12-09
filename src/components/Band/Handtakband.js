@@ -20,6 +20,7 @@ const Handtakband = () => {
                     harRing={true}
                     harFarge2={true}
                     harLeke={false}
+                    overrask={false}
                 />
             </div>
         </div>

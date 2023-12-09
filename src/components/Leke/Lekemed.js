@@ -20,6 +20,7 @@ const Lekemed = () => {
                     harRing={false}
                     harFarge2={true}
                     harLeke={true}
+                    overrask={false}
                 />
             </div>
         </div>

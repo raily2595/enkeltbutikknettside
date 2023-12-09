@@ -20,6 +20,7 @@ const Leieband = () => {
                     harRing={false}
                     harFarge2={true}
                     harLeke={false}
+                    overrask={false}
                 />
             </div>
         </div>

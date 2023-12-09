@@ -20,6 +20,7 @@ const Handtak = () => {
                     harRing={false}
                     harFarge2={false}
                     harLeke={false}
+                    overrask={false}
                 />
             </div>
         </div>
