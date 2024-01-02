@@ -5,10 +5,8 @@ import ColorSelector from "../Konfigurator/ColorSelector";
 import TextSettings from "../Konfigurator/TextSettings";
 import SubmitButton from "../Konfigurator/SubmitButton";
 import ConfigList from "./ConfigList";
-import KlipsSelector from "../Konfigurator/KlipsSelector";
-import MetallSelector from "../Konfigurator/MetallSelector";
 import SubmissionWindow from "./SubmissionWindow";
-import Lekebutton from "./Lekebutton";
+import { MetallSelector, LekeSelector, KlipsSelector } from '../Konfigurator/Selectors';
 
 const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, harLengdecm, harBredde, harKrokband, harHandtak, harKrok, harTekst, harKlips, harRing, harFarge2, harLeke }) => {
     const [farge, setFarge] = useState("Lysblå");
@@ -232,45 +230,12 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                         <hr />
                     </>
                 )}
-                <MetallSelector farge={detaljefarger} onColorChange={handleDetaljefarger} />
+                <MetallSelector handleChange={handleDetaljefarger} />
                 {harKlipsbool && (
-                    <KlipsSelector farge={klips} onColorChange={handleKlipsChange} />
+                    <KlipsSelector farge={klips} handleChange={handleKlipsChange} />
                 )}
                 {harLekebool && (
-                    <>
-                        <Lekebutton
-                            image={`${process.env.PUBLIC_URL}/leker/leke.png`}
-                            type="lekeXS"
-                            pris={109}
-                            onSelect={handleProductSelect}
-                            selected={valgtLeke === 'lekeXS'}
-                            diameter={5}
-                        />
-                        <Lekebutton
-                            image={`${process.env.PUBLIC_URL}/leker/leke.png`}
-                            type="lekeS"
-                            pris={149}
-                            onSelect={handleProductSelect}
-                            selected={valgtLeke === 'lekeS'}
-                            diameter={8}
-                        />
-                        <Lekebutton
-                            image={`${process.env.PUBLIC_URL}/leker/leke.png`}
-                            type="lekeM"
-                            pris={169}
-                            onSelect={handleProductSelect}
-                            selected={valgtLeke === 'lekeM'}
-                            diameter={12}
-                        />
-                        <Lekebutton
-                            image={`${process.env.PUBLIC_URL}/leker/leke.png`}
-                            type="lekeL"
-                            pris={229}
-                            onSelect={handleProductSelect}
-                            selected={valgtLeke === 'lekeL'}
-                            diameter={14}
-                        />
-                    </>
+                    <LekeSelector handleChange={handleProductSelect} />
                 )}
                 {harTekstbool && (
                     <>
