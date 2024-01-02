@@ -232,14 +232,14 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                 {harLengdecmbool && (
                     <>
                         <h3 htmlFor="lengdecminput">Lengde i cm</h3>
-                        <input type="number" id="lengdecminput" value={lengde} onChange={handleLengdeChange} style={{ fontSize: 16, }} />
+                        <input type="number" id="lengdecminput" value={lengde} placeholder="45" onChange={handleLengdeChange} style={{ fontSize: 16, }} />
                         <hr className="konfigurator-divider" />
                     </>
                 )}
                 {harLengdemeterbool && (
                     <>
                         <h3 htmlFor="lengdemeterinput">Lengde i meter</h3>
-                        <input type="number" id="lengdemeterinput" value={lengde} onChange={handleLengdeChange} style={{ fontSize: 16, }} />
+                        <input type="number" id="lengdemeterinput" value={lengde} placeholder="1,5" onChange={handleLengdeChange} style={{ fontSize: 16, }} />
                         <hr className="konfigurator-divider" />
                     </>
                 )}

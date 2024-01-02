@@ -5,13 +5,16 @@ const TextSettings = ({ text, onTextChange, font, onFontChange }) => {
 
     return (
         <div className="konfigurator-tekst">
-            <input
-                type="text" value={text}
-                placeholder="Hundenavn"
-                onChange={(e) => onTextChange(e.target.value)}
-                style={{ fontSize: 16, }} />
             <div>
-                <label>Skrifttype: </label>
+                <label>Tekst</label>
+                <input
+                    type="text" value={text}
+                    placeholder="Hundenavn"
+                    onChange={(e) => onTextChange(e.target.value)}
+                    style={{ fontSize: 16, }} />
+            </div>
+            <div>
+                <label>Skrifttype</label>
                 <select
                     value={font}
                     onChange={(e) => onFontChange(e.target.value)}
