@@ -187,11 +187,9 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     return (
         <div>
             <div className="konfigurator-card">
-                <div className="konfigurator-tekst">
-                    <label>Hovedfarge</label>
-                </div>
+                <h3>Hovedfarge</h3>
                 <ColorSelector farge={farge} onColorChange={handleColorChange} />
-                <hr />
+                <hr className="konfigurator-divider" />
                 {harFarge2bool && (
                     <>
                         <div className="konfigurator-tekst">
@@ -205,41 +203,12 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                                 <ColorSelector farge={farge2} tittel="abc" onColorChange={handleColorChange2} />
                             </>
                         )}
-                        <hr />
+                        <hr className="konfigurator-divider" />
                     </>
-                )}
-                {harLengdecmbool && (
-                    <>
-                        <label htmlFor="lengdecminput">Lengde i cm:</label>
-                        <input type="number" id="lengdecminput" className="brukerinput" value={lengde} onChange={handleLengdeChange} />
-                        <hr />
-                    </>
-                )}
-                {harLengdemeterbool && (
-                    <>
-                        <label htmlFor="lengdemeterinput">Lengde i meter:</label>
-                        <input type="number" id="lengdecminput" className="brukerinput" value={lengde} onChange={handleLengdeChange} />
-                        <hr />
-                    </>
-                )}
-                {harBreddebool && (
-                    <>
-                        <p>Bredde:</p>
-                        <label><input type="radio" value="16" onChange={handleBreddeChange} />16 mm</label>
-                        <label><input type="radio" value="25" onChange={handleBreddeChange} />25 mm</label>
-                        <hr />
-                    </>
-                )}
-                <MetallSelector handleChange={handleDetaljefarger} />
-                {harKlipsbool && (
-                    <KlipsSelector farge={klips} handleChange={handleKlipsChange} />
-                )}
-                {harLekebool && (
-                    <LekeSelector handleChange={handleProductSelect} />
                 )}
                 {harTekstbool && (
                     <>
-                        <div>
+                        <div className="konfigurator-tekst">
                             <label>
                                 <input
                                     type="checkbox"
@@ -262,12 +231,56 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                                 <ProductDisplay farge={farge} vinyltekst={vinyltekst} fontfarge={fontfarge} font={font} />
                             </>
                         )}
-                        <hr />
+                        <hr className="konfigurator-divider" />
                     </>
                 )}
-                <p>Pris: {pris} NOK</p>
+                {harLengdecmbool && (
+                    <>
+                        <div className="konfigurator-tekst">
+                            <label htmlFor="lengdecminput">Lengde i cm: </label>
+                            <input type="number" id="lengdecminput" className="brukerinput" value={lengde} onChange={handleLengdeChange} />
+                            <hr className="konfigurator-divider" />
+                        </div>
+                    </>
+                )}
+                {harLengdemeterbool && (
+                    <div className="konfigurator-tekst">
+                        <label htmlFor="lengdemeterinput">Lengde i meter: </label>
+                        <input type="number" id="lengdemeterinput" className="brukerinput" value={lengde} onChange={handleLengdeChange} />
+                        <hr className="konfigurator-divider" />
+                    </div>
+                )}
+                {harBreddebool && (
+                    <>
+                        <p>Bredde:</p>
+                        <label><input type="radio" value="16" onChange={handleBreddeChange} />16 mm</label>
+                        <label><input type="radio" value="25" onChange={handleBreddeChange} />25 mm</label>
+                        <hr className="konfigurator-divider" />
+                    </>
+                )}
+                <>
+                    <h3>Metallfarge (skruer, kroker, d-ring)</h3>
+                    <MetallSelector handleChange={handleDetaljefarger} />
+                    <hr className="konfigurator-divider" />
+                </>
+                {harKlipsbool && (
+                    <>
+                        <h3>Klipsfarge</h3>
+                        <KlipsSelector farge={klips} handleChange={handleKlipsChange} />
+                        <hr className="konfigurator-divider" />
+                    </>
+                )}
+                {harLekebool && (
+                    <>
+                        <h3>Velg leke</h3>
+                        <LekeSelector handleChange={handleProductSelect} />
+                        <hr className="konfigurator-divider" />
+                    </>
+                )}
                 <label>
-                    Kommentar:
+                    <div className="konfigurator-tekst">
+                        <h3>Kommentar</h3>
+                    </div>
                     <textarea
                         value={kommentar}
                         onChange={handleKommentarChange}
@@ -275,6 +288,8 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                         cols="50"
                     />
                 </label>
+                <hr className="konfigurator-divider" />
+                <h3>Pris: {pris} NOK</h3>
                 <SubmitButton
                     onSaveConfig={handleAddConfig}
                     onDeleteConfig={selectedConfigIndex !== null ? () => handleDeleteConfig(selectedConfigIndex) : null}

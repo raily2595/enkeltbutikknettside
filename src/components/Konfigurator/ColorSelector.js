@@ -37,26 +37,28 @@ const calculateBackgroundColor = (inputColor) => {
 const ColorButtons = ({ onColorChange }) => {
     const [selectedColor, setSelectedColor] = useState("Lysblå"); // Initialize with a default selection
     return (
-        <div className='konfigurator-fargeboks'>
-            {colors.map((color) => (
-                <button
-                    key={color}
-                    style={{
-                        backgroundColor: calculateBackgroundColor(color),
-                        padding: 6,
-                        width: 180,
-                        fontSize: 16,
-                        fontWeight: 'bold',
-                        border: color === selectedColor ? "4px solid #000" : "4px solid transparent", //Border for the selected color
-                    }}
-                    onClick={() => {
-                        onColorChange(color);
-                        setSelectedColor(color);
-                    }}
-                >
-                    {color}
-                </button>
-            ))}
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+            <div className='konfigurator-fargeboks'>
+                {colors.map((color) => (
+                    <button
+                        key={color}
+                        style={{
+                            backgroundColor: calculateBackgroundColor(color),
+                            padding: 6,
+                            width: 180,
+                            fontSize: 16,
+                            fontWeight: 'bold',
+                            border: color === selectedColor ? "4px solid #000" : "4px solid transparent", //Border for the selected color
+                        }}
+                        onClick={() => {
+                            onColorChange(color);
+                            setSelectedColor(color);
+                        }}
+                    >
+                        {color}
+                    </button>
+                ))}
+            </div>
         </div>
     );
 };

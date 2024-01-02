@@ -23,13 +23,13 @@ const klipsValg = {
 };
 
 export const MetallSelector = ({ handleChange }) => (
-    <PictureButtons options={metallValg} onColorChange={handleChange} title="Metallfarge (skruer, kroker, d-ring)" />
+    <PictureButtons options={metallValg} onColorChange={handleChange} />
 );
 
 export const LekeSelector = ({ handleChange }) => (
-    <PictureButtons options={lekeValg} onColorChange={handleChange} title="Velg leke" />
+    <PictureButtons options={lekeValg} onColorChange={handleChange} />
 );
 
 export const KlipsSelector = ({ handleChange }) => (
-    <PictureButtons options={klipsValg} onColorChange={handleChange} title="Klipsfarge" />
+    <PictureButtons options={klipsValg} onColorChange={handleChange} />
 );
