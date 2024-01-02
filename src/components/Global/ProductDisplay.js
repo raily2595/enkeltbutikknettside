@@ -10,6 +10,7 @@ const ProductDisplay = ({ farge, vinyltekst, fontfarge, font }) => {
                 fontFamily: font,
                 fontSize: "56px",
                 padding: "12px",
+                margin: "12px"
             }}>
             <div>
                 {vinyltekst}

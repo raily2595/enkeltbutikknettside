@@ -11,14 +11,14 @@ const TextSettings = ({ text, onTextChange, font, onFontChange }) => {
                     type="text" value={text}
                     placeholder="Hundenavn"
                     onChange={(e) => onTextChange(e.target.value)}
-                    style={{ fontSize: 16, }} />
+                    style={{ fontSize: 16, width: '180px', margin: '8px' }} />
             </div>
             <div>
                 <label>Skrifttype</label>
                 <select
                     value={font}
                     onChange={(e) => onFontChange(e.target.value)}
-                    style={{ fontSize: 16, }}  >
+                    style={{ fontSize: 16, width: '180px', margin: '8px' }}  >
                     {fonts.map((fontOption) => (
                         <option key={fontOption} value={fontOption} style={{ fontSize: 16, }}>
                             {fontOption}
