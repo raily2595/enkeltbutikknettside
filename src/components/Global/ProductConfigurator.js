@@ -18,7 +18,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     const [configurations, setConfigurations] = useState([]);
     const [selectedConfigIndex, setSelectedConfigIndex] = useState(null);
     const [lengde, setLengde] = useState(0);
-    const [bredde, setBredde] = useState(16);
+    const [bredde, setBredde] = useState(25);
     const [detaljefarger, setDetaljefarger] = useState("sølv");
     const [klips, setKlips] = useState("");
     const [pris, setPris] = useState(produktpris);
@@ -231,48 +231,64 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                 )}
                 {harLengdecmbool && (
                     <>
-                        <h3 htmlFor="lengdecminput">Lengde i cm</h3>
+                        <div className="konfigurator-tittel">
+                            <label>Lengde i cm</label>
+                        </div>
                         <input type="number" id="lengdecminput" value={lengde} placeholder="45" onChange={handleLengdeChange} style={{ fontSize: 16, }} />
                         <hr className="konfigurator-divider" />
                     </>
                 )}
                 {harLengdemeterbool && (
                     <>
-                        <h3 htmlFor="lengdemeterinput">Lengde i meter</h3>
+                        <div className="konfigurator-tittel">
+                            <label>Lengde i meter</label>
+                        </div>
                         <input type="number" id="lengdemeterinput" value={lengde} placeholder="1,5" onChange={handleLengdeChange} style={{ fontSize: 16, }} />
                         <hr className="konfigurator-divider" />
                     </>
                 )}
                 {harBreddebool && (
                     <>
-                        <h3>Bredde</h3>
-                        <label><input type="radio" value="16" onChange={handleBreddeChange} />16 mm</label>
-                        <label><input type="radio" value="25" onChange={handleBreddeChange} />25 mm</label>
+                        <div className="konfigurator-tittel">
+                            <label>Bredde</label>
+                        </div>
+                        <div>
+                            <label><input name="bredde" type="radio" style={{ margin: '12px' }} value="16" onChange={handleBreddeChange} />16 mm - for hunder under 5kg</label>
+                        </div>
+                        <div>
+                            <label><input name="bredde" type="radio" style={{ margin: '12px' }} value="25" onChange={handleBreddeChange} checked={true} />25 mm - passer de fleste hunder</label>
+                        </div>
                         <hr className="konfigurator-divider" />
                     </>
                 )}
                 <>
-                    <h3>Metallfarge (skruer, kroker, d-ring)</h3>
+                    <div className="konfigurator-tittel">
+                        <label>Metallfarge (skruer, kroker, d-ring)</label>
+                    </div>
                     <MetallSelector onSelection={handleDetaljefarger} />
                     <hr className="konfigurator-divider" />
                 </>
                 {harKlipsbool && (
                     <>
-                        <h3>Klipsfarge</h3>
+                        <div className="konfigurator-tittel">
+                            <label>Klipsfarge</label>
+                        </div>
                         <KlipsSelector farge={klips} onSelection={handleKlipsChange} />
                         <hr className="konfigurator-divider" />
                     </>
                 )}
                 {harLekebool && (
                     <>
-                        <h3>Velg leke</h3>
+                        <div className="konfigurator-tittel">
+                            <label>Velg leke</label>
+                        </div>
                         <LekeSelector onSelection={handleProductSelect} />
                         <hr className="konfigurator-divider" />
                     </>
                 )}
                 <label>
-                    <div className="konfigurator-tekst">
-                        <h3>Kommentar</h3>
+                    <div className="konfigurator-tittel">
+                        <label>Kommentar</label>
                     </div>
                     <textarea
                         value={kommentar}
@@ -282,7 +298,9 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                     />
                 </label>
                 <hr className="konfigurator-divider" />
-                <h3>Pris: {pris} NOK</h3>
+                <div className="konfigurator-tittel">
+                    <label>Pris: {pris} NOK</label>
+                </div>
                 <SubmitButton
                     onSaveConfig={handleAddConfig}
                     onDeleteConfig={selectedConfigIndex !== null ? () => handleDeleteConfig(selectedConfigIndex) : null}
@@ -295,17 +313,19 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                     />
                 )}
             </div>
-            {harDataILocalStorage && (
-                <>
-                    <div className="konfigurator-card">
-                        <ConfigList
-                            configurations={configurations}
-                            onDeleteConfig={handleDeleteConfig}
-                        />
-                    </div>
-                </>
-            )}
-        </div>
+            {
+                harDataILocalStorage && (
+                    <>
+                        <div className="konfigurator-card">
+                            <ConfigList
+                                configurations={configurations}
+                                onDeleteConfig={handleDeleteConfig}
+                            />
+                        </div>
+                    </>
+                )
+            }
+        </div >
     );
 };
 
