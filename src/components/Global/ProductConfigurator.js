@@ -187,17 +187,15 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     return (
         <div>
             <div className="konfigurator-card">
-                <h3>Hovedfarge</h3>
+                <label className="konfigurator-tittel">Hovedfarge</label>
                 <ColorSelector farge={farge} onColorChange={handleColorChange} />
                 <hr className="konfigurator-divider" />
                 {harFarge2bool && (
                     <>
-                        <div className="konfigurator-tekst">
-                            <label>
-                                <input type="checkbox" checked={onskerFarge2} onChange={handleOnskerFarge2Change} />
-                                Ønsker du en farge til?
-                            </label>
-                        </div>
+                        <label className="konfigurator-tittel">
+                            <input type="checkbox" checked={onskerFarge2} onChange={handleOnskerFarge2Change} />
+                            Ønsker du en farge til?
+                        </label>
                         {onskerFarge2 && (
                             <>
                                 <ColorSelector farge={farge2} tittel="abc" onColorChange={handleColorChange2} />
@@ -208,16 +206,14 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                 )}
                 {harTekstbool && (
                     <>
-                        <div className="konfigurator-tekst">
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    checked={onskerTekst}
-                                    onChange={handleOnskerTekstChange}
-                                />
-                                Ønsker du tekst?
-                            </label>
-                        </div>
+                        <label className="konfigurator-tittel">
+                            <input
+                                type="checkbox"
+                                checked={onskerTekst}
+                                onChange={handleOnskerTekstChange}
+                            />
+                            Ønsker du tekst?
+                        </label>
                         {onskerTekst && (
                             <>
                                 <TextSettings
@@ -236,23 +232,21 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                 )}
                 {harLengdecmbool && (
                     <>
-                        <div className="konfigurator-tekst">
-                            <label htmlFor="lengdecminput">Lengde i cm: </label>
-                            <input type="number" id="lengdecminput" className="brukerinput" value={lengde} onChange={handleLengdeChange} />
-                            <hr className="konfigurator-divider" />
-                        </div>
+                        <h3 htmlFor="lengdecminput">Lengde i cm</h3>
+                        <input type="number" id="lengdecminput" value={lengde} onChange={handleLengdeChange} style={{ fontSize: 16, }} />
+                        <hr className="konfigurator-divider" />
                     </>
                 )}
                 {harLengdemeterbool && (
-                    <div className="konfigurator-tekst">
-                        <label htmlFor="lengdemeterinput">Lengde i meter: </label>
-                        <input type="number" id="lengdemeterinput" className="brukerinput" value={lengde} onChange={handleLengdeChange} />
+                    <>
+                        <h3 htmlFor="lengdemeterinput">Lengde i meter</h3>
+                        <input type="number" id="lengdemeterinput" value={lengde} onChange={handleLengdeChange} style={{ fontSize: 16, }} />
                         <hr className="konfigurator-divider" />
-                    </div>
+                    </>
                 )}
                 {harBreddebool && (
                     <>
-                        <p>Bredde:</p>
+                        <h3>Bredde</h3>
                         <label><input type="radio" value="16" onChange={handleBreddeChange} />16 mm</label>
                         <label><input type="radio" value="25" onChange={handleBreddeChange} />25 mm</label>
                         <hr className="konfigurator-divider" />

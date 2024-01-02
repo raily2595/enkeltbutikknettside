@@ -22,6 +22,10 @@ const klipsValg = {
     Beige: `${process.env.PUBLIC_URL}/klips/beigeklips.jpg`,
 };
 
+const biothaneValg = ["Lysblå", "Laguneblå", "Karibigrønn", "Eplegrønn", "Ferskenorange", "Beige", "Neonrosa", "Ametyst", "Korall", "Rød", "Vinrød", "Rødbrun"];
+
+const vinylValg = ["Sølv", "Gull", "Hvit", "Svart", "Lys grønn", "Mørk grønn", "Neon gull", "Neon orange", "Lys blå", "Mørk blå", "Rød", "Brun", "Turkis", "Lys rosa", "Mørk rosa", "Lilla", "Beige"];
+
 export const MetallSelector = ({ handleChange }) => (
     <PictureButtons options={metallValg} onColorChange={handleChange} />
 );
@@ -32,4 +36,12 @@ export const LekeSelector = ({ handleChange }) => (
 
 export const KlipsSelector = ({ handleChange }) => (
     <PictureButtons options={klipsValg} onColorChange={handleChange} />
+);
+
+export const BiothaneSelector = ({ handleChange }) => (
+    <PictureButtons options={biothaneValg} onColorChange={handleChange} />
+);
+
+export const VinylSelector = ({ handleChange }) => (
+    <PictureButtons options={vinylValg} onColorChange={handleChange} />
 );

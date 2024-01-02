@@ -1,4 +1,3 @@
-// TextSettings.js
 import React from "react";
 
 const TextSettings = ({ text, onTextChange, onTextColorChange, font, onFontChange }) => {
