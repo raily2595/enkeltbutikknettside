@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const PictureButtons = ({ options, onColorChange }) => {
+const PictureButtons = ({ options, onSelectionChange }) => {
     const defaultOption = Object.keys(options)[0];
     const [selected, setSelected] = useState(defaultOption); // Initialize with a default selection
 
@@ -21,7 +21,7 @@ const PictureButtons = ({ options, onColorChange }) => {
                         border: option === selected ? "4px solid #000" : "4px solid transparent", // Border for the selected color
                     }}
                     onClick={() => {
-                        onColorChange(option)
+                        onSelectionChange(option)
                         setSelected(option)
                     }}
                 >

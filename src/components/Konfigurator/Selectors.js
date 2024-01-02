@@ -1,5 +1,6 @@
 import React from 'react';
 import PictureButtons from "../Konfigurator/PictureSelector";
+import ColorButtons from "../Konfigurator/ColorSelector";
 
 const metallValg = {
     Sølv: `${process.env.PUBLIC_URL}/metall/sølvmetall.png`,
@@ -22,26 +23,26 @@ const klipsValg = {
     Beige: `${process.env.PUBLIC_URL}/klips/beigeklips.jpg`,
 };
 
-const biothaneValg = ["Lysblå", "Laguneblå", "Karibigrønn", "Eplegrønn", "Ferskenorange", "Beige", "Neonrosa", "Ametyst", "Korall", "Rød", "Vinrød", "Rødbrun"];
+const biothaneValg = ["Lyseblå", "Laguneblå", "Karibigrønn", "Eplegrønn", "Ferskenoransje", "Beige", "Neonrosa", "Ametyst", "Korall", "Rød", "Vinrød", "Rødbrun"];
 
-const vinylValg = ["Sølv", "Gull", "Hvit", "Svart", "Lys grønn", "Mørk grønn", "Neon gull", "Neon orange", "Lys blå", "Mørk blå", "Rød", "Brun", "Turkis", "Lys rosa", "Mørk rosa", "Lilla", "Beige"];
+const vinylValg = ["Sølv", "Gull", "Hvit", "Svart", "Lysegrønn", "Mørkegrønn", "Neongull", "Neonoransje", "Lyseblå2", "Mørkeblå", "Rød", "Brun", "Turkis", "Lyserosa", "Mørkerosa", "Lilla", "Beige2"];
 
-export const MetallSelector = ({ handleChange }) => (
-    <PictureButtons options={metallValg} onColorChange={handleChange} />
+export const MetallSelector = ({ onSelection }) => (
+    <PictureButtons options={metallValg} onSelectionChange={onSelection} />
 );
 
-export const LekeSelector = ({ handleChange }) => (
-    <PictureButtons options={lekeValg} onColorChange={handleChange} />
+export const LekeSelector = ({ onSelection }) => (
+    <PictureButtons options={lekeValg} onSelectionChange={onSelection} />
 );
 
-export const KlipsSelector = ({ handleChange }) => (
-    <PictureButtons options={klipsValg} onColorChange={handleChange} />
+export const KlipsSelector = ({ onSelection }) => (
+    <PictureButtons options={klipsValg} onSelectionChange={onSelection} />
 );
 
-export const BiothaneSelector = ({ handleChange }) => (
-    <PictureButtons options={biothaneValg} onColorChange={handleChange} />
+export const BiothaneSelector = ({ onSelection }) => (
+    <ColorButtons options={biothaneValg} onSelectionChange={onSelection} />
 );
 
-export const VinylSelector = ({ handleChange }) => (
-    <PictureButtons options={vinylValg} onColorChange={handleChange} />
+export const VinylSelector = ({ onSelection }) => (
+    <ColorButtons options={vinylValg} onSelectionChange={onSelection} />
 );

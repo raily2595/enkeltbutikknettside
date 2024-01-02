@@ -1,12 +1,11 @@
 // ProductConfigurator.js
 import React, { useState, useEffect } from "react";
 import ProductDisplay from "./ProductDisplay";
-import ColorSelector from "../Konfigurator/ColorSelector";
 import TextSettings from "../Konfigurator/TextSettings";
 import SubmitButton from "../Konfigurator/SubmitButton";
 import ConfigList from "./ConfigList";
 import SubmissionWindow from "./SubmissionWindow";
-import { MetallSelector, LekeSelector, KlipsSelector } from '../Konfigurator/Selectors';
+import { BiothaneSelector, VinylSelector, MetallSelector, LekeSelector, KlipsSelector } from '../Konfigurator/Selectors';
 
 const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, harLengdecm, harBredde, harKrokband, harHandtak, harKrok, harTekst, harKlips, harRing, harFarge2, harLeke }) => {
     const [farge, setFarge] = useState("Lysblå");
@@ -14,7 +13,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     const [onskerFarge2, setOnskerFarge2] = useState(false);
     const [onskerTekst, setOnskerTekst] = useState(false);
     const [vinyltekst, setVinyltekst] = useState("Hundenavn");
-    const [fontfarge, setFontfarge] = useState("#c0c0c0");
+    const [fontfarge, setFontfarge] = useState("Sølv");
     const [font, setFont] = useState("Handskrevet");
     const [configurations, setConfigurations] = useState([]);
     const [selectedConfigIndex, setSelectedConfigIndex] = useState(null);
@@ -105,8 +104,8 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         setVinyltekst(newText);
     };
 
-    const handleTextColorChange = (newColor) => {
-        setFontfarge(newColor);
+    const handleTextColorChange = (color) => {
+        setFontfarge(color);
     };
 
     const handleFontChange = (newFont) => {
@@ -188,7 +187,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         <div>
             <div className="konfigurator-card">
                 <label className="konfigurator-tittel">Hovedfarge</label>
-                <ColorSelector farge={farge} onColorChange={handleColorChange} />
+                <BiothaneSelector onSelection={handleColorChange} />
                 <hr className="konfigurator-divider" />
                 {harFarge2bool && (
                     <>
@@ -198,7 +197,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                         </label>
                         {onskerFarge2 && (
                             <>
-                                <ColorSelector farge={farge2} tittel="abc" onColorChange={handleColorChange2} />
+                                <BiothaneSelector onSelection={handleColorChange2} />
                             </>
                         )}
                         <hr className="konfigurator-divider" />
@@ -220,10 +219,10 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                                     vinyltekst={vinyltekst}
                                     onTextChange={handleTextChange}
                                     fontfarge={fontfarge}
-                                    onTextColorChange={handleTextColorChange}
                                     font={font}
                                     onFontChange={handleFontChange}
                                 />
+                                <VinylSelector onSelection={handleTextColorChange} />
                                 <ProductDisplay farge={farge} vinyltekst={vinyltekst} fontfarge={fontfarge} font={font} />
                             </>
                         )}
@@ -254,20 +253,20 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                 )}
                 <>
                     <h3>Metallfarge (skruer, kroker, d-ring)</h3>
-                    <MetallSelector handleChange={handleDetaljefarger} />
+                    <MetallSelector onSelection={handleDetaljefarger} />
                     <hr className="konfigurator-divider" />
                 </>
                 {harKlipsbool && (
                     <>
                         <h3>Klipsfarge</h3>
-                        <KlipsSelector farge={klips} handleChange={handleKlipsChange} />
+                        <KlipsSelector farge={klips} onSelection={handleKlipsChange} />
                         <hr className="konfigurator-divider" />
                     </>
                 )}
                 {harLekebool && (
                     <>
                         <h3>Velg leke</h3>
-                        <LekeSelector handleChange={handleProductSelect} />
+                        <LekeSelector onSelection={handleProductSelect} />
                         <hr className="konfigurator-divider" />
                     </>
                 )}
