@@ -25,7 +25,7 @@ const klipsValg = {
 
 const biothaneValg = ["Lyseblå", "Laguneblå", "Karibigrønn", "Eplegrønn", "Ferskenoransje", "Beige", "Neonrosa", "Ametyst", "Korall", "Rød", "Vinrød", "Rødbrun"];
 
-const vinylValg = ["Sølv", "Gull", "Hvit", "Svart", "Lysegrønn", "Mørkegrønn", "Neongull", "Neonoransje", "Lyseblå2", "Mørkeblå", "Rød", "Brun", "Turkis", "Lyserosa", "Mørkerosa", "Lilla", "Beige2"];
+const vinylValg = ["Sølv", "Gull", "Hvit", "Svart", "Lysegrønn", "Mørkegrønn", "Neongull", "Neonoransje", "Himmelblå", "Mørkeblå", "Rød", "Brun", "Turkis", "Lyserosa", "Mørkerosa", "Lilla", "Sand"];
 
 export const MetallSelector = ({ onSelection }) => (
     <PictureButtons options={metallValg} onSelectionChange={onSelection} />

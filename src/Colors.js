@@ -41,7 +41,7 @@ const mapColorToHex = (inputColor) => {
             return "#f3eb03";
         case "Neonoransje":
             return "#f89721";
-        case "Lyseblå2":
+        case "Himmelblå":
             return "#99dbf6";
         case "Mørkeblå":
             return "#1796d4";
@@ -57,7 +57,7 @@ const mapColorToHex = (inputColor) => {
             return "#f15377";
         case "Lilla":
             return "#cfb4d3";
-        case "Beige2":
+        case "Sand":
             return "#eed4b3";
 
         default:
