@@ -48,6 +48,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         if (savedConfigurations) {
             setConfigurations(savedConfigurations);
         }
+        CheckHandlekurv();
     }, []);
 
     useEffect(() => {
@@ -156,7 +157,8 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
 
         setConfigurations([...configurations, newConfig]);
         setSelectedConfigIndex(null);
-        setHarDataILocalStorage(true);
+        CheckHandlekurv();
+
         let summary = `Produkt: ${newConfig.produktnavn},Farge: ${newConfig.farge},`;
         if (newConfig.onskerFarge2) {
             summary += ` Farge 2: ${newConfig.farge2},`;
@@ -186,11 +188,13 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         const updatedConfigurations = [...configurations];
         updatedConfigurations.splice(index, 1);
         setConfigurations(updatedConfigurations);
-        const dataILocalStorage = localStorage.getItem('productConfigurations');
-        if (!dataILocalStorage) {
-            setHarDataILocalStorage(false);
-        }
+        CheckHandlekurv();
     };
+
+    const CheckHandlekurv = () => {
+        const dataILocalStorage = localStorage.getItem('productConfigurations');
+        setHarDataILocalStorage(dataILocalStorage);
+    }
 
     return (
         <div>
@@ -318,14 +322,14 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                     onDeleteConfig={selectedConfigIndex !== null ? () => handleDeleteConfig(selectedConfigIndex) : null}
                 />
             </div>
-            <div className="konfigurator-card">
-                {showSubmissionWindow && (
+            {showSubmissionWindow && (
+                <div className="konfigurator-card">
                     <SubmissionWindow
                         onClose={handleClearSubmissionWindow}
                         summary={submissionSummary}
                     />
-                )}
-            </div>
+                </div>
+            )}
             {
                 harDataILocalStorage && (
                     <>
