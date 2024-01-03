@@ -317,10 +317,11 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                     onSaveConfig={handleAddConfig}
                     onDeleteConfig={selectedConfigIndex !== null ? () => handleDeleteConfig(selectedConfigIndex) : null}
                 />
+            </div>
+            <div className="konfigurator-card">
                 {showSubmissionWindow && (
                     <SubmissionWindow
                         onClose={handleClearSubmissionWindow}
-                        onContinueShopping={handleClearSubmissionWindow}
                         summary={submissionSummary}
                     />
                 )}
