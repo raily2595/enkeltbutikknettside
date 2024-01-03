@@ -63,8 +63,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
 
 
     useEffect(() => {
-        // Save configurations to localStorage whenever they change
-        if (configurations.length > 0) localStorage.setItem("productConfigurations", JSON.stringify(configurations));
+        localStorage.setItem("productConfigurations", JSON.stringify(configurations));
     }, [configurations]);
 
     const handleOnskerTekstChange = (e) => {
