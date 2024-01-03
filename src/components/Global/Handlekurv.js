@@ -1,8 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const ConfigList = ({ configurations, onDeleteConfig }) => {
-    // Calculate the total sum of prices
+const Handlekurv = ({ configurations, onDeleteConfig }) => {
     const totalSum = configurations.reduce((sum, config) => sum + config.pris, 0);
 
     return (
@@ -49,4 +48,4 @@ const ConfigList = ({ configurations, onDeleteConfig }) => {
     );
 };
 
-export default ConfigList;
+export default Handlekurv;

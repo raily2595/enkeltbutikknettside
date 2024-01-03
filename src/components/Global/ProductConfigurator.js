@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import ProductDisplay from "./ProductDisplay";
 import TextSettings from "../Konfigurator/TextSettings";
 import SubmitButton from "../Konfigurator/SubmitButton";
-import ConfigList from "./ConfigList";
+import Handlekurv from "./Handlekurv";
 import SubmissionWindow from "./SubmissionWindow";
 import { BiothaneSelector, VinylSelector, MetallSelector, LekeSelector, KlipsSelector } from '../Konfigurator/Selectors';
 
@@ -334,7 +334,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                 harDataILocalStorage && (
                     <>
                         <div className="konfigurator-card">
-                            <ConfigList
+                            <Handlekurv
                                 configurations={configurations}
                                 onDeleteConfig={handleDeleteConfig}
                             />
