@@ -47,42 +47,40 @@ const Handlekurv = () => {
     };
 
     return (
-        <div>
-            <h2>Handlekurv</h2>
+        <div className="main-content">
             {handlekurvItems.length === 0 ? (
-                <p>Handlekurven er tom</p>
+                <div>
+                    <h2>Handlekurv</h2>
+                    <p>Handlekurven er tom</p>
+                </div>
             ) : (
                 <div className="handlekurv">
-                    <NavLink
-                        className="card-button"
-                        exact="true"
-                        to="/kasse"
-                    >
-                        Til kassen
-                    </NavLink>
-                    <ul>
+                    <h2>Handlekurv</h2>
+
+                    <ul className="no-bullets">
                         {handlekurvItems.map((item, index) => (
                             <li key={index}>
-                                <div className="konfigurator-tittel">
-                                    <label>{item.produktnavn}</label>
-                                </div>
-                                <div>
-                                    <label>{fargetekst(item)}</label>
-                                </div>
-                                {item.onskerTekst && (
-                                    <div>
-                                        <label>{item.fontfarge} {item.font} tekst "{item.vinyltekst}"</label>
+                                <div className="konfigurator-card">
+                                    <div className="konfigurator-tittel">
+                                        <label>{item.produktnavn}</label>
                                     </div>
-                                )}
-                                {item.harLekebool && (
-                                    <div>Valgt Leke: {item.valgtLeke}</div>
-                                )}
-                                <div>
-                                    <label>{storrelsestekst(item)}</label>
+                                    <div>
+                                        <label>{fargetekst(item)}</label>
+                                    </div>
+                                    {item.onskerTekst && (
+                                        <div>
+                                            <label>{item.fontfarge} {item.font} tekst "{item.vinyltekst}"</label>
+                                        </div>
+                                    )}
+                                    {item.harLekebool && (
+                                        <div>Valgt Leke: {item.valgtLeke}</div>
+                                    )}
+                                    <div>
+                                        <label>{storrelsestekst(item)}</label>
+                                    </div>
+                                    <div>Pris: {item.pris} kr</div>
+                                    <button className="secondary-small-button" onClick={() => removeFromCart(index)}>Fjern</button>
                                 </div>
-                                <div>Pris: {item.pris} kr</div>
-                                <button className="secondary-small-button" onClick={() => removeFromCart(index)}>Fjern</button>
-                                <hr />
                             </li>
                         ))}
                     </ul>
@@ -91,7 +89,7 @@ const Handlekurv = () => {
                     </div>
                     <button className="secondary-button" onClick={clearCart}>Tøm handlekurv</button>
                     <NavLink
-                        className="card-button"
+                        className="primary-button"
                         exact="true"
                         to="/kasse"
                     >

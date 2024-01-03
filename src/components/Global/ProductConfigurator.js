@@ -63,7 +63,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
 
 
     useEffect(() => {
-        localStorage.setItem("productConfigurations", JSON.stringify(configurations));
+        if (configurations.length > 0) localStorage.setItem("productConfigurations", JSON.stringify(configurations));
     }, [configurations]);
 
     const handleOnskerTekstChange = (e) => {
@@ -329,18 +329,14 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                     />
                 </div>
             )}
-            {
-                harDataILocalStorage && (
-                    <>
-                        <div className="konfigurator-card">
-                            <Handlekurv
-                                configurations={configurations}
-                                onDeleteConfig={handleDeleteConfig}
-                            />
-                        </div>
-                    </>
-                )
-            }
+            {harDataILocalStorage && (
+                <div className="konfigurator-card">
+                    <Handlekurv
+                        configurations={configurations}
+                        onDeleteConfig={handleDeleteConfig}
+                    />
+                </div>
+            )}
         </div >
     );
 };
