@@ -8,7 +8,7 @@ import SubmissionWindow from "./SubmissionWindow";
 import { BiothaneSelector, VinylSelector, MetallSelector, LekeSelector, KlipsSelector } from '../Konfigurator/Selectors';
 
 const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, harLengdecm, harBredde, harKrokband, harHandtak, harKrok, harTekst, harKlips, harRing, harFarge2, harLeke }) => {
-    const [farge, setFarge] = useState("Lysblå");
+    const [farge, setFarge] = useState("Lyseblå");
     const [farge2, setFarge2] = useState("");
     const [onskerFarge2, setOnskerFarge2] = useState(false);
     const [onskerTekst, setOnskerTekst] = useState(false);
@@ -20,12 +20,12 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     const [lengde, setLengde] = useState(0);
     const [bredde, setBredde] = useState(25);
     const [detaljefarger, setDetaljefarger] = useState("sølv");
-    const [klips, setKlips] = useState("");
+    const [klips, setKlips] = useState("Svart");
     const [pris, setPris] = useState(produktpris);
     const [kommentar, setKommentar] = useState('');
     const meterpris = prismeter;
-    const [lekepris, setLekePris] = useState(0);
-    const [valgtLeke, setValgtLeke] = useState('');
+    const [lekepris, setLekePris] = useState(170);
+    const [valgtLeke, setValgtLeke] = useState("HoleeRollerM");
     const produktnavn = navn;
     const harLengdemeterbool = harLengdemeter;
     const harLengdecmbool = harLengdecm;
@@ -70,14 +70,23 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         setOnskerTekst(e.target.checked);
     };
 
-    const handleProductSelect = (type, pris) => {
-        if (valgtLeke === type) {
-            // Hvis brukeren klikker på knappen til en allerede valgt leke, fjern valget
-            setValgtLeke('');
-            setLekePris(0);
-        } else {
-            setValgtLeke(type);
-            setLekePris(pris);
+    const handleProductSelect = (leke) => {
+        setValgtLeke(leke);
+        switch (leke) {
+            case "HoleeRollerXS":
+                setLekePris(110);
+                break;
+            case "HoleeRollerS":
+                setLekePris(150);
+                break;
+            case "HoleeRollerM":
+                setLekePris(170);
+                break;
+            case "HoleeRollerL":
+                setLekePris(230);
+                break;
+            default:
+                break;
         }
     };
 
@@ -283,6 +292,9 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                             <label>Velg leke</label>
                         </div>
                         <LekeSelector onSelection={handleProductSelect} />
+                        <div className="konfigurator-tittel">
+                            <label>XS = 5cm, S = 8cm, M = 12cm, L = 14cm</label>
+                        </div>
                         <hr className="konfigurator-divider" />
                     </>
                 )}

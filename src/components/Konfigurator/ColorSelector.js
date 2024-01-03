@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import mapColorToHex from '../../Colors';
 
-const ColorButtons = ({ options, onSelectionChange }) => {
-    const defaultOption = options[0];
-    const [selected, setSelected] = useState(defaultOption); // Initialize with a default selection
+const ColorButtons = ({ options, def, onSelectionChange }) => {
+    // Initialize with a default selection
+    const defaultOption = options[def];
+    const [selected, setSelected] = useState(defaultOption);
 
     return (
         <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>

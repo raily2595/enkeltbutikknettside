@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
-const PictureButtons = ({ options, onSelectionChange }) => {
-    const defaultOption = Object.keys(options)[0];
-    const [selected, setSelected] = useState(defaultOption); // Initialize with a default selection
+const PictureButtons = ({ options, def, onSelectionChange }) => {
+    // Initialize with a default selection
+    const defaultOption = Object.keys(options)[def];
+    const [selected, setSelected] = useState(defaultOption);
 
     return (
         <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>

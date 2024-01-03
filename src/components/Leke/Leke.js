@@ -1,7 +1,7 @@
 import strings from '../../strings.json';
 import React from "react";
-import {Carousel} from "react-responsive-carousel";
-import {NavLink} from "react-router-dom";
+import { Carousel } from "react-responsive-carousel";
+import { NavLink } from "react-router-dom";
 const Leke = () => {
     return (
         <div>
@@ -10,7 +10,6 @@ const Leke = () => {
                     <div className="carousel-container">
                         <Carousel>
                             <img src={`${process.env.PUBLIC_URL}bilder/leke.jpg`} alt="Nila" />
-                            <img src={`${process.env.PUBLIC_URL}bilder/leke1.jpg`} alt="Nila" />
                         </Carousel>
                     </div>
                     <div className="card-content">
@@ -35,7 +34,6 @@ const Leke = () => {
                 <div className="card">
                     <div className="carousel-container">
                         <Carousel>
-                            <img src={`${process.env.PUBLIC_URL}bilder/leke.jpg`} alt="Nila" />
                             <img src={`${process.env.PUBLIC_URL}bilder/leke1.jpg`} alt="Nila" />
                         </Carousel>
                     </div>

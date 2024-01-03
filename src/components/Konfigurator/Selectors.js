@@ -28,21 +28,21 @@ const biothaneValg = ["Lyseblå", "Laguneblå", "Karibigrønn", "Eplegrønn", "F
 const vinylValg = ["Sølv", "Gull", "Hvit", "Svart", "Lysegrønn", "Mørkegrønn", "Neongull", "Neonoransje", "Himmelblå", "Mørkeblå", "Rød", "Brun", "Turkis", "Lyserosa", "Mørkerosa", "Lilla", "Sand"];
 
 export const MetallSelector = ({ onSelection }) => (
-    <PictureButtons options={metallValg} onSelectionChange={onSelection} />
+    <PictureButtons options={metallValg} def={0} onSelectionChange={onSelection} />
 );
 
 export const LekeSelector = ({ onSelection }) => (
-    <PictureButtons options={lekeValg} onSelectionChange={onSelection} />
+    <PictureButtons options={lekeValg} def={2} onSelectionChange={onSelection} />
 );
 
 export const KlipsSelector = ({ onSelection }) => (
-    <PictureButtons options={klipsValg} onSelectionChange={onSelection} />
+    <PictureButtons options={klipsValg} def={0} onSelectionChange={onSelection} />
 );
 
 export const BiothaneSelector = ({ onSelection }) => (
-    <ColorButtons options={biothaneValg} onSelectionChange={onSelection} />
+    <ColorButtons options={biothaneValg} def={0} onSelectionChange={onSelection} />
 );
 
 export const VinylSelector = ({ onSelection }) => (
-    <ColorButtons options={vinylValg} onSelectionChange={onSelection} />
+    <ColorButtons options={vinylValg} def={0} onSelectionChange={onSelection} />
 );
