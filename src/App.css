@@ -148,11 +148,23 @@ main {
   border-radius: 12px;
   padding: 12px;
   background-color: whitesmoke;
+  margin: 12px;
+  font-size: large;
 }
 
 .konfigurator-tekst {
   margin: 12px;
   font-size: large;
+}
+
+.konfigurator-tittel {
+  margin: 12px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.konfigurator-divider {
+  margin: 24px 12px ;
 }
 
 .konfigurator-fargeboks {
@@ -209,5 +221,17 @@ footer {
   
   .carousel-container {
     width: 90%;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 10px; /* Adjust the top position as needed */
+    right: 10px; /* Adjust the right position as needed */
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #000; /* Adjust the color as needed */
+    outline: none;
   }
 }

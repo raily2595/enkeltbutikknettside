@@ -19,12 +19,12 @@ const Meny = () => {
                     className="menu-button"
                     activeclassname="nav-link-active"
                     exact="true"
-                    to="/annet">{strings.menytekst5}</NavLink>
+                    to="/leke">{strings.menytekst3}</NavLink>
                 <NavLink
                     className="menu-button"
                     activeclassname="nav-link-active"
                     exact="true"
-                    to="/leke">{strings.menytekst3}</NavLink>
+                    to="/handlekurv">{strings.menytekst6}</NavLink>
             </div>
         </div>
     );

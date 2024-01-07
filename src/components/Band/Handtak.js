@@ -1,24 +1,24 @@
 import React from "react";
 import ProductConfigurator from "../Global/ProductConfigurator";
-const Leieband = () => {
+const Handtak = () => {
     return (
         <div className="main-content">
             <div>
-                <h1>Leiebånd</h1>
+                <h1>Håndtak</h1>
                 <ProductConfigurator
-                    navn={"leiebånd"}
+                    navn={"handtak"}
                     produktpris={200}
-                    prismeter={50}
-                    harLengdemeter={true}
+                    prismeter={0}
+                    harLengdemeter={false}
                     harLengdecm={false}
                     harBredde={false}
-                    harKrokband={false}
+                    harKrokband={true}
                     harHandtak={true}
                     harKrok={true}
-                    harTekst={true}
+                    harTekst={false}
                     harKlips={false}
                     harRing={false}
-                    harFarge2={true}
+                    harFarge2={false}
                     harLeke={false}
                 />
             </div>
@@ -26,4 +26,4 @@ const Leieband = () => {
     );
 };
 
-export default Leieband;
+export default Handtak;

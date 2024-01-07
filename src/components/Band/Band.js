@@ -56,7 +56,11 @@ const Band = () => {
                             <p>{strings.prisinfoband}</p>
                             <p>{strings.vinylinfo}</p>
                         </div>
-                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
+                        <NavLink
+                            className="card-button"
+                            activeclassname="nav-link-active"
+                            exact="true"
+                            to="/band/sporline">Sporline</NavLink>
                     </div>
                 </div>
                 <div className="card">
@@ -81,7 +85,11 @@ const Band = () => {
                             <p>{strings.prisinfoband}</p>
                             <p>{strings.vinylinfo}</p>
                         </div>
-                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
+                        <NavLink
+                            className="card-button"
+                            activeclassname="nav-link-active"
+                            exact="true"
+                            to="/band/dobbeltkrok">Dobbeltkrok</NavLink>
                     </div>
                 </div>
                 <div className="card">
@@ -105,7 +113,66 @@ const Band = () => {
                             <p>{strings.prisinfohanefot}</p>
                             <p>{strings.vinylinfo}</p>
                         </div>
-                        <a href="https://forms.gle/kY8AKAE7vqwSmW2u5" className="card-button" target="_blank" rel="noreferrer">{strings.bestillknapp}</a>
+                        <NavLink
+                            className="card-button"
+                            activeclassname="nav-link-active"
+                            exact="true"
+                            to="/band/hanefot">Hanefot</NavLink>
+                    </div>
+                </div>
+                <div className="card">
+                    <div className="carousel-container">
+                        <Carousel>
+                            <img src={`${process.env.PUBLIC_URL}bilder/hanefothvit.png`} alt="Nila" />
+                            <img src={`${process.env.PUBLIC_URL}bilder/hanefot.jpg`} alt="Nila" />
+                            <img src={`${process.env.PUBLIC_URL}bilder/hanefot1.jpg`} alt="Nila" />
+                        </Carousel>
+                    </div>
+                    <div className="card-content">
+                        <div>
+                            <h2>{strings.handtak}</h2>
+                            <p>{strings.handtaktekst}</p>
+                        </div>
+                        <div>
+                            <p>{strings.fargetekst}</p>
+                            <p>{strings.lengdetekst}</p>
+                        </div>
+                        <div>
+                            <p>{strings.prisinfohandtak}</p>
+                        </div>
+                        <NavLink
+                            className="card-button"
+                            activeclassname="nav-link-active"
+                            exact="true"
+                            to="/band/handtak">Håndtak</NavLink>
+                    </div>
+                </div>
+                <div className="card">
+                    <div className="carousel-container">
+                        <Carousel>
+                            <img src={`${process.env.PUBLIC_URL}bilder/hanefothvit.png`} alt="Nila" />
+                            <img src={`${process.env.PUBLIC_URL}bilder/hanefot.jpg`} alt="Nila" />
+                            <img src={`${process.env.PUBLIC_URL}bilder/hanefot1.jpg`} alt="Nila" />
+                        </Carousel>
+                    </div>
+                    <div className="card-content">
+                        <div>
+                            <h2>{strings.handtakband}</h2>
+                            <p>{strings.handtakbandtekst}</p>
+                        </div>
+                        <div>
+                            <p>{strings.fargetekst}</p>
+                            <p>{strings.lengdetekst}</p>
+                        </div>
+                        <div>
+                            <p>{strings.prisinfohandtakband}</p>
+                            <p>{strings.vinylinfo}</p>
+                        </div>
+                        <NavLink
+                            className="card-button"
+                            activeclassname="nav-link-active"
+                            exact="true"
+                            to="/band/handtakband">Håndtak med Sporline</NavLink>
                     </div>
                 </div>
             </div>
