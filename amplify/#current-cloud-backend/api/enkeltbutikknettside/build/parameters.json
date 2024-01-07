@@ -1,0 +1,13 @@
+{
+    "AppSyncApiName": "enkeltbutikknettside",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "S3DeploymentBucket": "amplify-amplifyadb3b82811a94-staging-202144-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/2a5bb6eb1853e7d28f6b0e5c8370989493dfacb2"
+}
