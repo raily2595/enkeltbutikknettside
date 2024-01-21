@@ -1,6 +1,6 @@
 import React from 'react';
-import PictureButtons from "../Konfigurator/PictureSelector";
-import ColorButtons from "../Konfigurator/ColorSelector";
+import PictureButtons from "components/Konfigurator/PictureSelector";
+import ColorButtons from "components/Konfigurator/ColorSelector";
 
 const metallValg = {
     Sølv: `${process.env.PUBLIC_URL}/metall/sølvmetall.png`,

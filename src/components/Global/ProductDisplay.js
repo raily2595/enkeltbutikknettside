@@ -1,5 +1,5 @@
 import React from "react";
-import mapColorToHex from '../../Colors';
+import mapColorToHex from 'Colors';
 
 const ProductDisplay = ({ farge, vinyltekst, fontfarge, font }) => {
     return (

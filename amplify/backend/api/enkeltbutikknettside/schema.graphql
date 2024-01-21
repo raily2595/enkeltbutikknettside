@@ -42,4 +42,10 @@ type Bestilling @model @auth(rules: [{allow: public}]) {
   Kunde: Kunde @belongsTo(fields: ["kundeID"])
   Produkter: [Produkt] @hasMany(indexName: "byBestilling", fields: ["id"])
   Transaksjon: Transaksjon @hasOne
+  adresse: String
+  postnr: String
+  poststed: String
+  hentes: Boolean
+  kommentar: String
 }
+ 
