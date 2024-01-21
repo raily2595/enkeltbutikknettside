@@ -109,7 +109,6 @@ function Kasse() {
                     produkter: [],
                     leveringsmetode: '',
                     totalt: '',
-
                     // Tilbakestill andre felt om nødvendig
                 });
                 // Fjern produktinformasjonen fra localStorage etter bestilling hvis nødvendig
