@@ -48,6 +48,11 @@ type Bestilling @aws_iam @aws_api_key {
   Kunde: Kunde
   Produkter(filter: ModelProduktFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelProduktConnection
   Transaksjon: Transaksjon
+  adresse: String
+  postnr: String
+  poststed: String
+  hentes: Boolean
+  kommentar: String
   createdAt: AWSDateTime!
   updatedAt: AWSDateTime!
   bestillingTransaksjonId: ID
@@ -479,6 +484,11 @@ input ModelBestillingFilterInput {
   ordreDato: ModelStringInput
   bestillingsstatus: ModelStringInput
   kundeID: ModelIDInput
+  adresse: ModelStringInput
+  postnr: ModelStringInput
+  poststed: ModelStringInput
+  hentes: ModelBooleanInput
+  kommentar: ModelStringInput
   and: [ModelBestillingFilterInput]
   or: [ModelBestillingFilterInput]
   not: ModelBestillingFilterInput
@@ -489,6 +499,11 @@ input ModelBestillingConditionInput {
   ordreDato: ModelStringInput
   bestillingsstatus: ModelStringInput
   kundeID: ModelIDInput
+  adresse: ModelStringInput
+  postnr: ModelStringInput
+  poststed: ModelStringInput
+  hentes: ModelBooleanInput
+  kommentar: ModelStringInput
   and: [ModelBestillingConditionInput]
   or: [ModelBestillingConditionInput]
   not: ModelBestillingConditionInput
@@ -500,6 +515,11 @@ input CreateBestillingInput {
   ordreDato: AWSDate
   bestillingsstatus: String
   kundeID: ID!
+  adresse: String
+  postnr: String
+  poststed: String
+  hentes: Boolean
+  kommentar: String
   bestillingTransaksjonId: ID
 }
 
@@ -508,6 +528,11 @@ input UpdateBestillingInput {
   ordreDato: AWSDate
   bestillingsstatus: String
   kundeID: ID
+  adresse: String
+  postnr: String
+  poststed: String
+  hentes: Boolean
+  kommentar: String
   bestillingTransaksjonId: ID
 }
 
@@ -520,6 +545,11 @@ input ModelSubscriptionBestillingFilterInput {
   ordreDato: ModelSubscriptionStringInput
   bestillingsstatus: ModelSubscriptionStringInput
   kundeID: ModelSubscriptionIDInput
+  adresse: ModelSubscriptionStringInput
+  postnr: ModelSubscriptionStringInput
+  poststed: ModelSubscriptionStringInput
+  hentes: ModelSubscriptionBooleanInput
+  kommentar: ModelSubscriptionStringInput
   and: [ModelSubscriptionBestillingFilterInput]
   or: [ModelSubscriptionBestillingFilterInput]
 }
