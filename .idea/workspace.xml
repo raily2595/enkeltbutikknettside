@@ -5,52 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f37d5c44-5065-430f-aebe-91cfa3d9a96d" name="Changes" comment="legge til amplify">
-      <change afterPath="$PROJECT_DIR$/src/ui-components/KundeCreateForm.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui-components/KundeCreateForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui-components/KundeUpdateForm.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui-components/KundeUpdateForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui-components/TransaksjonCreateForm.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui-components/TransaksjonCreateForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui-components/TransaksjonUpdateForm.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui-components/TransaksjonUpdateForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui-components/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui-components/studioTheme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui-components/studioTheme.js.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui-components/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.graphqlconfig.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.graphqlconfig.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes/shelved.patch" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/jsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/amplify-meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/amplify-meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/cloudformation-template.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/cloudformation-template.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/parameters.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/parameters.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/schema.graphql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/schema.graphql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/api/enkeltbutikknettside/build/cloudformation-template.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/api/enkeltbutikknettside/build/cloudformation-template.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/awscloudformation/build/root-cloudformation-stack.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/awscloudformation/build/root-cloudformation-stack.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/root-cloudformation-stack.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/root-cloudformation-stack.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/amplify-meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/amplify-meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/cloudformation-template.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/cloudformation-template.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/parameters.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/parameters.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/schema.graphql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/cli-inputs.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/cli-inputs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/parameters.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/parameters.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/resolvers/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/resolvers/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/schema.graphql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/stacks/CustomResources.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/stacks/CustomResources.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/transform.conf.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/transform.conf.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/api/enkeltbutikknettside/build/cloudformation-template.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/api/enkeltbutikknettside/build/cloudformation-template.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/awscloudformation/build/root-cloudformation-stack.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/awscloudformation/build/root-cloudformation-stack.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/root-cloudformation-stack.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/root-cloudformation-stack.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/backend-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/backend-config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/tags.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/tags.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/types/amplify-dependent-resources-ref.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/types/amplify-dependent-resources-ref.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/cli.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/cli.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/team-provider-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/team-provider-info.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Band/Band.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Band/Band.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Band/Dobbeltkrok.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Band/Dobbeltkrok.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Band/Handtak.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Band/Handtak.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Band/Handtakband.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Band/Handtakband.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Band/Hanefot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Band/Hanefot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Band/Leieband.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Band/Leieband.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Band/Sporline.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Band/Sporline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Bestilling/Bekreftelse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Bestilling/Bekreftelse.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Bestilling/Kasse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Bestilling/Kasse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Global/Banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Global/Banner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Global/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Global/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Global/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Global/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Global/MainContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Global/MainContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Global/Meny.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Global/Meny.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Global/ProductConfigurator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Global/ProductConfigurator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Global/ProductDisplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Global/ProductDisplay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Global/SubmissionWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Global/SubmissionWindow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Global/ToggleDrawerButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Global/ToggleDrawerButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Halsband/Halsband.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Halsband/Halsband.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Halsband/Klipsband.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Halsband/Klipsband.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Konfigurator/ColorSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Konfigurator/ColorSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Konfigurator/Selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Konfigurator/Selectors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Leke/Leke.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Leke/Leke.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Leke/Lekemed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Leke/Lekemed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Leke/Lekeuten.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Leke/Lekeuten.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sele/Sele.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sele/Sele.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,24 +62,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "aws-branch",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Tomaten/Desktop/enkeltbutikknettside/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;aws-branch&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tomaten/Desktop/enkeltbutikknettside/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Tomaten\Desktop\enkeltbutikknettside\src" />

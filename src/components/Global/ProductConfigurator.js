@@ -1,10 +1,10 @@
 // ProductConfigurator.js
 import React, { useState, useEffect } from "react";
-import ProductDisplay from "./ProductDisplay";
-import TextSettings from "../Konfigurator/TextSettings";
-import SubmitButton from "../Konfigurator/SubmitButton";
-import ConfigList from "./ConfigList";
-import SubmissionWindow from "./SubmissionWindow";
+import ProductDisplay from "components/Global/ProductDisplay";
+import TextSettings from "components/Konfigurator/TextSettings";
+import SubmitButton from "components/Konfigurator/SubmitButton";
+import ConfigList from "components/Global/ConfigList";
+import SubmissionWindow from "components/Global/SubmissionWindow";
 import { BiothaneSelector, VinylSelector, MetallSelector, LekeSelector, KlipsSelector } from '../Konfigurator/Selectors';
 
 const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, harLengdecm, harBredde, harKrokband, harHandtak, harKrok, harTekst, harKlips, harRing, harFarge2, harLeke }) => {

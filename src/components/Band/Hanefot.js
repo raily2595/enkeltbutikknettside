@@ -1,5 +1,5 @@
 import React from "react";
-import ProductConfigurator from "../Global/ProductConfigurator";
+import ProductConfigurator from "components/Global/ProductConfigurator";
 const Hanefot = () => {
     return (
         <div className="main-content">
