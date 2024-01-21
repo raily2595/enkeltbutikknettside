@@ -4,36 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f37d5c44-5065-430f-aebe-91cfa3d9a96d" name="Changes" comment="legge til amplify">
-      <change afterPath="$PROJECT_DIR$/jsconfig.json" afterDir="false" />
+    <list default="true" id="f37d5c44-5065-430f-aebe-91cfa3d9a96d" name="Changes" comment="bedre import, fikse aws import fra v5 til v6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Band/Band.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Band/Band.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Band/Dobbeltkrok.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Band/Dobbeltkrok.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Band/Handtak.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Band/Handtak.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Band/Handtakband.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Band/Handtakband.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Band/Hanefot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Band/Hanefot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Band/Leieband.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Band/Leieband.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Band/Sporline.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Band/Sporline.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Bestilling/Bekreftelse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Bestilling/Bekreftelse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Bestilling/Kasse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Bestilling/Kasse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Global/Banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Global/Banner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Global/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Global/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Global/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Global/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Global/MainContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Global/MainContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Global/Meny.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Global/Meny.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Global/ProductConfigurator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Global/ProductConfigurator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Global/ProductDisplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Global/ProductDisplay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Global/SubmissionWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Global/SubmissionWindow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Global/ToggleDrawerButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Global/ToggleDrawerButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Halsband/Halsband.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Halsband/Halsband.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Halsband/Klipsband.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Halsband/Klipsband.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Konfigurator/ColorSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Konfigurator/ColorSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Konfigurator/Selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Konfigurator/Selectors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Leke/Leke.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Leke/Leke.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Leke/Lekemed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Leke/Lekemed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Leke/Lekeuten.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Leke/Lekeuten.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sele/Sele.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sele/Sele.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,14 +96,6 @@
       <workItem from="1704213948263" duration="6465000" />
       <workItem from="1704662068329" duration="917000" />
       <workItem from="1705852033522" duration="7845000" />
-    </task>
-    <task id="LOCAL-00019" summary="infotekst til info-boks">
-      <option name="closed" value="true" />
-      <created>1689279393757</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1689279393757</updated>
     </task>
     <task id="LOCAL-00020" summary="skrivefeil">
       <option name="closed" value="true" />
@@ -517,7 +481,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704662146029</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="bedre import, fikse aws import fra v5 til v6">
+      <option name="closed" value="true" />
+      <created>1705864714912</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1705864714912</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +497,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="nye produlter i regnskap.txt" />
     <MESSAGE value="gjøre ProductConfigurator.js klassen mer generelt ved å ta ut navn og pris" />
     <MESSAGE value="fikse tekstconfig" />
     <MESSAGE value="fortsette med config" />
@@ -550,6 +521,7 @@
     <MESSAGE value="legge til leke" />
     <MESSAGE value="legge til overraskelspakker" />
     <MESSAGE value="legge til amplify" />
-    <option name="LAST_COMMIT_MESSAGE" value="legge til amplify" />
+    <MESSAGE value="bedre import, fikse aws import fra v5 til v6" />
+    <option name="LAST_COMMIT_MESSAGE" value="bedre import, fikse aws import fra v5 til v6" />
   </component>
 </project>
