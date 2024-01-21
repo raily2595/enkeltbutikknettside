@@ -4,7 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f37d5c44-5065-430f-aebe-91cfa3d9a96d" name="Changes" comment="legge til overraskelspakker" />
+    <list default="true" id="f37d5c44-5065-430f-aebe-91cfa3d9a96d" name="Changes" comment="legge til amplify">
+      <change afterPath="$PROJECT_DIR$/src/ui-components/KundeCreateForm.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui-components/KundeCreateForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui-components/KundeUpdateForm.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui-components/KundeUpdateForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui-components/TransaksjonCreateForm.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui-components/TransaksjonCreateForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui-components/TransaksjonUpdateForm.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui-components/TransaksjonUpdateForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui-components/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui-components/studioTheme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui-components/studioTheme.js.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui-components/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.graphqlconfig.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.graphqlconfig.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/amplify-meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/amplify-meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/cloudformation-template.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/cloudformation-template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/parameters.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/parameters.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/schema.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/schema.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/api/enkeltbutikknettside/build/cloudformation-template.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/api/enkeltbutikknettside/build/cloudformation-template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/awscloudformation/build/root-cloudformation-stack.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/awscloudformation/build/root-cloudformation-stack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/root-cloudformation-stack.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/root-cloudformation-stack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/amplify-meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/amplify-meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/cloudformation-template.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/cloudformation-template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/parameters.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/parameters.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/schema.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/cli-inputs.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/cli-inputs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/parameters.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/parameters.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/resolvers/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/resolvers/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/schema.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/stacks/CustomResources.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/stacks/CustomResources.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/transform.conf.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/transform.conf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/api/enkeltbutikknettside/build/cloudformation-template.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/api/enkeltbutikknettside/build/cloudformation-template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/awscloudformation/build/root-cloudformation-stack.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/awscloudformation/build/root-cloudformation-stack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/root-cloudformation-stack.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/root-cloudformation-stack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/backend-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/backend-config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/tags.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/tags.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/types/amplify-dependent-resources-ref.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/types/amplify-dependent-resources-ref.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/cli.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/cli.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/team-provider-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/team-provider-info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Bestilling/Kasse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Bestilling/Kasse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Global/ProductConfigurator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Global/ProductConfigurator.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +60,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="configvalg" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,6 +85,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "aws-branch",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Tomaten/Desktop/enkeltbutikknettside/src",
     "node.js.detected.package.eslint": "true",
@@ -91,22 +139,8 @@
       <workItem from="1700833207585" duration="9135000" />
       <workItem from="1702041211054" duration="12053000" />
       <workItem from="1704213948263" duration="6465000" />
-    </task>
-    <task id="LOCAL-00017" summary="Endre tekster for kortene">
-      <option name="closed" value="true" />
-      <created>1689277944086</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1689277944086</updated>
-    </task>
-    <task id="LOCAL-00018" summary="fjerne karusell til bilde i infoboksen">
-      <option name="closed" value="true" />
-      <created>1689278565505</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1689278565505</updated>
+      <workItem from="1704662068329" duration="917000" />
+      <workItem from="1705852033522" duration="7845000" />
     </task>
     <task id="LOCAL-00019" summary="infotekst til info-boks">
       <option name="closed" value="true" />
@@ -484,7 +518,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702125491747</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="legge til amplify">
+      <option name="closed" value="true" />
+      <created>1704662109393</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1704662109393</updated>
+    </task>
+    <task id="LOCAL-00067" summary="legge til amplify">
+      <option name="closed" value="true" />
+      <created>1704662146029</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1704662146029</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,7 +542,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="legge til biothane farger med riktig hex" />
     <MESSAGE value="nye produlter i regnskap.txt" />
     <MESSAGE value="gjøre ProductConfigurator.js klassen mer generelt ved å ta ut navn og pris" />
     <MESSAGE value="fikse tekstconfig" />
@@ -517,6 +566,7 @@
     <MESSAGE value="Legge til flere produkter" />
     <MESSAGE value="legge til leke" />
     <MESSAGE value="legge til overraskelspakker" />
-    <option name="LAST_COMMIT_MESSAGE" value="legge til overraskelspakker" />
+    <MESSAGE value="legge til amplify" />
+    <option name="LAST_COMMIT_MESSAGE" value="legge til amplify" />
   </component>
 </project>
