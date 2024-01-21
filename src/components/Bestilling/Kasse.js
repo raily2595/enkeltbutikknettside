@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { API, graphqlOperation } from 'aws-amplify';
-import { createBestilling } from '../../graphql/mutations';
+import { generateClient } from 'aws-amplify/api';
+import { createBestilling } from 'graphql/mutations';
 
 function Kasse() {
+    const client = generateClient();
     const navigate = useNavigate();
     const [harDataILocalStorage, setHarDataILocalStorage] = useState(false);
     const [bestillingsforesporsel, setBestillingsforesporsel] = useState({
@@ -81,7 +82,7 @@ function Kasse() {
                     poststed: bestillingsforesporsel.poststed,
                     telefon: bestillingsforesporsel.telefon
                 }
-                const Kunde = await API.graphql(graphqlOperation(upsertKundeByPhoneNumber, { input: Kundedata }));
+                const Kunde = await client.graphql({query: upsertKundeByPhoneNumber, variables: { input: Kundedata }});
 
                 const bestillingData = {
                     id: Date.now() * Math.random(),
@@ -97,8 +98,7 @@ function Kasse() {
                     }
                 };
 
-                const response = await API.graphql(graphqlOperation(createBestilling, { input: bestillingData }));
-                console.log('Bestilling opprettet:', response.data);
+                const response = await client.graphql({query: createBestilling, variables: { input: bestillingData }});
                 setBestillingsforesporsel({
                     navn: '',
                     epost: '',
@@ -108,7 +108,8 @@ function Kasse() {
                     poststed: '',
                     produkter: [],
                     leveringsmetode: '',
-                    totalt: 600,
+                    totalt: '',
+
                     // Tilbakestill andre felt om nødvendig
                 });
                 // Fjern produktinformasjonen fra localStorage etter bestilling hvis nødvendig

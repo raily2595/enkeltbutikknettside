@@ -1,4 +1,4 @@
-import strings from '../../strings.json';
+import strings from 'strings.json';
 import { NavLink } from "react-router-dom";
 import React from "react";
 const Meny = () => {

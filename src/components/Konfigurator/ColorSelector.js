@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import mapColorToHex from '../../Colors';
+import mapColorToHex from 'Colors';
 
 const ColorButtons = ({ options, def, onSelectionChange }) => {
     // Initialize with a default selection
