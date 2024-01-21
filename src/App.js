@@ -25,10 +25,13 @@ import Lekeuten from "components/Leke/Lekeuten";
 import Lekemed from "components/Leke/Lekemed";
 import Handtak from "components/Band/Handtak";
 import Handtakband from "components/Band/Handtakband";
+import { Amplify } from 'aws-amplify';
+import config from './amplifyconfiguration.json';
 {/* import Banner from "./components/Banner";*/ }
 
 
 function App() {
+    Amplify.configure(config);
     return (
         <Router>
             <div className="App">
