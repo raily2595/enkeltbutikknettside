@@ -123,7 +123,7 @@
                     ]
                 },
                 "Description": "api key description",
-                "Expires": 1708446888
+                "Expires": 1708613567
             }
         },
         "GraphQLAPINONEDS95A13CF0": {
@@ -829,6 +829,119 @@
                 "Kunde",
                 "Produkt",
                 "Transaksjon"
+            ]
+        },
+        "MutationUpsertKundeDataResolverFnMutationUpsertKundeDataResolverFnAppSyncFunction8CC4575C": {
+            "Type": "AWS::AppSync::FunctionConfiguration",
+            "Properties": {
+                "ApiId": {
+                    "Fn::GetAtt": [
+                        "GraphQLAPI",
+                        "ApiId"
+                    ]
+                },
+                "DataSourceName": {
+                    "Fn::GetAtt": [
+                        "GraphQLAPINONEDS95A13CF0",
+                        "Name"
+                    ]
+                },
+                "Name": "MutationUpsertKundeDataResolverFn",
+                "FunctionVersion": "2018-05-29",
+                "RequestMappingTemplateS3Location": {
+                    "Fn::Join": [
+                        "",
+                        [
+                            "s3://",
+                            {
+                                "Ref": "S3DeploymentBucket"
+                            },
+                            "/",
+                            {
+                                "Ref": "S3DeploymentRootKey"
+                            },
+                            "/resolvers/Mutation.upsertKunde.req.vtl"
+                        ]
+                    ]
+                },
+                "ResponseMappingTemplateS3Location": {
+                    "Fn::Join": [
+                        "",
+                        [
+                            "s3://",
+                            {
+                                "Ref": "S3DeploymentBucket"
+                            },
+                            "/",
+                            {
+                                "Ref": "S3DeploymentRootKey"
+                            },
+                            "/resolvers/Mutation.upsertKunde.res.vtl"
+                        ]
+                    ]
+                }
+            },
+            "DependsOn": [
+                "GraphQLAPITransformerSchema3CB2AE18"
+            ]
+        },
+        "MutationupsertKundeResolver": {
+            "Type": "AWS::AppSync::Resolver",
+            "Properties": {
+                "ApiId": {
+                    "Fn::GetAtt": [
+                        "GraphQLAPI",
+                        "ApiId"
+                    ]
+                },
+                "FieldName": "upsertKunde",
+                "TypeName": "Mutation",
+                "Kind": "PIPELINE",
+                "PipelineConfig": {
+                    "Functions": [
+                        {
+                            "Fn::GetAtt": [
+                                "MutationUpsertKundeDataResolverFnMutationUpsertKundeDataResolverFnAppSyncFunction8CC4575C",
+                                "FunctionId"
+                            ]
+                        }
+                    ]
+                },
+                "RequestMappingTemplate": {
+                    "Fn::Join": [
+                        "",
+                        [
+                            "$util.qr($ctx.stash.put(\"typeName\", \"Mutation\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"upsertKunde\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+                            {
+                                "Fn::GetAtt": [
+                                    "GraphQLAPI",
+                                    "ApiId"
+                                ]
+                            },
+                            "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:aws:sts::",
+                            {
+                                "Ref": "AWS::AccountId"
+                            },
+                            ":assumed-role/",
+                            {
+                                "Ref": "authRoleName"
+                            },
+                            "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:aws:sts::",
+                            {
+                                "Ref": "AWS::AccountId"
+                            },
+                            ":assumed-role/",
+                            {
+                                "Ref": "unauthRoleName"
+                            },
+                            "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"adminRoles\", [\"eu-north-1_fSMtlC20R_Full-access/CognitoIdentityCredentials\",\"eu-north-1_fSMtlC20R_Manage-only/CognitoIdentityCredentials\"]))\n$util.toJson({})"
+                        ]
+                    ]
+                },
+                "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)"
+            },
+            "DependsOn": [
+                "GraphQLAPITransformerSchema3CB2AE18"
             ]
         },
         "CustomResourcesjson": {

@@ -212,6 +212,11 @@ export const onCreateBestilling = /* GraphQL */ `
         updatedAt
         __typename
       }
+      adresse
+      postnr
+      poststed
+      hentes
+      kommentar
       createdAt
       updatedAt
       bestillingTransaksjonId
@@ -253,6 +258,11 @@ export const onUpdateBestilling = /* GraphQL */ `
         updatedAt
         __typename
       }
+      adresse
+      postnr
+      poststed
+      hentes
+      kommentar
       createdAt
       updatedAt
       bestillingTransaksjonId
@@ -294,6 +304,11 @@ export const onDeleteBestilling = /* GraphQL */ `
         updatedAt
         __typename
       }
+      adresse
+      postnr
+      poststed
+      hentes
+      kommentar
       createdAt
       updatedAt
       bestillingTransaksjonId
