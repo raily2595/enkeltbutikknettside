@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { generateClient } from 'aws-amplify/api';
-import { createBestilling, upsertKunde } from 'graphql/mutations';
+import {createBestilling, createKunde, upsertKunde} from 'graphql/mutations';
 
 function Kasse() {
     const client = generateClient();
@@ -53,6 +53,7 @@ function Kasse() {
         event.preventDefault();
 
             try {
+                /*
                 const Kundedata = {
                     navn: bestillingsforesporsel.navn,
                     epost: bestillingsforesporsel.epost,
@@ -96,6 +97,18 @@ function Kasse() {
 
                 // Naviger til en ny side
                 navigate('/bekreftelse'); // Bytt ut '/ny-side' med den faktiske URLen til den nye siden
+                 */
+                const Kundedata = {
+                    id: 1234,
+                    navn: bestillingsforesporsel.navn,
+                    epost: bestillingsforesporsel.epost,
+                    adresse: bestillingsforesporsel.adresse,
+                    postnr: bestillingsforesporsel.postnr,
+                    poststed: bestillingsforesporsel.poststed,
+                    telefon: bestillingsforesporsel.telefon
+                }
+                const Kunde = await client.graphql({query: createKunde, variables: { input: Kundedata }});
+                console.log(Kunde)
             } catch (err) {
                 console.error('Error upserting or creating bestilling:', err);
             }
