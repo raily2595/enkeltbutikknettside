@@ -77,7 +77,6 @@ function Kasse() {
                     }
                 };
 
-                console.log(Kunde.id)
                 const response = await client.graphql({query: createBestilling, variables: { input: bestillingData }});
                 setBestillingsforesporsel({
                     navn: '',
