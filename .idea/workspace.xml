@@ -4,8 +4,66 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f37d5c44-5065-430f-aebe-91cfa3d9a96d" name="Changes" comment="bedre import, fikse aws import fra v5 til v6">
+    <list default="true" id="f37d5c44-5065-430f-aebe-91cfa3d9a96d" name="Changes" comment="fikse feil">
+      <change afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.bestillingsByKundeID.auth.1.req.vtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Produkt.produktsByBestillingID.auth.1.req.vtl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/amplify-meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/amplify-meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/cloudformation-template.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/cloudformation-template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Kunde.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Kunde.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Kunde.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Kunde.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Produkter.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Produkter.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Produkter.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Produkter.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Transaksjon.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Transaksjon.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Transaksjon.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Transaksjon.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Kunde.Bestillinger.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Kunde.Bestillinger.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Kunde.Bestillinger.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Kunde.Bestillinger.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.createBestilling.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.createBestilling.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.createKunde.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.createKunde.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.createProdukt.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.createProdukt.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.createTransaksjon.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.createTransaksjon.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.deleteBestilling.auth.1.res.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.deleteBestilling.auth.1.res.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.deleteKunde.auth.1.res.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.deleteKunde.auth.1.res.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.deleteProdukt.auth.1.res.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.deleteProdukt.auth.1.res.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.deleteTransaksjon.auth.1.res.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.deleteTransaksjon.auth.1.res.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.updateBestilling.auth.1.res.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.updateBestilling.auth.1.res.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.updateKunde.auth.1.res.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.updateKunde.auth.1.res.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.updateProdukt.auth.1.res.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.updateProdukt.auth.1.res.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.updateTransaksjon.auth.1.res.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.updateTransaksjon.auth.1.res.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.bestillingsByKundeID.auth.1.req.vtl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.bestillingsByKundeID.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.bestillingsByKundeID.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.getBestilling.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.getBestilling.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.getKunde.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.getKunde.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.getProdukt.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.getProdukt.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.getTransaksjon.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.getTransaksjon.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.listBestillings.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.listBestillings.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.listKundes.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.listKundes.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.listProdukts.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.listProdukts.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.listTransaksjons.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.listTransaksjons.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.produktsByBestillingID.auth.1.req.vtl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.produktsByBestillingID.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.produktsByBestillingID.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onCreateBestilling.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onCreateBestilling.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onCreateKunde.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onCreateKunde.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onCreateProdukt.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onCreateProdukt.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onCreateTransaksjon.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onCreateTransaksjon.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onDeleteBestilling.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onDeleteBestilling.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onDeleteKunde.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onDeleteKunde.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onDeleteProdukt.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onDeleteProdukt.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onDeleteTransaksjon.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onDeleteTransaksjon.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onUpdateBestilling.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onUpdateBestilling.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onUpdateKunde.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onUpdateKunde.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onUpdateProdukt.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onUpdateProdukt.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onUpdateTransaksjon.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onUpdateTransaksjon.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/schema.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/Bestilling.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/Bestilling.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/ConnectionStack.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/ConnectionStack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/Kunde.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/Kunde.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/Produkt.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/Produkt.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/Transaksjon.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/Transaksjon.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/api/enkeltbutikknettside/build/cloudformation-template.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/api/enkeltbutikknettside/build/cloudformation-template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/amplify-meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/amplify-meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/cloudformation-template.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/cloudformation-template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Bestilling/Kasse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Bestilling/Kasse.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,14 +154,7 @@
       <workItem from="1704213948263" duration="6465000" />
       <workItem from="1704662068329" duration="917000" />
       <workItem from="1705852033522" duration="7845000" />
-    </task>
-    <task id="LOCAL-00020" summary="skrivefeil">
-      <option name="closed" value="true" />
-      <created>1689279772522</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1689279772522</updated>
+      <workItem from="1706017817836" duration="1119000" />
     </task>
     <task id="LOCAL-00021" summary="fikse bilder">
       <option name="closed" value="true" />
@@ -489,7 +540,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705864714912</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="fikse feil">
+      <option name="closed" value="true" />
+      <created>1705866527988</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1705866527988</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,7 +556,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="gjøre ProductConfigurator.js klassen mer generelt ved å ta ut navn og pris" />
     <MESSAGE value="fikse tekstconfig" />
     <MESSAGE value="fortsette med config" />
     <MESSAGE value="vise pris" />
@@ -522,6 +580,7 @@
     <MESSAGE value="legge til overraskelspakker" />
     <MESSAGE value="legge til amplify" />
     <MESSAGE value="bedre import, fikse aws import fra v5 til v6" />
-    <option name="LAST_COMMIT_MESSAGE" value="bedre import, fikse aws import fra v5 til v6" />
+    <MESSAGE value="fikse feil" />
+    <option name="LAST_COMMIT_MESSAGE" value="fikse feil" />
   </component>
 </project>

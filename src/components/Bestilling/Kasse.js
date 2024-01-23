@@ -49,8 +49,8 @@ function Kasse() {
         }));
     };
 
-    const upsertKundeByPhoneNumber = /* GraphQL */ `
-  mutation UpsertKundeByPhoneNumber($input: ObjectInput!) {
+    const UpsertKundeByPhoneNumber = `
+  mutation UpsertKundeByPhoneNumber($input: CreateKundeInput!) {
     upsertKundeByPhoneNumber(input: $input) {
       id
       navn
@@ -82,7 +82,7 @@ function Kasse() {
                     poststed: bestillingsforesporsel.poststed,
                     telefon: bestillingsforesporsel.telefon
                 }
-                const Kunde = await client.graphql({query: upsertKundeByPhoneNumber, variables: { input: Kundedata }});
+                const Kunde = await client.graphql({query: UpsertKundeByPhoneNumber, variables: { input: Kundedata }});
 
                 const bestillingData = {
                     id: Date.now() * Math.random(),

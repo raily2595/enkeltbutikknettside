@@ -9,8 +9,8 @@
         "DataSourceName": {
           "Ref": "referencetotransformerrootstackGraphQLAPINONEDS2BA9D1C8Name"
         },
-        "Name": "KundeBestillingerauth0Function",
         "FunctionVersion": "2018-05-29",
+        "Name": "KundeBestillingerauth0Function",
         "RequestMappingTemplateS3Location": {
           "Fn::Join": [
             "",
@@ -39,8 +39,8 @@
         "DataSourceName": {
           "Ref": "referencetotransformerrootstackBestillingNestedStackBestillingNestedStackResource710485EAOutputstransformerrootstackBestillingBestillingDataSource563823B1Name"
         },
-        "Name": "KundeBestillingerDataResolverFn",
         "FunctionVersion": "2018-05-29",
+        "Name": "KundeBestillingerDataResolverFn",
         "RequestMappingTemplateS3Location": {
           "Fn::Join": [
             "",
@@ -108,7 +108,7 @@
               {
                 "Ref": "referencetotransformerrootstackGraphQLAPI20497F53ApiId"
               },
-              "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+              "\"))\n$util.qr($ctx.stash.put(\"tableName\", \"",
               {
                 "Ref": "referencetotransformerrootstackBestillingNestedStackBestillingNestedStackResource710485EAOutputstransformerrootstackBestillingBestillingTableB2F5DAB0Ref"
               },
@@ -128,7 +128,7 @@
               {
                 "Ref": "referencetotransformerrootstackunauthRoleName49F3C1FERef"
               },
-              "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"adminRoles\", [\"eu-north-1_fSMtlC20R_Full-access/CognitoIdentityCredentials\",\"eu-north-1_fSMtlC20R_Manage-only/CognitoIdentityCredentials\"]))\n$util.toJson({})"
+              "/CognitoIdentityCredentials\"))\n$util.toJson({})"
             ]
           ]
         },
@@ -144,8 +144,8 @@
         "DataSourceName": {
           "Ref": "referencetotransformerrootstackProduktNestedStackProduktNestedStackResourceE820ABEDOutputstransformerrootstackProduktProduktDataSource80DF8A94Name"
         },
-        "Name": "BestillingProdukterDataResolverFn",
         "FunctionVersion": "2018-05-29",
+        "Name": "BestillingProdukterDataResolverFn",
         "RequestMappingTemplateS3Location": {
           "Fn::Join": [
             "",
@@ -213,7 +213,7 @@
               {
                 "Ref": "referencetotransformerrootstackGraphQLAPI20497F53ApiId"
               },
-              "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+              "\"))\n$util.qr($ctx.stash.put(\"tableName\", \"",
               {
                 "Ref": "referencetotransformerrootstackProduktNestedStackProduktNestedStackResourceE820ABEDOutputstransformerrootstackProduktProduktTable0D04998ARef"
               },
@@ -233,7 +233,7 @@
               {
                 "Ref": "referencetotransformerrootstackunauthRoleName49F3C1FERef"
               },
-              "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"adminRoles\", [\"eu-north-1_fSMtlC20R_Full-access/CognitoIdentityCredentials\",\"eu-north-1_fSMtlC20R_Manage-only/CognitoIdentityCredentials\"]))\n$util.toJson({})"
+              "/CognitoIdentityCredentials\"))\n$util.toJson({})"
             ]
           ]
         },
@@ -249,8 +249,8 @@
         "DataSourceName": {
           "Ref": "referencetotransformerrootstackTransaksjonNestedStackTransaksjonNestedStackResource6921F3BDOutputstransformerrootstackTransaksjonTransaksjonDataSourceE7F04B58Name"
         },
-        "Name": "BestillingTransaksjonDataResolverFn",
         "FunctionVersion": "2018-05-29",
+        "Name": "BestillingTransaksjonDataResolverFn",
         "RequestMappingTemplateS3Location": {
           "Fn::Join": [
             "",
@@ -318,7 +318,7 @@
               {
                 "Ref": "referencetotransformerrootstackGraphQLAPI20497F53ApiId"
               },
-              "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+              "\"))\n$util.qr($ctx.stash.put(\"tableName\", \"",
               {
                 "Ref": "referencetotransformerrootstackTransaksjonNestedStackTransaksjonNestedStackResource6921F3BDOutputstransformerrootstackTransaksjonTransaksjonTableC7C7FA4DRef"
               },
@@ -338,7 +338,7 @@
               {
                 "Ref": "referencetotransformerrootstackunauthRoleName49F3C1FERef"
               },
-              "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"adminRoles\", [\"eu-north-1_fSMtlC20R_Full-access/CognitoIdentityCredentials\",\"eu-north-1_fSMtlC20R_Manage-only/CognitoIdentityCredentials\"]))\n$util.toJson({})"
+              "/CognitoIdentityCredentials\"))\n$util.toJson({})"
             ]
           ]
         },
@@ -354,8 +354,8 @@
         "DataSourceName": {
           "Ref": "referencetotransformerrootstackKundeNestedStackKundeNestedStackResourceB70462A8OutputstransformerrootstackKundeKundeDataSourceC1D0CD3BName"
         },
-        "Name": "BestillingKundeDataResolverFn",
         "FunctionVersion": "2018-05-29",
+        "Name": "BestillingKundeDataResolverFn",
         "RequestMappingTemplateS3Location": {
           "Fn::Join": [
             "",
@@ -423,7 +423,7 @@
               {
                 "Ref": "referencetotransformerrootstackGraphQLAPI20497F53ApiId"
               },
-              "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+              "\"))\n$util.qr($ctx.stash.put(\"tableName\", \"",
               {
                 "Ref": "referencetotransformerrootstackKundeNestedStackKundeNestedStackResourceB70462A8OutputstransformerrootstackKundeKundeTableE7FFD290Ref"
               },
@@ -443,7 +443,7 @@
               {
                 "Ref": "referencetotransformerrootstackunauthRoleName49F3C1FERef"
               },
-              "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"adminRoles\", [\"eu-north-1_fSMtlC20R_Full-access/CognitoIdentityCredentials\",\"eu-north-1_fSMtlC20R_Manage-only/CognitoIdentityCredentials\"]))\n$util.toJson({})"
+              "/CognitoIdentityCredentials\"))\n$util.toJson({})"
             ]
           ]
         },

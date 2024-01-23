@@ -1,8 +1,7 @@
 #if( $ctx.stash.deniedField )
   #return($util.toJson(null))
 #end
-#set( $partitionKeyValue = $util.defaultIfNull($ctx.stash.connectionAttibutes.get("bestillingTransaksjonId"), $ctx.source.bestillingTransaksjonId) )
-#if( $util.isNull($partitionKeyValue) )
+#if( $util.isNull($ctx.source.bestillingTransaksjonId) )
   #return
 #else
   #set( $GetRequest = {
@@ -15,7 +14,7 @@
       "#partitionKey": "id"
   },
   "expressionValues": {
-      ":partitionValue": $util.parseJson($util.dynamodb.toDynamoDBJson($util.defaultIfNullOrBlank($partitionKeyValue, "___xamznone____")))
+      ":partitionValue": $util.parseJson($util.dynamodb.toDynamoDBJson($util.defaultIfNullOrBlank($ctx.source.bestillingTransaksjonId, "___xamznone____")))
   }
 }))
   #if( !$util.isNullOrEmpty($ctx.stash.authFilter) )
