@@ -58,6 +58,31 @@ type Bestilling @aws_iam @aws_api_key {
   bestillingTransaksjonId: ID
 }
 
+input UpsertKundeInput {
+  telefon: String!
+  navn: String
+  epost: AWSEmail
+  adresse: String
+  postnr: String
+  poststed: String
+}
+
+type Mutation {
+  createProdukt(input: CreateProduktInput!, condition: ModelProduktConditionInput): Produkt @aws_api_key @aws_iam
+  updateProdukt(input: UpdateProduktInput!, condition: ModelProduktConditionInput): Produkt @aws_api_key @aws_iam
+  deleteProdukt(input: DeleteProduktInput!, condition: ModelProduktConditionInput): Produkt @aws_api_key @aws_iam
+  createTransaksjon(input: CreateTransaksjonInput!, condition: ModelTransaksjonConditionInput): Transaksjon @aws_api_key @aws_iam
+  updateTransaksjon(input: UpdateTransaksjonInput!, condition: ModelTransaksjonConditionInput): Transaksjon @aws_api_key @aws_iam
+  deleteTransaksjon(input: DeleteTransaksjonInput!, condition: ModelTransaksjonConditionInput): Transaksjon @aws_api_key @aws_iam
+  createKunde(input: CreateKundeInput!, condition: ModelKundeConditionInput): Kunde @aws_api_key @aws_iam
+  updateKunde(input: UpdateKundeInput!, condition: ModelKundeConditionInput): Kunde @aws_api_key @aws_iam
+  deleteKunde(input: DeleteKundeInput!, condition: ModelKundeConditionInput): Kunde @aws_api_key @aws_iam
+  createBestilling(input: CreateBestillingInput!, condition: ModelBestillingConditionInput): Bestilling @aws_api_key @aws_iam
+  updateBestilling(input: UpdateBestillingInput!, condition: ModelBestillingConditionInput): Bestilling @aws_api_key @aws_iam
+  deleteBestilling(input: DeleteBestillingInput!, condition: ModelBestillingConditionInput): Bestilling @aws_api_key @aws_iam
+  upsertKunde(input: UpsertKundeInput!): Kunde @aws_iam @aws_api_key
+}
+
 input ModelStringInput {
   ne: String
   eq: String
@@ -305,21 +330,6 @@ input UpdateProduktInput {
 
 input DeleteProduktInput {
   id: ID!
-}
-
-type Mutation {
-  createProdukt(input: CreateProduktInput!, condition: ModelProduktConditionInput): Produkt @aws_api_key @aws_iam
-  updateProdukt(input: UpdateProduktInput!, condition: ModelProduktConditionInput): Produkt @aws_api_key @aws_iam
-  deleteProdukt(input: DeleteProduktInput!, condition: ModelProduktConditionInput): Produkt @aws_api_key @aws_iam
-  createTransaksjon(input: CreateTransaksjonInput!, condition: ModelTransaksjonConditionInput): Transaksjon @aws_api_key @aws_iam
-  updateTransaksjon(input: UpdateTransaksjonInput!, condition: ModelTransaksjonConditionInput): Transaksjon @aws_api_key @aws_iam
-  deleteTransaksjon(input: DeleteTransaksjonInput!, condition: ModelTransaksjonConditionInput): Transaksjon @aws_api_key @aws_iam
-  createKunde(input: CreateKundeInput!, condition: ModelKundeConditionInput): Kunde @aws_api_key @aws_iam
-  updateKunde(input: UpdateKundeInput!, condition: ModelKundeConditionInput): Kunde @aws_api_key @aws_iam
-  deleteKunde(input: DeleteKundeInput!, condition: ModelKundeConditionInput): Kunde @aws_api_key @aws_iam
-  createBestilling(input: CreateBestillingInput!, condition: ModelBestillingConditionInput): Bestilling @aws_api_key @aws_iam
-  updateBestilling(input: UpdateBestillingInput!, condition: ModelBestillingConditionInput): Bestilling @aws_api_key @aws_iam
-  deleteBestilling(input: DeleteBestillingInput!, condition: ModelBestillingConditionInput): Bestilling @aws_api_key @aws_iam
 }
 
 input ModelSubscriptionProduktFilterInput {

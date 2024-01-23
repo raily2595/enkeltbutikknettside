@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { generateClient } from 'aws-amplify/api';
-import { createBestilling } from 'graphql/mutations';
+import { createBestilling, upsertKunde } from 'graphql/mutations';
 
 function Kasse() {
     const client = generateClient();
@@ -49,27 +49,6 @@ function Kasse() {
         }));
     };
 
-    const upsertKundeByPhoneNumber = /* GraphQL */ `
-  mutation UpsertKundeByPhoneNumber($input: ObjectInput!) {
-    upsertKundeByPhoneNumber(input: $input) {
-      id
-      navn
-      epost
-      adresse
-      postnr
-      poststed
-      telefon
-      Bestillinger {
-        nextToken
-        __typename
-      }
-      createdAt
-      updatedAt
-      __typename
-    }
-  }
-`;
-
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -82,7 +61,7 @@ function Kasse() {
                     poststed: bestillingsforesporsel.poststed,
                     telefon: bestillingsforesporsel.telefon
                 }
-                const Kunde = await client.graphql({query: upsertKundeByPhoneNumber, variables: { input: Kundedata }});
+                const Kunde = await client.graphql({query: upsertKunde, variables: { input: Kundedata }});
 
                 const bestillingData = {
                     id: Date.now() * Math.random(),
@@ -98,6 +77,7 @@ function Kasse() {
                     }
                 };
 
+                console.log(Kunde.id)
                 const response = await client.graphql({query: createBestilling, variables: { input: bestillingData }});
                 setBestillingsforesporsel({
                     navn: '',

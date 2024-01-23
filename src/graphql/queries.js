@@ -207,6 +207,11 @@ export const getBestilling = /* GraphQL */ `
         updatedAt
         __typename
       }
+      adresse
+      postnr
+      poststed
+      hentes
+      kommentar
       createdAt
       updatedAt
       bestillingTransaksjonId
@@ -226,6 +231,11 @@ export const listBestillings = /* GraphQL */ `
         ordreDato
         bestillingsstatus
         kundeID
+        adresse
+        postnr
+        poststed
+        hentes
+        kommentar
         createdAt
         updatedAt
         bestillingTransaksjonId
@@ -256,6 +266,11 @@ export const bestillingsByKundeID = /* GraphQL */ `
         ordreDato
         bestillingsstatus
         kundeID
+        adresse
+        postnr
+        poststed
+        hentes
+        kommentar
         createdAt
         updatedAt
         bestillingTransaksjonId
