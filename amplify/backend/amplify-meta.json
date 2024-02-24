@@ -1,0 +1,47 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyadb3b82811a94-staging-202144-authRole",
+      "UnauthRoleArn": "arn:aws:iam::927964485773:role/amplify-amplifyadb3b82811a94-staging-202144-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::927964485773:role/amplify-amplifyadb3b82811a94-staging-202144-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-amplifyadb3b82811a94-staging-202144-deployment",
+      "UnauthRoleName": "amplify-amplifyadb3b82811a94-staging-202144-unauthRole",
+      "StackName": "amplify-amplifyadb3b82811a94-staging-202144",
+      "StackId": "arn:aws:cloudformation:eu-north-1:927964485773:stack/amplify-amplifyadb3b82811a94-staging-202144/60217bc0-ad9a-11ee-802e-0a48f03b554a",
+      "AmplifyAppId": "d2fdvfdh0bu1gr"
+    }
+  },
+  "api": {
+    "enkeltbutikknettside": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ],
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            }
+          }
+        },
+        "GraphQLAPIIdOutput": "bbdrmgbmmfdwjbzjfephzpf2k4",
+        "GraphQLAPIEndpointOutput": "https://5ugonlh4frg3hnml62vqr4kriq.appsync-api.eu-north-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-uj5kc73revhevlvinpm63apefq"
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync",
+      "lastPushTimeStamp": "2024-01-23T14:55:29.994Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyadb3b82811a94-staging-202144-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apienkeltbutikknettside"
+      },
+      "lastPushDirHash": "zVOOB2HxpOSYAmvQ0TVX56IU9gU="
+    }
+  }
+}

@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f37d5c44-5065-430f-aebe-91cfa3d9a96d" name="Changes" comment="fikse feil">
+      <change afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.upsertKunde.req.vtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.upsertKunde.res.vtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.bestillingsByKundeID.auth.1.req.vtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.produktsByBestillingID.auth.1.req.vtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/resolvers/Mutation.upsertKunde.req.vtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/resolvers/Mutation.upsertKunde.res.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/amplify-meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/amplify-meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/cloudformation-template.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/cloudformation-template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/parameters.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/parameters.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Kunde.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Kunde.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Kunde.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Kunde.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Produkter.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Produkter.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Produkter.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Produkter.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Transaksjon.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Transaksjon.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Transaksjon.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.Transaksjon.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Bestilling.bestillingsByKundeID.auth.1.req.vtl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Kunde.Bestillinger.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Kunde.Bestillinger.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Kunde.Bestillinger.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Kunde.Bestillinger.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.createBestilling.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.createBestilling.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.createKunde.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.createKunde.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.createProdukt.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.createProdukt.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.createTransaksjon.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.createTransaksjon.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.deleteBestilling.auth.1.res.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.deleteBestilling.auth.1.res.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.deleteKunde.auth.1.res.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.deleteKunde.auth.1.res.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.deleteProdukt.auth.1.res.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.deleteProdukt.auth.1.res.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.deleteTransaksjon.auth.1.res.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.deleteTransaksjon.auth.1.res.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.updateBestilling.auth.1.res.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.updateBestilling.auth.1.res.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.updateKunde.auth.1.res.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.updateKunde.auth.1.res.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.updateProdukt.auth.1.res.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.updateProdukt.auth.1.res.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.updateTransaksjon.auth.1.res.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Mutation.updateTransaksjon.auth.1.res.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Produkt.produktsByBestillingID.auth.1.req.vtl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.bestillingsByKundeID.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.bestillingsByKundeID.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.getBestilling.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.getBestilling.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.getKunde.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.getKunde.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.getProdukt.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.getProdukt.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.getTransaksjon.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.getTransaksjon.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.listBestillings.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.listBestillings.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.listKundes.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.listKundes.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.listProdukts.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.listProdukts.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.listTransaksjons.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.listTransaksjons.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.produktsByBestillingID.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.produktsByBestillingID.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onCreateBestilling.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onCreateBestilling.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onCreateKunde.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onCreateKunde.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onCreateProdukt.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onCreateProdukt.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onCreateTransaksjon.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onCreateTransaksjon.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onDeleteBestilling.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onDeleteBestilling.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onDeleteKunde.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onDeleteKunde.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onDeleteProdukt.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onDeleteProdukt.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onDeleteTransaksjon.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onDeleteTransaksjon.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onUpdateBestilling.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onUpdateBestilling.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onUpdateKunde.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onUpdateKunde.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onUpdateProdukt.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onUpdateProdukt.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onUpdateTransaksjon.auth.1.req.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Subscription.onUpdateTransaksjon.auth.1.req.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/schema.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/Bestilling.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/Bestilling.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/ConnectionStack.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/ConnectionStack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/Kunde.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/Kunde.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/Produkt.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/Produkt.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/Transaksjon.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/stacks/Transaksjon.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/schema.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/api/enkeltbutikknettside/build/cloudformation-template.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/api/enkeltbutikknettside/build/cloudformation-template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/awscloudformation/build/root-cloudformation-stack.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/awscloudformation/build/root-cloudformation-stack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/root-cloudformation-stack.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/#current-cloud-backend/awscloudformation/build/root-cloudformation-stack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/.config/project-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/.config/project-config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/amplify-meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/amplify-meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/cloudformation-template.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/cloudformation-template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/parameters.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/parameters.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/schema.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/schema.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/api/enkeltbutikknettside/build/cloudformation-template.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/api/enkeltbutikknettside/build/cloudformation-template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/awscloudformation/build/root-cloudformation-stack.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/awscloudformation/build/root-cloudformation-stack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/root-cloudformation-stack.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/root-cloudformation-stack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/cli.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/cli.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/team-provider-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/team-provider-info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Bestilling/Kasse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Bestilling/Kasse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphql/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphql/mutations.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2RbYYFrXOzz4a6fkD0eCANjuehg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;aws-branch&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tomaten/Desktop/enkeltbutikknettside/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Tomaten\Desktop\enkeltbutikknettside\src" />
+      <recent name="C:\Users\Tomaten\Desktop\enkeltbutikknettside\public\bilder" />
+      <recent name="C:\Users\Tomaten\Desktop\enkeltbutikknettside\src\fonts" />
+      <recent name="C:\Users\Tomaten\Desktop\enkeltbutikknettside\src\picture" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tomaten\Desktop\enkeltbutikknettside\src" />
+      <recent name="C:\Users\Tomaten\Desktop\enkeltbutikknettside\src\components\Global" />
+      <recent name="C:\Users\Tomaten\Desktop\enkeltbutikknettside\public\bilder" />
+      <recent name="C:\Users\Tomaten\Desktop\enkeltbutikknettside\public" />
+      <recent name="C:\Users\Tomaten\Desktop\enkeltbutikknettside\src\components\Konfigurator" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f37d5c44-5065-430f-aebe-91cfa3d9a96d" name="Changes" comment="" />
+      <created>1687520294004</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687520294004</updated>
+      <workItem from="1687520295067" duration="98000" />
+      <workItem from="1687520402378" duration="9308000" />
+      <workItem from="1688110877603" duration="14000" />
+      <workItem from="1688110897287" duration="917000" />
+      <workItem from="1688229667207" duration="31886000" />
+      <workItem from="1689319848524" duration="2149000" />
+      <workItem from="1689678879420" duration="2969000" />
+      <workItem from="1689756964302" duration="480000" />
+      <workItem from="1689757467458" duration="18262000" />
+      <workItem from="1691914375108" duration="5195000" />
+      <workItem from="1694587139908" duration="8988000" />
+      <workItem from="1694848154062" duration="58575000" />
+      <workItem from="1697198177440" duration="7063000" />
+      <workItem from="1697457773531" duration="18459000" />
+      <workItem from="1697815682948" duration="13807000" />
+      <workItem from="1699272936122" duration="8587000" />
+      <workItem from="1700833207585" duration="9135000" />
+      <workItem from="1702041211054" duration="12053000" />
+      <workItem from="1704213948263" duration="6465000" />
+      <workItem from="1704662068329" duration="917000" />
+      <workItem from="1705852033522" duration="7845000" />
+      <workItem from="1706017817836" duration="4199000" />
+    </task>
+    <task id="LOCAL-00022" summary="legge til banner">
+      <option name="closed" value="true" />
+      <created>1690310525296</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1690310525296</updated>
+    </task>
+    <task id="LOCAL-00023" summary="endre tekst">
+      <option name="closed" value="true" />
+      <created>1690315129961</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1690315129961</updated>
+    </task>
+    <task id="LOCAL-00024" summary="legge til instagram">
+      <option name="closed" value="true" />
+      <created>1690318765527</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1690318765527</updated>
+    </task>
+    <task id="LOCAL-00025" summary="end til flex-end">
+      <option name="closed" value="true" />
+      <created>1690320243598</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1690320243598</updated>
+    </task>
+    <task id="LOCAL-00026" summary="endre icon slik at google viser riktig">
+      <option name="closed" value="true" />
+      <created>1691165406918</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1691165406918</updated>
+    </task>
+    <task id="LOCAL-00027" summary="ny logo">
+      <option name="closed" value="true" />
+      <created>1691268543880</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1691268543880</updated>
+    </task>
+    <task id="LOCAL-00028" summary="ny logo">
+      <option name="closed" value="true" />
+      <created>1691269203580</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1691269203580</updated>
+    </task>
+    <task id="LOCAL-00029" summary="endre litt tekst">
+      <option name="closed" value="true" />
+      <created>1692043910205</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1692043910205</updated>
+    </task>
+    <task id="LOCAL-00030" summary="endre tekst på hanefot">
+      <option name="closed" value="true" />
+      <created>1692794423452</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1692794423452</updated>
+    </task>
+    <task id="LOCAL-00031" summary="legge til sidene og kartene tilhørende">
+      <option name="closed" value="true" />
+      <created>1694775572743</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1694775572743</updated>
+    </task>
+    <task id="LOCAL-00032" summary="små fiks">
+      <option name="closed" value="true" />
+      <created>1694862057658</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1694862057658</updated>
+    </task>
+    <task id="LOCAL-00033" summary="sortere filene i mapper, legge til bestillingsfila, legge til leiebånd config">
+      <option name="closed" value="true" />
+      <created>1694876900593</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1694876900593</updated>
+    </task>
+    <task id="LOCAL-00034" summary="opprydding">
+      <option name="closed" value="true" />
+      <created>1694897887463</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1694897887463</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Bestilling: Lage form, begynne på tilkobling til API.">
+      <option name="closed" value="true" />
+      <created>1695159548292</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1695159548292</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Bestilling: Lage form, begynne på tilkobling til API.">
+      <option name="closed" value="true" />
+      <created>1695332050462</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1695332050462</updated>
+    </task>
+    <task id="LOCAL-00037" summary="endre til små bokstaver">
+      <option name="closed" value="true" />
+      <created>1695334816760</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1695334816760</updated>
+    </task>
+    <task id="LOCAL-00038" summary="endre postnr til string">
+      <option name="closed" value="true" />
+      <created>1695422193819</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1695422193819</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Bekreftelseside">
+      <option name="closed" value="true" />
+      <created>1695641568943</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1695641568943</updated>
+    </task>
+    <task id="LOCAL-00040" summary="legge til biothane farger med riktig hex">
+      <option name="closed" value="true" />
+      <created>1695651072689</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1695651072689</updated>
+    </task>
+    <task id="LOCAL-00041" summary="nye produlter i regnskap.txt">
+      <option name="closed" value="true" />
+      <created>1695651093320</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1695651093320</updated>
+    </task>
+    <task id="LOCAL-00042" summary="gjøre ProductConfigurator.js klassen mer generelt ved å ta ut navn og pris">
+      <option name="closed" value="true" />
+      <created>1695651131677</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1695651131677</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fikse tekstconfig">
+      <option name="closed" value="true" />
+      <created>1696248460848</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1696248460848</updated>
+    </task>
+    <task id="LOCAL-00044" summary="fortsette med config">
+      <option name="closed" value="true" />
+      <created>1697208667498</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1697208667498</updated>
+    </task>
+    <task id="LOCAL-00045" summary="vise pris">
+      <option name="closed" value="true" />
+      <created>1697458202795</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1697458202795</updated>
+    </task>
+    <task id="LOCAL-00046" summary="klips selector og vise leiebånd og halsbånd på forsiden">
+      <option name="closed" value="true" />
+      <created>1697540447257</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1697540447257</updated>
+    </task>
+    <task id="LOCAL-00047" summary="fjerne sele, leke knapp&#10;fjerne fargekart og font knapp&#10;endre annet til vinyltrykk">
+      <option name="closed" value="true" />
+      <created>1697543980446</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1697543980446</updated>
+    </task>
+    <task id="LOCAL-00048" summary="spør om sluttbruker ønsker tekst eller farge2">
+      <option name="closed" value="true" />
+      <created>1697545942890</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1697545942890</updated>
+    </task>
+    <task id="LOCAL-00049" summary="vise totalpris">
+      <option name="closed" value="true" />
+      <created>1697566383553</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1697566383553</updated>
+    </task>
+    <task id="LOCAL-00050" summary="vise pris mens man velger produkt">
+      <option name="closed" value="true" />
+      <created>1697566434385</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1697566434385</updated>
+    </task>
+    <task id="LOCAL-00051" summary="vise configliste bare når noe er i localstorage, fjerne alerts">
+      <option name="closed" value="true" />
+      <created>1697566499181</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1697566499181</updated>
+    </task>
+    <task id="LOCAL-00052" summary="rydde i configliste">
+      <option name="closed" value="true" />
+      <created>1697566571415</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1697566571415</updated>
+    </task>
+    <task id="LOCAL-00053" summary="fikse feil med farge2">
+      <option name="closed" value="true" />
+      <created>1697566582498</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1697566582498</updated>
+    </task>
+    <task id="LOCAL-00054" summary="legge til bilder og leke fane">
+      <option name="closed" value="true" />
+      <created>1698069528519</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1698069528519</updated>
+    </task>
+    <task id="LOCAL-00055" summary="legge til bilder">
+      <option name="closed" value="true" />
+      <created>1698240489017</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1698240489017</updated>
+    </task>
+    <task id="LOCAL-00056" summary="legge til congif for halsbånd">
+      <option name="closed" value="true" />
+      <created>1699007726779</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1699007726779</updated>
+    </task>
+    <task id="LOCAL-00057" summary="legge til knapp for å åpne handlekurv skuff">
+      <option name="closed" value="true" />
+      <created>1699276588872</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1699276588872</updated>
+    </task>
+    <task id="LOCAL-00058" summary="legge til bilder for klips og metall">
+      <option name="closed" value="true" />
+      <created>1699276608705</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1699276608705</updated>
+    </task>
+    <task id="LOCAL-00059" summary="legge til kant når man har valgt farge">
+      <option name="closed" value="true" />
+      <created>1699277008715</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1699277008715</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Legge til handlekurv">
+      <option name="closed" value="true" />
+      <created>1699370045116</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1699370045116</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Oppsummeringsboks når man bestiller.">
+      <option name="closed" value="true" />
+      <created>1699370070102</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1699370070102</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Legge til flere produkter">
+      <option name="closed" value="true" />
+      <created>1702042486856</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1702042486856</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Legge til flere produkter">
+      <option name="closed" value="true" />
+      <created>1702042511952</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1702042511952</updated>
+    </task>
+    <task id="LOCAL-00064" summary="legge til leke">
+      <option name="closed" value="true" />
+      <created>1702048160132</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1702048160132</updated>
+    </task>
+    <task id="LOCAL-00065" summary="legge til overraskelspakker">
+      <option name="closed" value="true" />
+      <created>1702125491747</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1702125491747</updated>
+    </task>
+    <task id="LOCAL-00066" summary="legge til amplify">
+      <option name="closed" value="true" />
+      <created>1704662109393</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1704662109393</updated>
+    </task>
+    <task id="LOCAL-00067" summary="legge til amplify">
+      <option name="closed" value="true" />
+      <created>1704662146029</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1704662146029</updated>
+    </task>
+    <task id="LOCAL-00068" summary="bedre import, fikse aws import fra v5 til v6">
+      <option name="closed" value="true" />
+      <created>1705864714912</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1705864714912</updated>
+    </task>
+    <task id="LOCAL-00069" summary="fikse feil">
+      <option name="closed" value="true" />
+      <created>1705866527988</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1705866527988</updated>
+    </task>
+    <task id="LOCAL-00070" summary="fikse feil">
+      <option name="closed" value="true" />
+      <created>1706019491857</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1706019491857</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="fikse tekstconfig" />
+    <MESSAGE value="fortsette med config" />
+    <MESSAGE value="vise pris" />
+    <MESSAGE value="klips selector og vise leiebånd og halsbånd på forsiden" />
+    <MESSAGE value="fjerne sele, leke knapp&#10;fjerne fargekart og font knapp&#10;endre annet til vinyltrykk" />
+    <MESSAGE value="spør om sluttbruker ønsker tekst eller farge2" />
+    <MESSAGE value="vise totalpris" />
+    <MESSAGE value="vise pris mens man velger produkt" />
+    <MESSAGE value="vise configliste bare når noe er i localstorage, fjerne alerts" />
+    <MESSAGE value="rydde i configliste" />
+    <MESSAGE value="fikse feil med farge2" />
+    <MESSAGE value="legge til bilder og leke fane" />
+    <MESSAGE value="legge til bilder" />
+    <MESSAGE value="legge til congif for halsbånd" />
+    <MESSAGE value="legge til knapp for å åpne handlekurv skuff" />
+    <MESSAGE value="legge til bilder for klips og metall" />
+    <MESSAGE value="legge til kant når man har valgt farge" />
+    <MESSAGE value="Legge til handlekurv" />
+    <MESSAGE value="Oppsummeringsboks når man bestiller." />
+    <MESSAGE value="Legge til flere produkter" />
+    <MESSAGE value="legge til leke" />
+    <MESSAGE value="legge til overraskelspakker" />
+    <MESSAGE value="legge til amplify" />
+    <MESSAGE value="bedre import, fikse aws import fra v5 til v6" />
+    <MESSAGE value="fikse feil" />
+    <option name="LAST_COMMIT_MESSAGE" value="fikse feil" />
+  </component>
+</project>

@@ -1,4 +1,4 @@
-import strings from '../../strings.json';
+import strings from 'strings.json';
 import { Carousel } from "react-responsive-carousel";
 import React from "react";
 import { NavLink } from "react-router-dom";

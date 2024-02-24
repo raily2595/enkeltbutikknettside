@@ -1,10 +1,10 @@
 // ProductConfigurator.js
 import React, { useState, useEffect } from "react";
-import ProductDisplay from "./ProductDisplay";
-import TextSettings from "../Konfigurator/TextSettings";
-import SubmitButton from "../Konfigurator/SubmitButton";
-import Handlekurv from "../Bestilling/Handlekurv";
-import SubmissionWindow from "./SubmissionWindow";
+import ProductDisplay from "components/Global/ProductDisplay";
+import TextSettings from "components/Konfigurator/TextSettings";
+import SubmitButton from "components/Konfigurator/SubmitButton";
+import ConfigList from "components/Global/ConfigList";
+import SubmissionWindow from "components/Global/SubmissionWindow";
 import { BiothaneSelector, VinylSelector, MetallSelector, LekeSelector, KlipsSelector } from '../Konfigurator/Selectors';
 
 const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, harLengdecm, harBredde, harKrokband, harHandtak, harKrok, harTekst, harKlips, harRing, harFarge2, harLeke }) => {
@@ -40,6 +40,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     const harLekebool = harLeke;
     const [harDataILocalStorage, setHarDataILocalStorage] = useState(false);
     const [showSubmissionWindow, setShowSubmissionWindow] = useState(false); // Track whether to show the submission window
+    const [submissionSummary, setSubmissionSummary] = useState(""); // Summary of choices for the submission window
 
     useEffect(() => {
         // Load configurations from localStorage when the component mounts
@@ -47,7 +48,6 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         if (savedConfigurations) {
             setConfigurations(savedConfigurations);
         }
-        CheckHandlekurv();
     }, []);
 
     useEffect(() => {
@@ -62,6 +62,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
 
 
     useEffect(() => {
+        // Save configurations to localStorage whenever they change
         if (configurations.length > 0) localStorage.setItem("productConfigurations", JSON.stringify(configurations));
     }, [configurations]);
 
@@ -133,8 +134,9 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     };
 
     const handleAddConfig = () => {
-
+        const id = Date.now() * Math.random()
         const newConfig = {
+            id,
             farge,
             farge2,
             vinyltekst,
@@ -157,6 +159,25 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         setSelectedConfigIndex(null);
         CheckHandlekurv();
 
+        setHarDataILocalStorage(true);
+        let summary = `Produkt: ${newConfig.produktnavn},Farge: ${newConfig.farge},`;
+        if (newConfig.onskerFarge2) {
+            summary += ` Farge 2: ${newConfig.farge2},`;
+        }
+        if (newConfig.onskerTekst) {
+            summary += ` VinylTekst: ${newConfig.vinyltekst},`;
+            summary += ` Fontfarge: ${newConfig.fontfarge},`;
+            summary += ` Font: ${newConfig.font},`;
+        }
+        summary += ` Lengde: ${newConfig.lengde}, Bredde: ${newConfig.bredde}, Detaljefarger: ${newConfig.detaljefarger},`
+        if (harKlipsbool) {
+            summary += ` Klips: ${newConfig.klips},`;
+        }
+        if (harLekebool) {
+            summary += ` Leke: ${newConfig.valgtLeke},`;
+        }
+        summary += ` Pris: ${newConfig.pris}, Kommentar: ${newConfig.kommentar}`;
+        setSubmissionSummary(summary); // Set the summary
         setShowSubmissionWindow(true); // Show the submission window
     };
 
@@ -168,13 +189,11 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         const updatedConfigurations = [...configurations];
         updatedConfigurations.splice(index, 1);
         setConfigurations(updatedConfigurations);
-        CheckHandlekurv();
-    };
-
-    const CheckHandlekurv = () => {
         const dataILocalStorage = localStorage.getItem('productConfigurations');
-        setHarDataILocalStorage(dataILocalStorage);
-    }
+        if (!dataILocalStorage) {
+            setHarDataILocalStorage(false);
+        }
+    };
 
     return (
         <div>
@@ -301,19 +320,26 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                     onSaveConfig={handleAddConfig}
                     onDeleteConfig={selectedConfigIndex !== null ? () => handleDeleteConfig(selectedConfigIndex) : null}
                 />
-            </div>
-            {showSubmissionWindow && (
-                <div className="konfigurator-card">
+                {showSubmissionWindow && (
                     <SubmissionWindow
                         onClose={handleClearSubmissionWindow}
+                        onContinueShopping={handleClearSubmissionWindow}
+                        summary={submissionSummary}
                     />
-                </div>
-            )}
-            {harDataILocalStorage && (
-                <div className="konfigurator-card">
-                    <Handlekurv />
-                </div>
-            )}
+                )}
+            </div>
+            {
+                harDataILocalStorage && (
+                    <>
+                        <div className="konfigurator-card">
+                            <ConfigList
+                                configurations={configurations}
+                                onDeleteConfig={handleDeleteConfig}
+                            />
+                        </div>
+                    </>
+                )
+            }
         </div >
     );
 };

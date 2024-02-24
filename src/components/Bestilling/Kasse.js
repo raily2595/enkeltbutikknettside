@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { generateClient } from 'aws-amplify/api';
+import {createBestilling, createKunde, upsertKunde} from 'graphql/mutations';
 
 function Kasse() {
+    const client = generateClient();
     const navigate = useNavigate();
     const [harDataILocalStorage, setHarDataILocalStorage] = useState(false);
     const [bestillingsforesporsel, setBestillingsforesporsel] = useState({
@@ -13,10 +15,9 @@ function Kasse() {
         telefon: '',
         poststed: '',
         produkter: [],
-        betalingsmetode: '',
-        totalt: 600,
+        leveringsmetode: '',
+        totalt: '',
     });
-    const [feilmelding, setFeilmelding] = useState('');
 
     // Sjekk localstorage ved oppstart av komponenten
     useEffect(() => {
@@ -29,9 +30,14 @@ function Kasse() {
     useEffect(() => {
         // Hent produktinformasjon fra localStorage og legg den til i bestillingsforespørselen
         const productConfigurations = JSON.parse(localStorage.getItem('productConfigurations')) || [];
+        const totalPrice = productConfigurations.reduce((total, produkt) => {
+            return total + produkt.pris; // Assuming pris is the property that stores the price
+        }, 0);
+
         setBestillingsforesporsel((prevState) => ({
             ...prevState,
             produkter: productConfigurations,
+            totalt: totalPrice,
         }));
     }, []);
 
@@ -43,15 +49,37 @@ function Kasse() {
         }));
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
-        axios
-            .post('https://localhost:7123/api/Nettside', bestillingsforesporsel)
-            .then((response) => {
-                // Håndter suksessrespons her
-                console.log('Bestilling opprettet:', response.data);
-                // Tilbakestill skjemaet etter en vellykket bestilling om nødvendig
+            try {
+                /*
+                const Kundedata = {
+                    navn: bestillingsforesporsel.navn,
+                    epost: bestillingsforesporsel.epost,
+                    adresse: bestillingsforesporsel.adresse,
+                    postnr: bestillingsforesporsel.postnr,
+                    poststed: bestillingsforesporsel.poststed,
+                    telefon: bestillingsforesporsel.telefon
+                }
+                const Kunde = await client.graphql({query: upsertKunde, variables: { input: Kundedata }});
+
+                const bestillingData = {
+                    id: Date.now() * Math.random(),
+                    ordreDato: Date.now(),
+                    bestillingsstatus: "bestilt",
+                    kundeID: Kunde.id,
+                    Produkter: bestillingsforesporsel.produkter,
+                    Transaksjon: {
+                        id: Date.now() * Math.random(),
+                        betalingsmetode: "faktura",
+                        betalingsstatus: "ikke betalt",
+                        total: bestillingsforesporsel.totalt,
+                    }
+                };
+
+                console.log(Kunde.id)
+                const response = await client.graphql({query: createBestilling, variables: { input: bestillingData }});
                 setBestillingsforesporsel({
                     navn: '',
                     epost: '',
@@ -60,8 +88,8 @@ function Kasse() {
                     telefon: '',
                     poststed: '',
                     produkter: [],
-                    betalingsmetode: '',
-                    totalt: 600,
+                    leveringsmetode: '',
+                    totalt: '',
                     // Tilbakestill andre felt om nødvendig
                 });
                 // Fjern produktinformasjonen fra localStorage etter bestilling hvis nødvendig
@@ -69,20 +97,21 @@ function Kasse() {
 
                 // Naviger til en ny side
                 navigate('/bekreftelse'); // Bytt ut '/ny-side' med den faktiske URLen til den nye siden
-
-            })
-            .catch((error) => {
-                // Håndter feilrespons her
-                if (error.response) {
-                    // Feilmelding fra serveren
-                    console.error('Feilmelding fra server:', error.response.data);
-                } else {
-                    // Annet feil, for eksempel nettverksfeil
-                    console.error('Annet feil:', error.message);
+                 */
+                const Kundedata = {
+                    id: 1234,
+                    navn: bestillingsforesporsel.navn,
+                    epost: bestillingsforesporsel.epost,
+                    adresse: bestillingsforesporsel.adresse,
+                    postnr: bestillingsforesporsel.postnr,
+                    poststed: bestillingsforesporsel.poststed,
+                    telefon: bestillingsforesporsel.telefon
                 }
-                console.error('Feil ved opprettelse av bestilling:', error);
-                setFeilmelding('Feil ved opprettelse av bestilling');
-            });
+                const Kunde = await client.graphql({query: createKunde, variables: { input: Kundedata }});
+                console.log(Kunde)
+            } catch (err) {
+                console.error('Error upserting or creating bestilling:', err);
+            }
     };
 
     return (
@@ -162,30 +191,29 @@ function Kasse() {
                     />
                 </div>
                 <div>
-                    <p>Betalingsmetode</p>
+                    <p>Leveringsmetode</p>
                     <input
                         type="radio"
-                        id="epostfaktura"
-                        name="Betalingsmetode"
-                        value="Faktura på epost"
+                        id="levering"
+                        name="Leveringsmetode"
+                        value="Sendes med posten"
                         onChange={handleInputChange}
                         required
                     />
-                    <label htmlFor="epostfaktura">Faktura på epost:</label>
+                    <label htmlFor="levering">Sendes med posten</label>
                     <input
                         type="radio"
-                        id="vippsfaktura"
-                        name="Betalingsmetode"
-                        value="Faktura på vipps"
+                        id="avtaler"
+                        name="Leveringsmetode"
+                        value="Avtaler levering"
                         onChange={handleInputChange}
                         required
                     />
-                    <label htmlFor="vippsfaktura">eFaktura:</label>
+                    <label htmlFor="avtaler">Avtaler levering:</label>
                 </div>
                 {harDataILocalStorage && (
                 <button type="submit">Send bestilling</button>)}
             </form>
-            {feilmelding && <p>{feilmelding}</p>}
         </div>
     );
 }
