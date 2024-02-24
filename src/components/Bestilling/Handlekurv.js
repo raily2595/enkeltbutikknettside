@@ -47,7 +47,7 @@ const Handlekurv = () => {
     };
 
     return (
-        <div className="main-content">
+        <div>
             {handlekurvItems.length === 0 ? (
                 <div>
                     <h2>Handlekurv</h2>
@@ -60,27 +60,26 @@ const Handlekurv = () => {
                     <ul className="no-bullets">
                         {handlekurvItems.map((item, index) => (
                             <li key={index}>
-                                <div className="konfigurator-card">
-                                    <div className="konfigurator-tittel">
-                                        <label>{item.produktnavn}</label>
-                                    </div>
-                                    <div>
-                                        <label>{fargetekst(item)}</label>
-                                    </div>
-                                    {item.onskerTekst && (
-                                        <div>
-                                            <label>{item.fontfarge} {item.font} tekst "{item.vinyltekst}"</label>
-                                        </div>
-                                    )}
-                                    {item.harLekebool && (
-                                        <div>Valgt Leke: {item.valgtLeke}</div>
-                                    )}
-                                    <div>
-                                        <label>{storrelsestekst(item)}</label>
-                                    </div>
-                                    <div>Pris: {item.pris} kr</div>
-                                    <button className="secondary-small-button" onClick={() => removeFromCart(index)}>Fjern</button>
+                                <div className="konfigurator-tittel">
+                                    <label>{item.produktnavn}</label>
                                 </div>
+                                <div>
+                                    <label>{fargetekst(item)}</label>
+                                </div>
+                                {item.onskerTekst && (
+                                    <div>
+                                        <label>{item.fontfarge} {item.font} tekst "{item.vinyltekst}"</label>
+                                    </div>
+                                )}
+                                {item.harLekebool && (
+                                    <div>Valgt Leke: {item.valgtLeke}</div>
+                                )}
+                                <div>
+                                    <label>{storrelsestekst(item)}</label>
+                                </div>
+                                <div>Pris: {item.pris} kr</div>
+                                <button className="secondary-small-button" onClick={() => removeFromCart(index)}>Fjern</button>
+                                <hr className="konfigurator-divider" />
                             </li>
                         ))}
                     </ul>
