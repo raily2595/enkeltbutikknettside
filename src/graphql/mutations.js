@@ -340,23 +340,3 @@ export const deleteBestilling = /* GraphQL */ `
     }
   }
 `;
-export const upsertKunde = /* GraphQL */ `
-  mutation UpsertKunde($input: UpsertKundeInput!) {
-    upsertKunde(input: $input) {
-      id
-      navn
-      epost
-      adresse
-      postnr
-      poststed
-      telefon
-      Bestillinger {
-        nextToken
-        __typename
-      }
-      createdAt
-      updatedAt
-      __typename
-    }
-  }
-`;

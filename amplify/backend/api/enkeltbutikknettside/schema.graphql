@@ -47,18 +47,4 @@ type Bestilling @model @auth(rules: [{allow: public}]) {
   poststed: String
   hentes: Boolean
   kommentar: String
-}
-
-input UpsertKundeInput {
-  telefon: String!
-  navn: String
-  epost: AWSEmail
-  adresse: String
-  postnr: String
-  poststed: String
-}
-
-type Mutation {
-  upsertKunde(input: UpsertKundeInput!): Kunde @auth(rules: [{allow: public}])
-}
- 
+} 

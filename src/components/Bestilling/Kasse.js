@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { generateClient } from 'aws-amplify/api';
-import {createBestilling, createKunde, upsertKunde} from 'graphql/mutations';
+import React, {useEffect, useState} from 'react';
+import {useNavigate} from 'react-router-dom';
+import {generateClient} from 'aws-amplify/api';
+import {createBestilling, createKunde, createProdukt, createTransaksjon} from 'graphql/mutations';
+import {getKunde} from "../../graphql/queries";
+import moment from "moment";
 
 function Kasse() {
     const client = generateClient();
@@ -17,7 +19,9 @@ function Kasse() {
         produkter: [],
         leveringsmetode: '',
         totalt: '',
+        kommentar: ''
     });
+    const [kundeid, setKundeid] = useState('');
 
     // Sjekk localstorage ved oppstart av komponenten
     useEffect(() => {
@@ -35,87 +39,105 @@ function Kasse() {
         }, 0);
 
         setBestillingsforesporsel((prevState) => ({
-            ...prevState,
-            produkter: productConfigurations,
-            totalt: totalPrice,
+            ...prevState, produkter: productConfigurations, totalt: totalPrice,
         }));
     }, []);
 
     const handleInputChange = (event) => {
-        const { name, value } = event.target;
+        const {name, value} = event.target;
         setBestillingsforesporsel((prevState) => ({
-            ...prevState,
-            [name]: value,
+            ...prevState, [name]: value,
         }));
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
+        try {
             try {
-                /*
-                const Kundedata = {
-                    navn: bestillingsforesporsel.navn,
-                    epost: bestillingsforesporsel.epost,
-                    adresse: bestillingsforesporsel.adresse,
-                    postnr: bestillingsforesporsel.postnr,
-                    poststed: bestillingsforesporsel.poststed,
-                    telefon: bestillingsforesporsel.telefon
-                }
-                const Kunde = await client.graphql({query: upsertKunde, variables: { input: Kundedata }});
-
-                const bestillingData = {
-                    id: Date.now() * Math.random(),
-                    ordreDato: Date.now(),
-                    bestillingsstatus: "bestilt",
-                    kundeID: Kunde.id,
-                    Produkter: bestillingsforesporsel.produkter,
-                    Transaksjon: {
-                        id: Date.now() * Math.random(),
-                        betalingsmetode: "faktura",
-                        betalingsstatus: "ikke betalt",
-                        total: bestillingsforesporsel.totalt,
-                    }
-                };
-
-                console.log(Kunde.id)
-                const response = await client.graphql({query: createBestilling, variables: { input: bestillingData }});
-                setBestillingsforesporsel({
-                    navn: '',
-                    epost: '',
-                    adresse: '',
-                    postnr: '',
-                    telefon: '',
-                    poststed: '',
-                    produkter: [],
-                    leveringsmetode: '',
-                    totalt: '',
-                    // Tilbakestill andre felt om nødvendig
+                // Get a specific item
+                const oneKunde = await client.graphql({
+                    query: getKunde, variables: {"telefon": bestillingsforesporsel.telefon}
                 });
-                // Fjern produktinformasjonen fra localStorage etter bestilling hvis nødvendig
-                localStorage.removeItem('productConfigurations');
-
-                // Naviger til en ny side
-                navigate('/bekreftelse'); // Bytt ut '/ny-side' med den faktiske URLen til den nye siden
-                 */
-                const Kundedata = {
-                    id: 1234,
-                    navn: bestillingsforesporsel.navn,
-                    epost: bestillingsforesporsel.epost,
-                    adresse: bestillingsforesporsel.adresse,
-                    postnr: bestillingsforesporsel.postnr,
-                    poststed: bestillingsforesporsel.poststed,
-                    telefon: bestillingsforesporsel.telefon
+                setKundeid(oneKunde?.data?.getKunde?.id)
+            } catch {
+                console.log(bestillingsforesporsel.telefon, bestillingsforesporsel.telefon.type)
+                console.log(bestillingsforesporsel.poststed, bestillingsforesporsel.poststed.type)
+                try {
+                    const newKunde = await client.graphql({
+                        query: createKunde, variables: {
+                            input: {
+                                "navn": bestillingsforesporsel.navn,
+                                "epost": bestillingsforesporsel.epost,
+                                "adresse": bestillingsforesporsel.adresse,
+                                "postnr": bestillingsforesporsel.postnr,
+                                "poststed": bestillingsforesporsel.poststed,
+                                "telefon": bestillingsforesporsel.telefon,
+                            }
+                        }
+                    });
+                    setKundeid(newKunde?.data?.createKunde?.id)
+                } catch (error){
+                    console.error("Error in createKunde:", error);
                 }
-                const Kunde = await client.graphql({query: createKunde, variables: { input: Kundedata }});
-                console.log(Kunde)
-            } catch (err) {
-                console.error('Error upserting or creating bestilling:', err);
             }
+            const newTransaksjon = await client.graphql({
+                query: createTransaksjon, variables: {
+                    input: {
+                        "betalingsmetode": "faktura",
+                        "betalingsstatus": "ikke betalt",
+                        "total": bestillingsforesporsel.totalt
+                    }
+                }
+            });
+
+            const newBestilling = await client.graphql({
+                query: createBestilling, variables: {
+                    input: {
+                        "ordreDato": moment().format('YYYY-MM-DD'),
+                        "bestillingsstatus": "bestilt",
+                        "kundeID": kundeid,
+                        "adresse": bestillingsforesporsel.adresse,
+                        "postnr": bestillingsforesporsel.postnr,
+                        "poststed": bestillingsforesporsel.poststed,
+                        "leveringsmetode": bestillingsforesporsel.leveringsmetode,
+                        "kommentar": bestillingsforesporsel.kommentar,
+                        "Transaksjon": newTransaksjon?.data?.createTransaksjon
+                    }
+                }
+            });
+            bestillingsforesporsel.produkter.map(async produkt => {
+                try {
+                    const newProdukt = await client.graphql({
+                        query: createProdukt, variables: {
+                            input: {
+                                "produktnavn": produkt.produktnavn,
+                                "farge": produkt.farge,
+                                "farge2": produkt.farge2,
+                                "lengde": produkt.lengde,
+                                "bredde": produkt.bredde,
+                                "detaljefarger": produkt.detaljefarger,
+                                "klips": produkt.klips,
+                                "vinyltekst": produkt.vinyltekst,
+                                "fontfarge": produkt.fontfarge,
+                                "font": produkt.font,
+                                "pris": produkt.pris,
+                                "kommentar": produkt.kommentar,
+                                "valgtLeke": produkt.valgtLeke,
+                                "bestillingID": newBestilling?.data?.createBestilling?.id
+                            }
+                        }
+                    });
+                    console.log("New Produkt:", newProdukt);
+                } catch (error) {
+                    console.error("Error creating Produkt:", error);
+                }
+            });
+        } catch (error) {
+            console.error("Error in handleSubmit:", error);
+        }
     };
 
-    return (
-        <div>
+    return (<div>
             <h1>Bestillingsskjema</h1>
             <form onSubmit={handleSubmit}>
                 <div>
@@ -195,7 +217,7 @@ function Kasse() {
                     <input
                         type="radio"
                         id="levering"
-                        name="Leveringsmetode"
+                        name="leveringsmetode"
                         value="Sendes med posten"
                         onChange={handleInputChange}
                         required
@@ -204,18 +226,23 @@ function Kasse() {
                     <input
                         type="radio"
                         id="avtaler"
-                        name="Leveringsmetode"
+                        name="leveringsmetode"
                         value="Avtaler levering"
                         onChange={handleInputChange}
                         required
                     />
                     <label htmlFor="avtaler">Avtaler levering:</label>
+                    <label htmlFor="kommentar">Kommentar: </label>
+                    <textarea
+                        id="kommentar"
+                        name="kommentar"
+                        value={bestillingsforesporsel.kommentar}
+                        onChange={handleInputChange}
+                    />
                 </div>
-                {harDataILocalStorage && (
-                <button type="submit">Send bestilling</button>)}
+                {harDataILocalStorage && (<button type="submit">Send bestilling</button>)}
             </form>
-        </div>
-    );
+        </div>);
 }
 
 export default Kasse;
