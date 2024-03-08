@@ -48,6 +48,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         if (savedConfigurations) {
             setConfigurations(savedConfigurations);
         }
+        CheckHandlekurv();
     }, []);
 
     useEffect(() => {
@@ -193,7 +194,13 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         if (!dataILocalStorage) {
             setHarDataILocalStorage(false);
         }
+        CheckHandlekurv();
     };
+
+    const CheckHandlekurv = () => {
+        const dataILocalStorage = localStorage.getItem('productConfigurations');
+        setHarDataILocalStorage(dataILocalStorage);
+    }
 
     return (
         <div>
