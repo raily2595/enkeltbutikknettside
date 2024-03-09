@@ -21,7 +21,6 @@ function Kasse() {
         totalt: '',
         kommentar: ''
     });
-    const [kundeid, setKundeid] = useState('');
 
     // Sjekk localstorage ved oppstart av komponenten
     useEffect(() => {
@@ -52,16 +51,16 @@ function Kasse() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        let kundeid = ""
         try {
             try {
                 // Get a specific item
                 const oneKunde = await client.graphql({
                     query: getKunde, variables: {"telefon": bestillingsforesporsel.telefon}
                 });
-                setKundeid(oneKunde?.data?.getKunde?.id)
+                kundeid = oneKunde?.data?.getKunde?.id
             } catch {
-                console.log(bestillingsforesporsel.telefon, bestillingsforesporsel.telefon.type)
-                console.log(bestillingsforesporsel.poststed, bestillingsforesporsel.poststed.type)
+                console.log(bestillingsforesporsel.poststed)
                 try {
                     const newKunde = await client.graphql({
                         query: createKunde, variables: {
@@ -75,7 +74,7 @@ function Kasse() {
                             }
                         }
                     });
-                    setKundeid(newKunde?.data?.createKunde?.id)
+                    kundeid = newKunde?.data?.getKunde?.id
                 } catch (error){
                     console.error("Error in createKunde:", error);
                 }
