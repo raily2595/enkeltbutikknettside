@@ -60,7 +60,6 @@ function Kasse() {
                 });
                 kundeid = oneKunde?.data?.getKunde?.id
             } catch {
-                console.log(bestillingsforesporsel.poststed)
                 try {
                     const newKunde = await client.graphql({
                         query: createKunde, variables: {
@@ -74,7 +73,7 @@ function Kasse() {
                             }
                         }
                     });
-                    kundeid = newKunde?.data?.getKunde?.id
+                    kundeid = newKunde?.data?.createKunde?.id
                 } catch (error) {
                     console.error("Error in createKunde:", error);
                 }

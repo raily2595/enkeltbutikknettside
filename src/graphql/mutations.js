@@ -92,6 +92,7 @@ export const createTransaksjon = /* GraphQL */ `
       betalingsmetode
       betalingsstatus
       total
+      bestillingID
       createdAt
       updatedAt
       __typename
@@ -108,6 +109,7 @@ export const updateTransaksjon = /* GraphQL */ `
       betalingsmetode
       betalingsstatus
       total
+      bestillingID
       createdAt
       updatedAt
       __typename
@@ -124,6 +126,7 @@ export const deleteTransaksjon = /* GraphQL */ `
       betalingsmetode
       betalingsstatus
       total
+      bestillingID
       createdAt
       updatedAt
       __typename
@@ -219,17 +222,11 @@ export const createBestilling = /* GraphQL */ `
       leveringsmetode
       kommentar
       Transaksjon {
-        id
-        betalingsmetode
-        betalingsstatus
-        total
-        createdAt
-        updatedAt
+        nextToken
         __typename
       }
       createdAt
       updatedAt
-      bestillingTransaksjonId
       __typename
     }
   }
@@ -254,17 +251,11 @@ export const updateBestilling = /* GraphQL */ `
       leveringsmetode
       kommentar
       Transaksjon {
-        id
-        betalingsmetode
-        betalingsstatus
-        total
-        createdAt
-        updatedAt
+        nextToken
         __typename
       }
       createdAt
       updatedAt
-      bestillingTransaksjonId
       __typename
     }
   }
@@ -289,17 +280,11 @@ export const deleteBestilling = /* GraphQL */ `
       leveringsmetode
       kommentar
       Transaksjon {
-        id
-        betalingsmetode
-        betalingsstatus
-        total
-        createdAt
-        updatedAt
+        nextToken
         __typename
       }
       createdAt
       updatedAt
-      bestillingTransaksjonId
       __typename
     }
   }

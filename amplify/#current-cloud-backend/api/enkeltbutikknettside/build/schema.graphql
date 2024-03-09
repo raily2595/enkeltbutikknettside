@@ -23,6 +23,7 @@ type Transaksjon @aws_iam @aws_api_key {
   betalingsmetode: String
   betalingsstatus: String
   total: Int
+  bestillingID: ID!
   createdAt: AWSDateTime!
   updatedAt: AWSDateTime!
 }
@@ -51,10 +52,9 @@ type Bestilling @aws_iam @aws_api_key {
   poststed: String
   leveringsmetode: String
   kommentar: String
-  Transaksjon: Transaksjon
+  Transaksjon(filter: ModelTransaksjonFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelTransaksjonConnection
   createdAt: AWSDateTime!
   updatedAt: AWSDateTime!
-  bestillingTransaksjonId: ID
 }
 
 input ModelStringInput {
@@ -239,6 +239,7 @@ type Query {
   produktsByBestillingID(bestillingID: ID!, sortDirection: ModelSortDirection, filter: ModelProduktFilterInput, limit: Int, nextToken: String): ModelProduktConnection @aws_api_key @aws_iam
   getTransaksjon(id: ID!): Transaksjon @aws_api_key @aws_iam
   listTransaksjons(filter: ModelTransaksjonFilterInput, limit: Int, nextToken: String): ModelTransaksjonConnection @aws_api_key @aws_iam
+  transaksjonsByBestillingID(bestillingID: ID!, sortDirection: ModelSortDirection, filter: ModelTransaksjonFilterInput, limit: Int, nextToken: String): ModelTransaksjonConnection @aws_api_key @aws_iam
   getKunde(id: ID!): Kunde @aws_api_key @aws_iam
   listKundes(filter: ModelKundeFilterInput, limit: Int, nextToken: String): ModelKundeConnection @aws_api_key @aws_iam
   getBestilling(id: ID!): Bestilling @aws_api_key @aws_iam
@@ -366,6 +367,7 @@ input ModelTransaksjonFilterInput {
   betalingsmetode: ModelStringInput
   betalingsstatus: ModelStringInput
   total: ModelIntInput
+  bestillingID: ModelIDInput
   and: [ModelTransaksjonFilterInput]
   or: [ModelTransaksjonFilterInput]
   not: ModelTransaksjonFilterInput
@@ -375,6 +377,7 @@ input ModelTransaksjonConditionInput {
   betalingsmetode: ModelStringInput
   betalingsstatus: ModelStringInput
   total: ModelIntInput
+  bestillingID: ModelIDInput
   and: [ModelTransaksjonConditionInput]
   or: [ModelTransaksjonConditionInput]
   not: ModelTransaksjonConditionInput
@@ -385,6 +388,7 @@ input CreateTransaksjonInput {
   betalingsmetode: String
   betalingsstatus: String
   total: Int
+  bestillingID: ID!
 }
 
 input UpdateTransaksjonInput {
@@ -392,6 +396,7 @@ input UpdateTransaksjonInput {
   betalingsmetode: String
   betalingsstatus: String
   total: Int
+  bestillingID: ID
 }
 
 input DeleteTransaksjonInput {
@@ -403,6 +408,7 @@ input ModelSubscriptionTransaksjonFilterInput {
   betalingsmetode: ModelSubscriptionStringInput
   betalingsstatus: ModelSubscriptionStringInput
   total: ModelSubscriptionIntInput
+  bestillingID: ModelSubscriptionIDInput
   and: [ModelSubscriptionTransaksjonFilterInput]
   or: [ModelSubscriptionTransaksjonFilterInput]
 }
@@ -491,7 +497,6 @@ input ModelBestillingFilterInput {
   and: [ModelBestillingFilterInput]
   or: [ModelBestillingFilterInput]
   not: ModelBestillingFilterInput
-  bestillingTransaksjonId: ModelIDInput
 }
 
 input ModelBestillingConditionInput {
@@ -506,7 +511,6 @@ input ModelBestillingConditionInput {
   and: [ModelBestillingConditionInput]
   or: [ModelBestillingConditionInput]
   not: ModelBestillingConditionInput
-  bestillingTransaksjonId: ModelIDInput
 }
 
 input CreateBestillingInput {
@@ -519,7 +523,6 @@ input CreateBestillingInput {
   poststed: String
   leveringsmetode: String
   kommentar: String
-  bestillingTransaksjonId: ID
 }
 
 input UpdateBestillingInput {
@@ -532,7 +535,6 @@ input UpdateBestillingInput {
   poststed: String
   leveringsmetode: String
   kommentar: String
-  bestillingTransaksjonId: ID
 }
 
 input DeleteBestillingInput {

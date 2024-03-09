@@ -21,6 +21,7 @@ type Transaksjon @model @auth(rules: [{allow: public}]) {
   betalingsmetode: String
   betalingsstatus: String
   total: Int
+  bestillingID: ID! @index(name: "byBestilling")
 }
 
 type Kunde @model @auth(rules: [{allow: public}]) {
@@ -45,6 +46,6 @@ type Bestilling @model @auth(rules: [{allow: public}]) {
   poststed: String
   leveringsmetode: String
   kommentar: String
-  Transaksjon: Transaksjon @hasOne
+  Transaksjon: [Transaksjon] @hasMany(indexName: "byBestilling", fields: ["id"])
 }
  
