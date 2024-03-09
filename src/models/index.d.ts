@@ -1,6 +1,6 @@
 import { ModelInit, MutableModel, __modelMeta__, ManagedIdentifier } from "@aws-amplify/datastore";
 // @ts-ignore
-import { LazyLoading, LazyLoadingDisabled, AsyncCollection, AsyncItem } from "@aws-amplify/datastore";
+import { LazyLoading, LazyLoadingDisabled, AsyncCollection } from "@aws-amplify/datastore";
 
 
 
@@ -69,6 +69,7 @@ type EagerTransaksjon = {
   readonly betalingsmetode?: string | null;
   readonly betalingsstatus?: string | null;
   readonly total?: number | null;
+  readonly bestillingID: string;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -82,6 +83,7 @@ type LazyTransaksjon = {
   readonly betalingsmetode?: string | null;
   readonly betalingsstatus?: string | null;
   readonly total?: number | null;
+  readonly bestillingID: string;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -147,10 +149,9 @@ type EagerBestilling = {
   readonly poststed?: string | null;
   readonly leveringsmetode?: string | null;
   readonly kommentar?: string | null;
-  readonly Transaksjon?: Transaksjon | null;
+  readonly Transaksjon?: (Transaksjon | null)[] | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
-  readonly bestillingTransaksjonId?: string | null;
 }
 
 type LazyBestilling = {
@@ -168,10 +169,9 @@ type LazyBestilling = {
   readonly poststed?: string | null;
   readonly leveringsmetode?: string | null;
   readonly kommentar?: string | null;
-  readonly Transaksjon: AsyncItem<Transaksjon | undefined>;
+  readonly Transaksjon: AsyncCollection<Transaksjon>;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
-  readonly bestillingTransaksjonId?: string | null;
 }
 
 export declare type Bestilling = LazyLoading extends LazyLoadingDisabled ? EagerBestilling : LazyBestilling

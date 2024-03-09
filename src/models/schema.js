@@ -190,6 +190,13 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
+                "bestillingID": {
+                    "name": "bestillingID",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -213,6 +220,15 @@ export const schema = {
                 {
                     "type": "model",
                     "properties": {}
+                },
+                {
+                    "type": "key",
+                    "properties": {
+                        "name": "byBestilling",
+                        "fields": [
+                            "bestillingID"
+                        ]
+                    }
                 },
                 {
                     "type": "auth",
@@ -426,19 +442,17 @@ export const schema = {
                 },
                 "Transaksjon": {
                     "name": "Transaksjon",
-                    "isArray": false,
+                    "isArray": true,
                     "type": {
                         "model": "Transaksjon"
                     },
                     "isRequired": false,
                     "attributes": [],
+                    "isArrayNullable": true,
                     "association": {
-                        "connectionType": "HAS_ONE",
+                        "connectionType": "HAS_MANY",
                         "associatedWith": [
-                            "id"
-                        ],
-                        "targetNames": [
-                            "bestillingTransaksjonId"
+                            "bestillingID"
                         ]
                     }
                 },
@@ -457,13 +471,6 @@ export const schema = {
                     "isRequired": false,
                     "attributes": [],
                     "isReadOnly": true
-                },
-                "bestillingTransaksjonId": {
-                    "name": "bestillingTransaksjonId",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": false,
-                    "attributes": []
                 }
             },
             "syncable": true,
@@ -504,5 +511,5 @@ export const schema = {
     "enums": {},
     "nonModels": {},
     "codegenVersion": "3.4.4",
-    "version": "99fd6025bb381c09d2c3ba2e9b0a0fb4"
+    "version": "8789320e576a96ad1ffee1c4e4eb657d"
 };
