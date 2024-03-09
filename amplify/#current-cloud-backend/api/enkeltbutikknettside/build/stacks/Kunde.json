@@ -1268,19 +1268,6 @@
           ]
         }
       }
-    },
-    "transformerrootstackKundeKundeDataSourceC1D0CD3BName": {
-      "Value": {
-        "Fn::GetAtt": [
-          "KundeDataSource",
-          "Name"
-        ]
-      }
-    },
-    "transformerrootstackKundeKundeTableE7FFD290Ref": {
-      "Value": {
-        "Ref": "KundeTable"
-      }
     }
   }
 }

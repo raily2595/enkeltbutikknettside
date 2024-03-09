@@ -104,6 +104,7 @@ export const getTransaksjon = /* GraphQL */ `
       betalingsmetode
       betalingsstatus
       total
+      bestillingID
       createdAt
       updatedAt
       __typename
@@ -122,6 +123,37 @@ export const listTransaksjons = /* GraphQL */ `
         betalingsmetode
         betalingsstatus
         total
+        bestillingID
+        createdAt
+        updatedAt
+        __typename
+      }
+      nextToken
+      __typename
+    }
+  }
+`;
+export const transaksjonsByBestillingID = /* GraphQL */ `
+  query TransaksjonsByBestillingID(
+    $bestillingID: ID!
+    $sortDirection: ModelSortDirection
+    $filter: ModelTransaksjonFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    transaksjonsByBestillingID(
+      bestillingID: $bestillingID
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        betalingsmetode
+        betalingsstatus
+        total
+        bestillingID
         createdAt
         updatedAt
         __typename
@@ -182,29 +214,17 @@ export const getBestilling = /* GraphQL */ `
       ordreDato
       bestillingsstatus
       kundeID
-      Kunde {
-        id
-        navn
-        epost
-        adresse
-        postnr
-        poststed
-        telefon
-        createdAt
-        updatedAt
-        __typename
-      }
       Produkter {
         nextToken
         __typename
       }
+      adresse
+      postnr
+      poststed
+      leveringsmetode
+      kommentar
       Transaksjon {
-        id
-        betalingsmetode
-        betalingsstatus
-        total
-        createdAt
-        updatedAt
+        nextToken
         __typename
       }
       adresse
@@ -214,7 +234,6 @@ export const getBestilling = /* GraphQL */ `
       kommentar
       createdAt
       updatedAt
-      bestillingTransaksjonId
       __typename
     }
   }
@@ -234,11 +253,10 @@ export const listBestillings = /* GraphQL */ `
         adresse
         postnr
         poststed
-        hentes
+        leveringsmetode
         kommentar
         createdAt
         updatedAt
-        bestillingTransaksjonId
         __typename
       }
       nextToken
@@ -269,11 +287,10 @@ export const bestillingsByKundeID = /* GraphQL */ `
         adresse
         postnr
         poststed
-        hentes
+        leveringsmetode
         kommentar
         createdAt
         updatedAt
-        bestillingTransaksjonId
         __typename
       }
       nextToken

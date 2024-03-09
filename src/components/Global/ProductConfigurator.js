@@ -135,9 +135,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     };
 
     const handleAddConfig = () => {
-        const id = Date.now() * Math.random()
         const newConfig = {
-            id,
             farge,
             farge2,
             vinyltekst,

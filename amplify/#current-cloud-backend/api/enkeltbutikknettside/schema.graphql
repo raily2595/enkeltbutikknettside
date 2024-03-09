@@ -21,6 +21,7 @@ type Transaksjon @model @auth(rules: [{allow: public}]) {
   betalingsmetode: String
   betalingsstatus: String
   total: Int
+  bestillingID: ID! @index(name: "byBestilling")
 }
 
 type Kunde @model @auth(rules: [{allow: public}]) {
@@ -39,14 +40,13 @@ type Bestilling @model @auth(rules: [{allow: public}]) {
   ordreDato: AWSDate
   bestillingsstatus: String
   kundeID: ID! @index(name: "byKunde")
-  Kunde: Kunde @belongsTo(fields: ["kundeID"])
   Produkter: [Produkt] @hasMany(indexName: "byBestilling", fields: ["id"])
-  Transaksjon: Transaksjon @hasOne
   adresse: String
   postnr: String
   poststed: String
-  hentes: Boolean
+  leveringsmetode: String
   kommentar: String
+  Transaksjon: [Transaksjon] @hasMany(indexName: "byBestilling", fields: ["id"])
 }
 
 input UpsertKundeInput {
