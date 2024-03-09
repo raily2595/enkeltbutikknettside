@@ -182,22 +182,15 @@ export const getBestilling = /* GraphQL */ `
       ordreDato
       bestillingsstatus
       kundeID
-      Kunde {
-        id
-        navn
-        epost
-        adresse
-        postnr
-        poststed
-        telefon
-        createdAt
-        updatedAt
-        __typename
-      }
       Produkter {
         nextToken
         __typename
       }
+      adresse
+      postnr
+      poststed
+      leveringsmetode
+      kommentar
       Transaksjon {
         id
         betalingsmetode
@@ -207,11 +200,6 @@ export const getBestilling = /* GraphQL */ `
         updatedAt
         __typename
       }
-      adresse
-      postnr
-      poststed
-      hentes
-      kommentar
       createdAt
       updatedAt
       bestillingTransaksjonId
@@ -234,7 +222,7 @@ export const listBestillings = /* GraphQL */ `
         adresse
         postnr
         poststed
-        hentes
+        leveringsmetode
         kommentar
         createdAt
         updatedAt
@@ -269,7 +257,7 @@ export const bestillingsByKundeID = /* GraphQL */ `
         adresse
         postnr
         poststed
-        hentes
+        leveringsmetode
         kommentar
         createdAt
         updatedAt

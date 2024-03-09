@@ -39,12 +39,12 @@ type Bestilling @model @auth(rules: [{allow: public}]) {
   ordreDato: AWSDate
   bestillingsstatus: String
   kundeID: ID! @index(name: "byKunde")
-  Kunde: Kunde @belongsTo(fields: ["kundeID"])
   Produkter: [Produkt] @hasMany(indexName: "byBestilling", fields: ["id"])
-  Transaksjon: Transaksjon @hasOne
   adresse: String
   postnr: String
   poststed: String
-  hentes: Boolean
+  leveringsmetode: String
   kommentar: String
-} 
+  Transaksjon: Transaksjon @hasOne
+}
+ 

@@ -296,7 +296,7 @@ export const schema = {
                     "association": {
                         "connectionType": "HAS_MANY",
                         "associatedWith": [
-                            "Kunde"
+                            "kundeID"
                         ]
                     }
                 },
@@ -373,21 +373,6 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "Kunde": {
-                    "name": "Kunde",
-                    "isArray": false,
-                    "type": {
-                        "model": "Kunde"
-                    },
-                    "isRequired": false,
-                    "attributes": [],
-                    "association": {
-                        "connectionType": "BELONGS_TO",
-                        "targetNames": [
-                            "kundeID"
-                        ]
-                    }
-                },
                 "Produkter": {
                     "name": "Produkter",
                     "isArray": true,
@@ -401,24 +386,6 @@ export const schema = {
                         "connectionType": "HAS_MANY",
                         "associatedWith": [
                             "bestillingID"
-                        ]
-                    }
-                },
-                "Transaksjon": {
-                    "name": "Transaksjon",
-                    "isArray": false,
-                    "type": {
-                        "model": "Transaksjon"
-                    },
-                    "isRequired": false,
-                    "attributes": [],
-                    "association": {
-                        "connectionType": "HAS_ONE",
-                        "associatedWith": [
-                            "id"
-                        ],
-                        "targetNames": [
-                            "bestillingTransaksjonId"
                         ]
                     }
                 },
@@ -443,10 +410,10 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "hentes": {
-                    "name": "hentes",
+                "leveringsmetode": {
+                    "name": "leveringsmetode",
                     "isArray": false,
-                    "type": "Boolean",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -456,6 +423,24 @@ export const schema = {
                     "type": "String",
                     "isRequired": false,
                     "attributes": []
+                },
+                "Transaksjon": {
+                    "name": "Transaksjon",
+                    "isArray": false,
+                    "type": {
+                        "model": "Transaksjon"
+                    },
+                    "isRequired": false,
+                    "attributes": [],
+                    "association": {
+                        "connectionType": "HAS_ONE",
+                        "associatedWith": [
+                            "id"
+                        ],
+                        "targetNames": [
+                            "bestillingTransaksjonId"
+                        ]
+                    }
                 },
                 "createdAt": {
                     "name": "createdAt",
@@ -519,5 +504,5 @@ export const schema = {
     "enums": {},
     "nonModels": {},
     "codegenVersion": "3.4.4",
-    "version": "16b20872e1af5fc4fb20d1237eceebb0"
+    "version": "99fd6025bb381c09d2c3ba2e9b0a0fb4"
 };

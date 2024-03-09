@@ -45,14 +45,13 @@ type Bestilling @aws_iam @aws_api_key {
   ordreDato: AWSDate
   bestillingsstatus: String
   kundeID: ID!
-  Kunde: Kunde
   Produkter(filter: ModelProduktFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelProduktConnection
-  Transaksjon: Transaksjon
   adresse: String
   postnr: String
   poststed: String
-  hentes: Boolean
+  leveringsmetode: String
   kommentar: String
+  Transaksjon: Transaksjon
   createdAt: AWSDateTime!
   updatedAt: AWSDateTime!
   bestillingTransaksjonId: ID
@@ -487,7 +486,7 @@ input ModelBestillingFilterInput {
   adresse: ModelStringInput
   postnr: ModelStringInput
   poststed: ModelStringInput
-  hentes: ModelBooleanInput
+  leveringsmetode: ModelStringInput
   kommentar: ModelStringInput
   and: [ModelBestillingFilterInput]
   or: [ModelBestillingFilterInput]
@@ -502,7 +501,7 @@ input ModelBestillingConditionInput {
   adresse: ModelStringInput
   postnr: ModelStringInput
   poststed: ModelStringInput
-  hentes: ModelBooleanInput
+  leveringsmetode: ModelStringInput
   kommentar: ModelStringInput
   and: [ModelBestillingConditionInput]
   or: [ModelBestillingConditionInput]
@@ -518,7 +517,7 @@ input CreateBestillingInput {
   adresse: String
   postnr: String
   poststed: String
-  hentes: Boolean
+  leveringsmetode: String
   kommentar: String
   bestillingTransaksjonId: ID
 }
@@ -531,7 +530,7 @@ input UpdateBestillingInput {
   adresse: String
   postnr: String
   poststed: String
-  hentes: Boolean
+  leveringsmetode: String
   kommentar: String
   bestillingTransaksjonId: ID
 }
@@ -548,7 +547,7 @@ input ModelSubscriptionBestillingFilterInput {
   adresse: ModelSubscriptionStringInput
   postnr: ModelSubscriptionStringInput
   poststed: ModelSubscriptionStringInput
-  hentes: ModelSubscriptionBooleanInput
+  leveringsmetode: ModelSubscriptionStringInput
   kommentar: ModelSubscriptionStringInput
   and: [ModelSubscriptionBestillingFilterInput]
   or: [ModelSubscriptionBestillingFilterInput]

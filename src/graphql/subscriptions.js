@@ -187,22 +187,15 @@ export const onCreateBestilling = /* GraphQL */ `
       ordreDato
       bestillingsstatus
       kundeID
-      Kunde {
-        id
-        navn
-        epost
-        adresse
-        postnr
-        poststed
-        telefon
-        createdAt
-        updatedAt
-        __typename
-      }
       Produkter {
         nextToken
         __typename
       }
+      adresse
+      postnr
+      poststed
+      leveringsmetode
+      kommentar
       Transaksjon {
         id
         betalingsmetode
@@ -212,11 +205,6 @@ export const onCreateBestilling = /* GraphQL */ `
         updatedAt
         __typename
       }
-      adresse
-      postnr
-      poststed
-      hentes
-      kommentar
       createdAt
       updatedAt
       bestillingTransaksjonId
@@ -233,22 +221,15 @@ export const onUpdateBestilling = /* GraphQL */ `
       ordreDato
       bestillingsstatus
       kundeID
-      Kunde {
-        id
-        navn
-        epost
-        adresse
-        postnr
-        poststed
-        telefon
-        createdAt
-        updatedAt
-        __typename
-      }
       Produkter {
         nextToken
         __typename
       }
+      adresse
+      postnr
+      poststed
+      leveringsmetode
+      kommentar
       Transaksjon {
         id
         betalingsmetode
@@ -258,11 +239,6 @@ export const onUpdateBestilling = /* GraphQL */ `
         updatedAt
         __typename
       }
-      adresse
-      postnr
-      poststed
-      hentes
-      kommentar
       createdAt
       updatedAt
       bestillingTransaksjonId
@@ -279,22 +255,15 @@ export const onDeleteBestilling = /* GraphQL */ `
       ordreDato
       bestillingsstatus
       kundeID
-      Kunde {
-        id
-        navn
-        epost
-        adresse
-        postnr
-        poststed
-        telefon
-        createdAt
-        updatedAt
-        __typename
-      }
       Produkter {
         nextToken
         __typename
       }
+      adresse
+      postnr
+      poststed
+      leveringsmetode
+      kommentar
       Transaksjon {
         id
         betalingsmetode
@@ -304,11 +273,6 @@ export const onDeleteBestilling = /* GraphQL */ `
         updatedAt
         __typename
       }
-      adresse
-      postnr
-      poststed
-      hentes
-      kommentar
       createdAt
       updatedAt
       bestillingTransaksjonId

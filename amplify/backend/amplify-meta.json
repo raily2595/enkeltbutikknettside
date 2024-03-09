@@ -36,12 +36,12 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "AppSync",
-      "lastPushTimeStamp": "2024-02-24T20:37:58.271Z",
+      "lastPushTimeStamp": "2024-03-09T14:43:02.288Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyadb3b82811a94-staging-202144-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apienkeltbutikknettside"
       },
-      "lastPushDirHash": "BGVW0vre36m9O6MQKA8d24uebjE="
+      "lastPushDirHash": "INvLyOldip9taJn6KaXHLBnBUks="
     }
   }
 }
