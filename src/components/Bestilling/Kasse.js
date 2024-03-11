@@ -132,6 +132,8 @@ function Kasse() {
                     console.error("Error creating Produkt:", error);
                 }
             });
+
+            navigate(`/bekreftelse`);
         } catch (error) {
             console.error("Error in handleSubmit:", error);
         }

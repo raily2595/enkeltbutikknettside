@@ -228,7 +228,6 @@ export const createBestilling = /* GraphQL */ `
       adresse
       postnr
       poststed
-      hentes
       kommentar
       createdAt
       updatedAt
@@ -262,7 +261,6 @@ export const updateBestilling = /* GraphQL */ `
       adresse
       postnr
       poststed
-      hentes
       kommentar
       createdAt
       updatedAt
