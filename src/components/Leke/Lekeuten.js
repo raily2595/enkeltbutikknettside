@@ -7,7 +7,7 @@ const Lekeuten = () => {
                 <h1>Håndtak for leke</h1>
                 <ProductConfigurator
                     navn={"lekeuten"}
-                    produktpris={200}
+                    produktpris={100}
                     prismeter={50}
                     harLengdemeter={true}
                     harLengdecm={false}

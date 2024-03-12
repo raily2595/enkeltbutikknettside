@@ -1,5 +1,5 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const SubmissionWindow = ({ onClose, onContinueShopping, summary }) => {
     return (
@@ -7,7 +7,7 @@ const SubmissionWindow = ({ onClose, onContinueShopping, summary }) => {
             <button className="close-button" onClick={onClose}>
                 X
             </button>
-            <h2>Lagt til</h2>
+            <h2>Lagt til i handlekurv</h2>
             <p>{summary}</p>
             <div >
                 <button className="card-button" onClick={onContinueShopping}>Fortsett å handle</button>

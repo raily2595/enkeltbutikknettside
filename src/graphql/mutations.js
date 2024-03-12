@@ -92,6 +92,7 @@ export const createTransaksjon = /* GraphQL */ `
       betalingsmetode
       betalingsstatus
       total
+      bestillingID
       createdAt
       updatedAt
       __typename
@@ -108,6 +109,7 @@ export const updateTransaksjon = /* GraphQL */ `
       betalingsmetode
       betalingsstatus
       total
+      bestillingID
       createdAt
       updatedAt
       __typename
@@ -124,6 +126,7 @@ export const deleteTransaksjon = /* GraphQL */ `
       betalingsmetode
       betalingsstatus
       total
+      bestillingID
       createdAt
       updatedAt
       __typename
@@ -209,39 +212,25 @@ export const createBestilling = /* GraphQL */ `
       ordreDato
       bestillingsstatus
       kundeID
-      Kunde {
-        id
-        navn
-        epost
-        adresse
-        postnr
-        poststed
-        telefon
-        createdAt
-        updatedAt
-        __typename
-      }
       Produkter {
         nextToken
-        __typename
-      }
-      Transaksjon {
-        id
-        betalingsmetode
-        betalingsstatus
-        total
-        createdAt
-        updatedAt
         __typename
       }
       adresse
       postnr
       poststed
-      hentes
+      leveringsmetode
+      kommentar
+      Transaksjon {
+        nextToken
+        __typename
+      }
+      adresse
+      postnr
+      poststed
       kommentar
       createdAt
       updatedAt
-      bestillingTransaksjonId
       __typename
     }
   }
@@ -256,39 +245,25 @@ export const updateBestilling = /* GraphQL */ `
       ordreDato
       bestillingsstatus
       kundeID
-      Kunde {
-        id
-        navn
-        epost
-        adresse
-        postnr
-        poststed
-        telefon
-        createdAt
-        updatedAt
-        __typename
-      }
       Produkter {
         nextToken
-        __typename
-      }
-      Transaksjon {
-        id
-        betalingsmetode
-        betalingsstatus
-        total
-        createdAt
-        updatedAt
         __typename
       }
       adresse
       postnr
       poststed
-      hentes
+      leveringsmetode
+      kommentar
+      Transaksjon {
+        nextToken
+        __typename
+      }
+      adresse
+      postnr
+      poststed
       kommentar
       createdAt
       updatedAt
-      bestillingTransaksjonId
       __typename
     }
   }
@@ -303,29 +278,17 @@ export const deleteBestilling = /* GraphQL */ `
       ordreDato
       bestillingsstatus
       kundeID
-      Kunde {
-        id
-        navn
-        epost
-        adresse
-        postnr
-        poststed
-        telefon
-        createdAt
-        updatedAt
-        __typename
-      }
       Produkter {
         nextToken
         __typename
       }
+      adresse
+      postnr
+      poststed
+      leveringsmetode
+      kommentar
       Transaksjon {
-        id
-        betalingsmetode
-        betalingsstatus
-        total
-        createdAt
-        updatedAt
+        nextToken
         __typename
       }
       adresse
@@ -335,7 +298,6 @@ export const deleteBestilling = /* GraphQL */ `
       kommentar
       createdAt
       updatedAt
-      bestillingTransaksjonId
       __typename
     }
   }
