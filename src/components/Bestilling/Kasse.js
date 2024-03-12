@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { generateClient } from 'aws-amplify/api';
-import {createBestilling, createKunde, upsertKunde} from 'graphql/mutations';
+import { createBestilling, createKunde, createProdukt, createTransaksjon } from 'graphql/mutations';
+import { getKunde } from "../../graphql/queries";
+import moment from "moment";
 
 function Kasse() {
     const client = generateClient();
@@ -17,6 +19,7 @@ function Kasse() {
         produkter: [],
         leveringsmetode: '',
         totalt: '',
+        kommentar: ''
     });
 
     // Sjekk localstorage ved oppstart av komponenten
@@ -35,187 +38,213 @@ function Kasse() {
         }, 0);
 
         setBestillingsforesporsel((prevState) => ({
-            ...prevState,
-            produkter: productConfigurations,
-            totalt: totalPrice,
+            ...prevState, produkter: productConfigurations, totalt: totalPrice,
         }));
     }, []);
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
         setBestillingsforesporsel((prevState) => ({
-            ...prevState,
-            [name]: value,
+            ...prevState, [name]: value,
         }));
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
+        let kundeid = ""
+        try {
             try {
-                /*
-                const Kundedata = {
-                    navn: bestillingsforesporsel.navn,
-                    epost: bestillingsforesporsel.epost,
-                    adresse: bestillingsforesporsel.adresse,
-                    postnr: bestillingsforesporsel.postnr,
-                    poststed: bestillingsforesporsel.poststed,
-                    telefon: bestillingsforesporsel.telefon
-                }
-                const Kunde = await client.graphql({query: upsertKunde, variables: { input: Kundedata }});
-
-                const bestillingData = {
-                    id: Date.now() * Math.random(),
-                    ordreDato: Date.now(),
-                    bestillingsstatus: "bestilt",
-                    kundeID: Kunde.id,
-                    Produkter: bestillingsforesporsel.produkter,
-                    Transaksjon: {
-                        id: Date.now() * Math.random(),
-                        betalingsmetode: "faktura",
-                        betalingsstatus: "ikke betalt",
-                        total: bestillingsforesporsel.totalt,
-                    }
-                };
-
-                console.log(Kunde.id)
-                const response = await client.graphql({query: createBestilling, variables: { input: bestillingData }});
-                setBestillingsforesporsel({
-                    navn: '',
-                    epost: '',
-                    adresse: '',
-                    postnr: '',
-                    telefon: '',
-                    poststed: '',
-                    produkter: [],
-                    leveringsmetode: '',
-                    totalt: '',
-                    // Tilbakestill andre felt om nødvendig
+                // Get a specific item
+                const oneKunde = await client.graphql({
+                    query: getKunde, variables: { "telefon": bestillingsforesporsel.telefon }
                 });
-                // Fjern produktinformasjonen fra localStorage etter bestilling hvis nødvendig
-                localStorage.removeItem('productConfigurations');
-
-                // Naviger til en ny side
-                navigate('/bekreftelse'); // Bytt ut '/ny-side' med den faktiske URLen til den nye siden
-                 */
-                const Kundedata = {
-                    id: 1234,
-                    navn: bestillingsforesporsel.navn,
-                    epost: bestillingsforesporsel.epost,
-                    adresse: bestillingsforesporsel.adresse,
-                    postnr: bestillingsforesporsel.postnr,
-                    poststed: bestillingsforesporsel.poststed,
-                    telefon: bestillingsforesporsel.telefon
+                kundeid = oneKunde?.data?.getKunde?.id
+            } catch {
+                try {
+                    const newKunde = await client.graphql({
+                        query: createKunde, variables: {
+                            input: {
+                                "navn": bestillingsforesporsel.navn,
+                                "epost": bestillingsforesporsel.epost,
+                                "adresse": bestillingsforesporsel.adresse,
+                                "postnr": bestillingsforesporsel.postnr,
+                                "poststed": bestillingsforesporsel.poststed,
+                                "telefon": bestillingsforesporsel.telefon,
+                            }
+                        }
+                    });
+                    kundeid = newKunde?.data?.createKunde?.id
+                } catch (error) {
+                    console.error("Error in createKunde:", error);
                 }
-                const Kunde = await client.graphql({query: createKunde, variables: { input: Kundedata }});
-                console.log(Kunde)
-            } catch (err) {
-                console.error('Error upserting or creating bestilling:', err);
             }
+
+            const newBestilling = await client.graphql({
+                query: createBestilling, variables: {
+                    input: {
+                        "ordreDato": moment().format('YYYY-MM-DD'),
+                        "bestillingsstatus": "bestilt",
+                        "kundeID": kundeid,
+                        "adresse": bestillingsforesporsel.adresse,
+                        "postnr": bestillingsforesporsel.postnr,
+                        "poststed": bestillingsforesporsel.poststed,
+                        "leveringsmetode": bestillingsforesporsel.leveringsmetode,
+                        "kommentar": bestillingsforesporsel.kommentar,
+                    }
+                }
+            });
+
+            const newTransaksjon = await client.graphql({
+                query: createTransaksjon, variables: {
+                    input: {
+                        "betalingsmetode": "faktura",
+                        "betalingsstatus": "ikke betalt",
+                        "total": bestillingsforesporsel.totalt,
+                        "bestillingID": newBestilling?.data?.createBestilling?.id,
+                    }
+                }
+            });
+
+            bestillingsforesporsel.produkter.map(async produkt => {
+                try {
+                    const newProdukt = await client.graphql({
+                        query: createProdukt, variables: {
+                            input: {
+                                "produktnavn": produkt.produktnavn,
+                                "farge": produkt.farge,
+                                "farge2": produkt.farge2,
+                                "lengde": produkt.lengde,
+                                "bredde": produkt.bredde,
+                                "detaljefarger": produkt.detaljefarger,
+                                "klips": produkt.klips,
+                                "vinyltekst": produkt.vinyltekst,
+                                "fontfarge": produkt.fontfarge,
+                                "font": produkt.font,
+                                "pris": produkt.pris,
+                                "kommentar": produkt.kommentar,
+                                "valgtLeke": produkt.valgtLeke,
+                                "bestillingID": newBestilling?.data?.createBestilling?.id,
+                            }
+                        }
+                    });
+                    console.log("New Produkt:", newProdukt);
+                } catch (error) {
+                    console.error("Error creating Produkt:", error);
+                }
+            });
+
+            navigate(`/bekreftelse`);
+        } catch (error) {
+            console.error("Error in handleSubmit:", error);
+        }
     };
 
-    return (
-        <div>
-            <h1>Bestillingsskjema</h1>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="navn">Navn:</label>
-                    <input
-                        type="text"
-                        id="navn"
-                        name="navn"
-                        value={bestillingsforesporsel.navn}
-                        onChange={handleInputChange}
-                        autoComplete="name"
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="epost">E-post:</label>
-                    <input
-                        type="email"
-                        id="epost"
-                        name="epost"
-                        value={bestillingsforesporsel.epost}
-                        onChange={handleInputChange}
-                        autoComplete="email"
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="gateadresse">Gateadresse:</label>
-                    <input
-                        type="text"
-                        id="gateadresse"
-                        name="adresse"
-                        value={bestillingsforesporsel.adresse}
-                        onChange={handleInputChange}
-                        autoComplete="address-line1"
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="postnr">Postnr:</label>
-                    <input
-                        type="text"
-                        id="postnr"
-                        name="postnr"
-                        value={bestillingsforesporsel.postnr}
-                        onChange={handleInputChange}
-                        autoComplete="postal-code"
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="poststed">Poststed:</label>
-                    <input
-                        type="text"
-                        id="poststed"
-                        name="poststed"
-                        value={bestillingsforesporsel.poststed}
-                        onChange={handleInputChange}
-                        autoComplete="address-level2"
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="telefon">Telefon:</label>
-                    <input
-                        type="tel"
-                        id="telefon"
-                        name="telefon"
-                        value={bestillingsforesporsel.telefon}
-                        onChange={handleInputChange}
-                        autoComplete="tel"
-                        required
-                    />
-                </div>
-                <div>
-                    <p>Leveringsmetode</p>
-                    <input
-                        type="radio"
-                        id="levering"
-                        name="Leveringsmetode"
-                        value="Sendes med posten"
-                        onChange={handleInputChange}
-                        required
-                    />
-                    <label htmlFor="levering">Sendes med posten</label>
-                    <input
-                        type="radio"
-                        id="avtaler"
-                        name="Leveringsmetode"
-                        value="Avtaler levering"
-                        onChange={handleInputChange}
-                        required
-                    />
-                    <label htmlFor="avtaler">Avtaler levering:</label>
-                </div>
-                {harDataILocalStorage && (
-                <button type="submit">Send bestilling</button>)}
-            </form>
-        </div>
-    );
+    return (<div>
+        <h1>Bestillingsskjema</h1>
+        <form onSubmit={handleSubmit}>
+            <div>
+                <label htmlFor="navn">Navn:</label>
+                <input
+                    type="text"
+                    id="navn"
+                    name="navn"
+                    value={bestillingsforesporsel.navn}
+                    onChange={handleInputChange}
+                    autoComplete="name"
+                    required
+                />
+            </div>
+            <div>
+                <label htmlFor="epost">E-post:</label>
+                <input
+                    type="email"
+                    id="epost"
+                    name="epost"
+                    value={bestillingsforesporsel.epost}
+                    onChange={handleInputChange}
+                    autoComplete="email"
+                    required
+                />
+            </div>
+            <div>
+                <label htmlFor="gateadresse">Gateadresse:</label>
+                <input
+                    type="text"
+                    id="gateadresse"
+                    name="adresse"
+                    value={bestillingsforesporsel.adresse}
+                    onChange={handleInputChange}
+                    autoComplete="address-line1"
+                    required
+                />
+            </div>
+            <div>
+                <label htmlFor="postnr">Postnr:</label>
+                <input
+                    type="text"
+                    id="postnr"
+                    name="postnr"
+                    value={bestillingsforesporsel.postnr}
+                    onChange={handleInputChange}
+                    autoComplete="postal-code"
+                    required
+                />
+            </div>
+            <div>
+                <label htmlFor="poststed">Poststed:</label>
+                <input
+                    type="text"
+                    id="poststed"
+                    name="poststed"
+                    value={bestillingsforesporsel.poststed}
+                    onChange={handleInputChange}
+                    autoComplete="address-level2"
+                    required
+                />
+            </div>
+            <div>
+                <label htmlFor="telefon">Telefon:</label>
+                <input
+                    type="tel"
+                    id="telefon"
+                    name="telefon"
+                    value={bestillingsforesporsel.telefon}
+                    onChange={handleInputChange}
+                    autoComplete="tel"
+                    required
+                />
+            </div>
+            <div>
+                <p>Leveringsmetode</p>
+                <input
+                    type="radio"
+                    id="levering"
+                    name="leveringsmetode"
+                    value="Sendes med posten"
+                    onChange={handleInputChange}
+                    required
+                />
+                <label htmlFor="levering">Sendes med posten</label>
+                <input
+                    type="radio"
+                    id="avtaler"
+                    name="leveringsmetode"
+                    value="Avtaler levering"
+                    onChange={handleInputChange}
+                    required
+                />
+                <label htmlFor="avtaler">Avtaler levering:</label>
+                <label htmlFor="kommentar">Kommentar: </label>
+                <textarea
+                    id="kommentar"
+                    name="kommentar"
+                    value={bestillingsforesporsel.kommentar}
+                    onChange={handleInputChange}
+                />
+            </div>
+            {harDataILocalStorage && (<button type="submit">Send bestilling</button>)}
+        </form>
+    </div>);
 }
 
 export default Kasse;

@@ -48,11 +48,20 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         if (savedConfigurations) {
             setConfigurations(savedConfigurations);
         }
+        CheckHandlekurv();
     }, []);
 
     useEffect(() => {
-        if (harLengdemeterbool) {
+        if (produktnavn === "hanefot") {
+            const calculatedPrice = produktpris + (lengde * meterpris*2);
+            setPris(calculatedPrice);
+        }
+        else if (harLengdemeterbool && harLekebool) {
             const calculatedPrice = produktpris + (lengde * meterpris) + lekepris;
+            setPris(calculatedPrice);
+        }
+        else if (harLengdemeterbool) {
+            const calculatedPrice = produktpris + (lengde * meterpris);
             setPris(calculatedPrice);
         }
         else {
@@ -134,9 +143,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     };
 
     const handleAddConfig = () => {
-        const id = Date.now()*Math.random()
         const newConfig = {
-            id,
             farge,
             farge2,
             vinyltekst,
@@ -157,6 +164,8 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
 
         setConfigurations([...configurations, newConfig]);
         setSelectedConfigIndex(null);
+        CheckHandlekurv();
+
         setHarDataILocalStorage(true);
         let summary = `Produkt: ${newConfig.produktnavn},Farge: ${newConfig.farge},`;
         if (newConfig.onskerFarge2) {
@@ -191,7 +200,13 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         if (!dataILocalStorage) {
             setHarDataILocalStorage(false);
         }
+        CheckHandlekurv();
     };
+
+    const CheckHandlekurv = () => {
+        const dataILocalStorage = localStorage.getItem('productConfigurations');
+        setHarDataILocalStorage(dataILocalStorage);
+    }
 
     return (
         <div>
