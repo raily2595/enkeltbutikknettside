@@ -52,8 +52,16 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
     }, []);
 
     useEffect(() => {
-        if (harLengdemeterbool) {
+        if (produktnavn === "hanefot") {
+            const calculatedPrice = produktpris + (lengde * meterpris*2);
+            setPris(calculatedPrice);
+        }
+        else if (harLengdemeterbool && harLekebool) {
             const calculatedPrice = produktpris + (lengde * meterpris) + lekepris;
+            setPris(calculatedPrice);
+        }
+        else if (harLengdemeterbool) {
+            const calculatedPrice = produktpris + (lengde * meterpris);
             setPris(calculatedPrice);
         }
         else {

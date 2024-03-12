@@ -120,7 +120,7 @@ const Band = () => {
                             to="/band/hanefot">Hanefot</NavLink>
                     </div>
                 </div>
-                <div className="card">
+                {/*<div className="card">
                     <div className="carousel-container">
                         <Carousel>
                             <img src={`${process.env.PUBLIC_URL}bilder/hanefothvit.png`} alt="Nila" />
@@ -146,8 +146,8 @@ const Band = () => {
                             exact="true"
                             to="/band/handtak">Håndtak</NavLink>
                     </div>
-                </div>
-                <div className="card">
+                </div>*/}
+                {/*<div className="card">
                     <div className="carousel-container">
                         <Carousel>
                             <img src={`${process.env.PUBLIC_URL}bilder/hanefothvit.png`} alt="Nila" />
@@ -174,7 +174,7 @@ const Band = () => {
                             exact="true"
                             to="/band/handtakband">Håndtak med Sporline</NavLink>
                     </div>
-                </div>
+                </div>*/}
             </div>
         </div>
     );
