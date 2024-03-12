@@ -23,7 +23,6 @@ const Halsband = () => {
                             <p>{strings.halsbandtekst}</p>
                         </div>
                         <div>
-                            <p>{strings.fargetekst}</p>
                             <p>{strings.lengdetekst}</p>
                         </div>
                         <div>

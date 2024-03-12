@@ -53,7 +53,6 @@ const MainContent = () => {
                             <p>{strings.halsbandtekst}</p>
                         </div>
                         <div>
-                            <p>{strings.fargetekst}</p>
                             <p>{strings.lengdetekst}</p>
                         </div>
                         <div>
@@ -72,7 +71,6 @@ const MainContent = () => {
                         <div>
                             <h2>{strings.info}</h2>
                             <p>{strings.infotext1}</p>
-                            <p>{strings.infotext2}</p>
                             <p>{strings.infotext3}</p>
                             <p>{strings.infotext4}</p>
                         </div>

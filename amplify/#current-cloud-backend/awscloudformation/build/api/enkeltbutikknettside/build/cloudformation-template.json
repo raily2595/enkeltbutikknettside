@@ -123,7 +123,7 @@
           ]
         },
         "Description": "api key description",
-        "Expires": 1708613567
+        "Expires": 1712590007
       }
     },
     "GraphQLAPINONEDS95A13CF0": {
@@ -808,25 +808,12 @@
               "Transaksjon",
               "Outputs.transformerrootstackTransaksjonTransaksjonTableC7C7FA4DRef"
             ]
-          },
-          "referencetotransformerrootstackKundeNestedStackKundeNestedStackResourceB70462A8OutputstransformerrootstackKundeKundeDataSourceC1D0CD3BName": {
-            "Fn::GetAtt": [
-              "Kunde",
-              "Outputs.transformerrootstackKundeKundeDataSourceC1D0CD3BName"
-            ]
-          },
-          "referencetotransformerrootstackKundeNestedStackKundeNestedStackResourceB70462A8OutputstransformerrootstackKundeKundeTableE7FFD290Ref": {
-            "Fn::GetAtt": [
-              "Kunde",
-              "Outputs.transformerrootstackKundeKundeTableE7FFD290Ref"
-            ]
           }
         }
       },
       "DependsOn": [
         "Bestilling",
         "GraphQLAPITransformerSchema3CB2AE18",
-        "Kunde",
         "Produkt",
         "Transaksjon"
       ]

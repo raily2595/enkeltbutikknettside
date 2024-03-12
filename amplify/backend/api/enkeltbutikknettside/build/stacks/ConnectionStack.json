@@ -344,111 +344,6 @@
         },
         "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)"
       }
-    },
-    "BestillingKundeDataResolverFnBestillingKundeDataResolverFnAppSyncFunction43C80D45": {
-      "Type": "AWS::AppSync::FunctionConfiguration",
-      "Properties": {
-        "ApiId": {
-          "Ref": "referencetotransformerrootstackGraphQLAPI20497F53ApiId"
-        },
-        "DataSourceName": {
-          "Ref": "referencetotransformerrootstackKundeNestedStackKundeNestedStackResourceB70462A8OutputstransformerrootstackKundeKundeDataSourceC1D0CD3BName"
-        },
-        "Name": "BestillingKundeDataResolverFn",
-        "FunctionVersion": "2018-05-29",
-        "RequestMappingTemplateS3Location": {
-          "Fn::Join": [
-            "",
-            [
-              "s3://",
-              {
-                "Ref": "referencetotransformerrootstackS3DeploymentBucket7592718ARef"
-              },
-              "/",
-              {
-                "Ref": "referencetotransformerrootstackS3DeploymentRootKeyA71EA735Ref"
-              },
-              "/resolvers/Bestilling.Kunde.req.vtl"
-            ]
-          ]
-        },
-        "ResponseMappingTemplateS3Location": {
-          "Fn::Join": [
-            "",
-            [
-              "s3://",
-              {
-                "Ref": "referencetotransformerrootstackS3DeploymentBucket7592718ARef"
-              },
-              "/",
-              {
-                "Ref": "referencetotransformerrootstackS3DeploymentRootKeyA71EA735Ref"
-              },
-              "/resolvers/Bestilling.Kunde.res.vtl"
-            ]
-          ]
-        }
-      }
-    },
-    "BestillingKundeResolver": {
-      "Type": "AWS::AppSync::Resolver",
-      "Properties": {
-        "ApiId": {
-          "Ref": "referencetotransformerrootstackGraphQLAPI20497F53ApiId"
-        },
-        "FieldName": "Kunde",
-        "TypeName": "Bestilling",
-        "Kind": "PIPELINE",
-        "PipelineConfig": {
-          "Functions": [
-            {
-              "Fn::GetAtt": [
-                "KundeBestillingerauth0FunctionKundeBestillingerauth0FunctionAppSyncFunctionBE687E32",
-                "FunctionId"
-              ]
-            },
-            {
-              "Fn::GetAtt": [
-                "BestillingKundeDataResolverFnBestillingKundeDataResolverFnAppSyncFunction43C80D45",
-                "FunctionId"
-              ]
-            }
-          ]
-        },
-        "RequestMappingTemplate": {
-          "Fn::Join": [
-            "",
-            [
-              "$util.qr($ctx.stash.put(\"typeName\", \"Bestilling\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"Kunde\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
-              {
-                "Ref": "referencetotransformerrootstackGraphQLAPI20497F53ApiId"
-              },
-              "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
-              {
-                "Ref": "referencetotransformerrootstackKundeNestedStackKundeNestedStackResourceB70462A8OutputstransformerrootstackKundeKundeTableE7FFD290Ref"
-              },
-              "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:aws:sts::",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":assumed-role/",
-              {
-                "Ref": "referencetotransformerrootstackauthRoleNameFB872D50Ref"
-              },
-              "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:aws:sts::",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":assumed-role/",
-              {
-                "Ref": "referencetotransformerrootstackunauthRoleName49F3C1FERef"
-              },
-              "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"adminRoles\", [\"eu-north-1_fSMtlC20R_Full-access/CognitoIdentityCredentials\",\"eu-north-1_fSMtlC20R_Manage-only/CognitoIdentityCredentials\"]))\n$util.toJson({})"
-            ]
-          ]
-        },
-        "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)"
-      }
     }
   },
   "Parameters": {
@@ -486,12 +381,6 @@
       "Type": "String"
     },
     "referencetotransformerrootstackTransaksjonNestedStackTransaksjonNestedStackResource6921F3BDOutputstransformerrootstackTransaksjonTransaksjonTableC7C7FA4DRef": {
-      "Type": "String"
-    },
-    "referencetotransformerrootstackKundeNestedStackKundeNestedStackResourceB70462A8OutputstransformerrootstackKundeKundeDataSourceC1D0CD3BName": {
-      "Type": "String"
-    },
-    "referencetotransformerrootstackKundeNestedStackKundeNestedStackResourceB70462A8OutputstransformerrootstackKundeKundeTableE7FFD290Ref": {
       "Type": "String"
     }
   }

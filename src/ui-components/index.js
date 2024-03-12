@@ -6,6 +6,4 @@
 
 export { default as KundeCreateForm } from "./KundeCreateForm";
 export { default as KundeUpdateForm } from "./KundeUpdateForm";
-export { default as TransaksjonCreateForm } from "./TransaksjonCreateForm";
-export { default as TransaksjonUpdateForm } from "./TransaksjonUpdateForm";
 export { default as studioTheme } from "./studioTheme";
