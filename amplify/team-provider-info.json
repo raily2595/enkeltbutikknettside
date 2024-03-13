@@ -10,11 +10,6 @@
       "StackName": "amplify-amplifyadb3b82811a94-staging-202144",
       "StackId": "arn:aws:cloudformation:eu-north-1:927964485773:stack/amplify-amplifyadb3b82811a94-staging-202144/60217bc0-ad9a-11ee-802e-0a48f03b554a",
       "AmplifyAppId": "d2fdvfdh0bu1gr"
-    },
-    "categories": {
-      "api": {
-        "enkeltbutikknettside": {}
-      }
     }
   }
 }
