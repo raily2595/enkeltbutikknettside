@@ -133,6 +133,7 @@ function Kasse() {
                 }
             });
 
+            localStorage.removeItem('productConfigurations');
             navigate(`/bekreftelse`);
         } catch (error) {
             console.error("Error in handleSubmit:", error);
