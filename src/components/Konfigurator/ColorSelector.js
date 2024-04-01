@@ -7,7 +7,7 @@ const ColorButtons = ({ options, def, onSelectionChange }) => {
     const [selected, setSelected] = useState(defaultOption);
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+        <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <div className='konfigurator-fargeboks'>
                 {options.map((option) => (
                     <button

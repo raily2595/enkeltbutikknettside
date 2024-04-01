@@ -6,7 +6,7 @@ const PictureButtons = ({ options, def, onSelectionChange }) => {
     const [selected, setSelected] = useState(defaultOption);
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+        <div className="picture-content">
             {Object.entries(options).map(([option, imageUrl]) => (
                 <button
                     key={option}
