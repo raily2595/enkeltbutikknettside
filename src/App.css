@@ -287,3 +287,10 @@ footer {
   list-style-type: none;
   padding-left: 0; 
 }
+
+@media only screen and (max-width: 600px) {
+  .color-button {
+    width: 120px; /* Reduserer bredden på knappen for mindre skjermer */
+    font-size: 14px; /* Reduserer fontstørrelsen for mindre skjermer */
+  }
+}

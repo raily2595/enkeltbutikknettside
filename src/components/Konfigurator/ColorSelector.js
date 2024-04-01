@@ -11,12 +11,13 @@ const ColorButtons = ({ options, def, onSelectionChange }) => {
             <div className='konfigurator-fargeboks'>
                 {options.map((option) => (
                     <button
+                        className="color-button"
                         key={option}
                         style={{
                             backgroundColor: mapColorToHex(option),
-                            padding: 6,
-                            width: 180,
-                            fontSize: 16,
+                            padding: '6px 12px', // Justerer padding for mobilvisning
+                            width: '180px', // Beholder bredden for større skjermer
+                            fontSize: '16px', // Endrer fontstørrelse for mobilvisning
                             fontWeight: 'bold',
                             border: option === selected ? "4px solid #000" : "4px solid transparent", //Border for the selected color
                         }}
