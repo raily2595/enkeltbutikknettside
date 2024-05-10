@@ -35,14 +35,14 @@ const Handlekurv = () => {
         let tekst = item.farge
         tekst += item.onskerFarge2 ? " og " + item.farge2 : ""
         tekst += " med " + item.detaljefarger + "farget metall"
-        tekst += item.harKlipsbool ? " og " + item.klips + " klipps" : ""
+        tekst += item.produktnavn == "halsbånd" ? " og " + item.klips + " klipps" : ""
         return tekst
     };
 
     const storrelsestekst = (item) => {
         let tekst = item.lengde
-        tekst += item.harLengdecmbool ? " cm omkrets" : " m lang"
-        tekst += item.harBreddebool ? " og " + item.bredde + "mm bred" : ""
+        tekst += item.produktnavn == "halsbånd" ? " cm omkrets" : " m lang"
+        tekst += item.produktnavn == "halsbånd" ? " og " + item.bredde + "mm bred" : ""
         return tekst
     };
 

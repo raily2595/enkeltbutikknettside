@@ -206,7 +206,24 @@ main {
 
 .konfigurator-fargeboks {
   margin: 12px;
-  width: 720px;
+  max-width: 720px;
+  align-self: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.picture-content {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 12px;
+  gap: 20px;
+  width: 100%;
 }
 
 .handlekurv {
@@ -269,4 +286,11 @@ footer {
 .no-bullets {
   list-style-type: none;
   padding-left: 0; 
+}
+
+@media only screen and (max-width: 600px) {
+  .color-button {
+    width: 120px; /* Reduserer bredden på knappen for mindre skjermer */
+    font-size: 14px; /* Reduserer fontstørrelsen for mindre skjermer */
+  }
 }
