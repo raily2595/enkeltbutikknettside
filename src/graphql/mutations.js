@@ -225,10 +225,6 @@ export const createBestilling = /* GraphQL */ `
         nextToken
         __typename
       }
-      adresse
-      postnr
-      poststed
-      kommentar
       createdAt
       updatedAt
       __typename
@@ -258,10 +254,6 @@ export const updateBestilling = /* GraphQL */ `
         nextToken
         __typename
       }
-      adresse
-      postnr
-      poststed
-      kommentar
       createdAt
       updatedAt
       __typename
@@ -288,31 +280,6 @@ export const deleteBestilling = /* GraphQL */ `
       leveringsmetode
       kommentar
       Transaksjon {
-        nextToken
-        __typename
-      }
-      adresse
-      postnr
-      poststed
-      hentes
-      kommentar
-      createdAt
-      updatedAt
-      __typename
-    }
-  }
-`;
-export const upsertKunde = /* GraphQL */ `
-  mutation UpsertKunde($input: UpsertKundeInput!) {
-    upsertKunde(input: $input) {
-      id
-      navn
-      epost
-      adresse
-      postnr
-      poststed
-      telefon
-      Bestillinger {
         nextToken
         __typename
       }

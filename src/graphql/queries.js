@@ -227,10 +227,6 @@ export const getBestilling = /* GraphQL */ `
         nextToken
         __typename
       }
-      adresse
-      postnr
-      poststed
-      kommentar
       createdAt
       updatedAt
       __typename

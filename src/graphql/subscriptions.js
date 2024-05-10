@@ -203,11 +203,6 @@ export const onCreateBestilling = /* GraphQL */ `
         nextToken
         __typename
       }
-      adresse
-      postnr
-      poststed
-      hentes
-      kommentar
       createdAt
       updatedAt
       __typename
@@ -236,11 +231,6 @@ export const onUpdateBestilling = /* GraphQL */ `
         nextToken
         __typename
       }
-      adresse
-      postnr
-      poststed
-      hentes
-      kommentar
       createdAt
       updatedAt
       __typename
@@ -269,11 +259,6 @@ export const onDeleteBestilling = /* GraphQL */ `
         nextToken
         __typename
       }
-      adresse
-      postnr
-      poststed
-      hentes
-      kommentar
       createdAt
       updatedAt
       __typename
