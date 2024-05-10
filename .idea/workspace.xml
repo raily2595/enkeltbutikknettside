@@ -4,8 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f37d5c44-5065-430f-aebe-91cfa3d9a96d" name="Changes" comment="amplify error fix attempt 2">
+    <list default="true" id="f37d5c44-5065-430f-aebe-91cfa3d9a96d" name="Changes" comment="paracord">
+      <change afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/cli-inputs.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/parameters.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/resolvers/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/schema.graphql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/stacks/CustomResources.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/transform.conf.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/backend-config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/tags.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/types/amplify-dependent-resources-ref.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.transaksjonsByBestillingID.postAuth.1.res.vtl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.transaksjonsByBestillingID.req.vtl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/#current-cloud-backend/api/enkeltbutikknettside/build/resolvers/Query.transaksjonsByBestillingID.res.vtl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/.config/local-aws-info.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/.config/local-env-info.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/resolvers/Query.transaksjonsByBestillingID.postAuth.1.res.vtl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/resolvers/Query.transaksjonsByBestillingID.req.vtl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/api/enkeltbutikknettside/build/resolvers/Query.transaksjonsByBestillingID.res.vtl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/awscloudformation/build/root-cloudformation-stack.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/scripts/amplify-modelgen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/scripts/amplify-push.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/src/ui-components/KundeCreateForm.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/src/ui-components/KundeCreateForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/src/ui-components/KundeUpdateForm.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/src/ui-components/KundeUpdateForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/src/ui-components/TransaksjonCreateForm.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/src/ui-components/TransaksjonCreateForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/src/ui-components/TransaksjonUpdateForm.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/src/ui-components/TransaksjonUpdateForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/src/ui-components/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/src/ui-components/studioTheme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/src/ui-components/studioTheme.js.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/src/ui-components/utils.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +48,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="qa" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,24 +67,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "dev",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Tomaten/Desktop/enkeltbutikknettside/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;qa&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tomaten/Desktop/enkeltbutikknettside/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Tomaten\Desktop\enkeltbutikknettside\src" />
@@ -66,6 +99,34 @@
       <recent name="C:\Users\Tomaten\Desktop\enkeltbutikknettside\public" />
       <recent name="C:\Users\Tomaten\Desktop\enkeltbutikknettside\src\components\Konfigurator" />
     </key>
+  </component>
+  <component name="RunManager" selected="npm.build">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -97,7 +158,15 @@
       <workItem from="1704662068329" duration="917000" />
       <workItem from="1705852033522" duration="7845000" />
       <workItem from="1706017817836" duration="4199000" />
-      <workItem from="1711622048921" duration="5648000" />
+      <workItem from="1715082145438" duration="4118000" />
+    </task>
+    <task id="LOCAL-00023" summary="endre tekst">
+      <option name="closed" value="true" />
+      <created>1690315129961</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1690315129961</updated>
     </task>
     <task id="LOCAL-00024" summary="legge til instagram">
       <option name="closed" value="true" />
@@ -475,23 +544,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706019491857</updated>
     </task>
-    <task id="LOCAL-00071" summary="amplify error fix attempt 2">
+    <task id="LOCAL-00071" summary="paracord">
       <option name="closed" value="true" />
-      <created>1711651463960</created>
+      <created>1715341241361</created>
       <option name="number" value="00071" />
       <option name="presentableId" value="LOCAL-00071" />
       <option name="project" value="LOCAL" />
-      <updated>1711651463960</updated>
+      <updated>1715341241361</updated>
     </task>
-    <task id="LOCAL-00072" summary="amplify error fix attempt 2">
-      <option name="closed" value="true" />
-      <created>1711994674892</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1711994674892</updated>
-    </task>
-    <option name="localTasksCounter" value="73" />
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +584,7 @@
     <MESSAGE value="legge til amplify" />
     <MESSAGE value="bedre import, fikse aws import fra v5 til v6" />
     <MESSAGE value="fikse feil" />
-    <MESSAGE value="amplify error fix attempt 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="amplify error fix attempt 2" />
+    <MESSAGE value="paracord" />
+    <option name="LAST_COMMIT_MESSAGE" value="paracord" />
   </component>
 </project>
