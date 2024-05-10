@@ -27,6 +27,9 @@ import Handtak from "components/Band/Handtak";
 import Handtakband from "components/Band/Handtakband";
 import { Amplify } from 'aws-amplify';
 import config from './amplifyconfiguration.json';
+import Annet from "./components/Annet/Annet";
+import TrykkHalsband from "./components/Annet/Trykk_halsband";
+import ParacordHalsband from "./components/Annet/Paracord_halsband";
 {/* import Banner from "./components/Banner";*/ }
 
 
@@ -57,7 +60,10 @@ function App() {
                     <Route path="/halsband/klipsband" element={<Klipsband />} />
                     <Route path="/handlekurv" element={<Handlekurv />} />
                     <Route path="/kasse" element={<Kasse />} />
-                    <Route path="/bekreftelse" element={< Bekreftelse />} />
+                    <Route path="/bekreftelse" element={<Bekreftelse />} />
+                    <Route path="/annet" element={<Annet />} />
+                    <Route path="/annet/paracord" element={<ParacordHalsband/>} />
+                    <Route path="/annet/trykk-halsband" element={<TrykkHalsband />} />
                 </Routes>
                 <Footer />
             </div>
