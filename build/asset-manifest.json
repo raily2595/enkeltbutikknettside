@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.524eefde.css",
+    "main.js": "/static/js/main.7f930311.js",
+    "static/js/787.c76013bc.chunk.js": "/static/js/787.c76013bc.chunk.js",
+    "static/media/dad.otf": "/static/media/dad.2a16d6d0f90dd5c6c557.otf",
+    "static/media/Handskrevet.otf": "/static/media/Handskrevet.378d9a61c27c5fd0050d.otf",
+    "static/media/wild.ttf": "/static/media/wild.eb484ea5b787c02ab1b1.ttf",
+    "static/media/ComicSans.ttf": "/static/media/ComicSans.44451542ca98f8d82d8a.ttf",
+    "static/media/bolde.otf": "/static/media/bolde.955b057240493650e2dc.otf",
+    "static/media/wizard.otf": "/static/media/wizard.d249e48fb8fd4bf67a66.otf",
+    "static/media/stjernekrig.ttf": "/static/media/stjernekrig.6526fc284cb7079f9c34.ttf",
+    "static/media/winnie.ttf": "/static/media/winnie.7189e64621a6a3177d76.ttf",
+    "index.html": "/index.html",
+    "main.524eefde.css.map": "/static/css/main.524eefde.css.map",
+    "main.7f930311.js.map": "/static/js/main.7f930311.js.map",
+    "787.c76013bc.chunk.js.map": "/static/js/787.c76013bc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.524eefde.css",
+    "static/js/main.7f930311.js"
+  ]
+}
