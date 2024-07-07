@@ -4,6 +4,7 @@ import ProductDisplay from "components/Global/ProductDisplay";
 import TextSettings from "components/Konfigurator/TextSettings";
 import SubmitButton from "components/Konfigurator/SubmitButton";
 import ConfigList from "components/Global/ConfigList";
+import Handlekurv from "components/Bestilling/Handlekurv";
 import SubmissionWindow from "components/Global/SubmissionWindow";
 import { BiothaneSelector, VinylSelector, MetallSelector, LekeSelector, KlipsSelector } from '../Konfigurator/Selectors';
 
@@ -53,7 +54,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
 
     useEffect(() => {
         if (produktnavn === "hanefot") {
-            const calculatedPrice = produktpris + (lengde * meterpris*2);
+            const calculatedPrice = produktpris + (lengde * meterpris * 2);
             setPris(calculatedPrice);
         }
         else if (harLengdemeterbool && harLekebool) {
@@ -166,7 +167,6 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
         setSelectedConfigIndex(null);
         CheckHandlekurv();
 
-        setHarDataILocalStorage(true);
         let summary = `Produkt: ${newConfig.produktnavn},Farge: ${newConfig.farge},`;
         if (newConfig.onskerFarge2) {
             summary += ` Farge 2: ${newConfig.farge2},`;
@@ -345,10 +345,7 @@ const ProductConfigurator = ({ navn, produktpris, prismeter, harLengdemeter, har
                 harDataILocalStorage && (
                     <>
                         <div className="konfigurator-card">
-                            <ConfigList
-                                configurations={configurations}
-                                onDeleteConfig={handleDeleteConfig}
-                            />
+                            <Handlekurv />
                         </div>
                     </>
                 )
