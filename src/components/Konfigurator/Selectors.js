@@ -23,9 +23,9 @@ const klipsValg = {
     Beige: `${process.env.PUBLIC_URL}/klips/beigeklips.jpg`,
 };
 
-const biothaneValg = ["Lyseblå", "Laguneblå", "Karibigrønn", "Eplegrønn", "Ferskenoransje", "Beige", "Neonrosa", "Ametyst", "Korall", "Rød", "Vinrød", "Rødbrun"];
+const biothaneValg = ["Lyseblå", "Laguneblå", "Karibigrønn", "Eplegrønn", "Ferskenoransje", "Beige", "Neonrosa", "Ametyst", "Korall", "Rød", "Vinrød", "Rødbrun", "Svart", "Hvit", "Kongeblå", "Turkis", "Oliven", "Pastell Lilla", "Pastell blå", "Lys Beige", "Petrolblå", "Rosegull", "Sølv", "Salvie Grønn", "Polarblå", "Lys kobber", "Gul"];
 
-const vinylValg = ["Sølv", "Gull", "Hvit", "Svart", "Lysegrønn", "Mørkegrønn", "Neongull", "Neonoransje", "Himmelblå", "Mørkeblå", "Rød", "Brun", "Turkis", "Lyserosa", "Mørkerosa", "Lilla", "Sand"];
+const vinylValg = ["Sølv", "Gull", "Hvit", "Svart", "Lysegrønn", "Mørkegrønn", "Neongull", "Neonoransje", "Himmelblå", "Mørkeblå", "Rød", "Brun", "Lys Turkis", "Lyserosa", "Mørkerosa", "Lilla", "Sand"];
 
 export const MetallSelector = ({ onSelection }) => (
     <PictureButtons options={metallValg} def={0} onSelectionChange={onSelection} />
