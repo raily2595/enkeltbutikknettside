@@ -1,32 +1,57 @@
 const mapColorToHex = (inputColor) => {
     switch (inputColor) {
         case "Lyseblå":
-            return "#5391FE";
+            return "#007AB4";
         case "Rødbrun":
-            return "#7C4E34";
+            return "#795146";
         case "Korall":
-            return "#e0584c";
+            return "#F36F77";
         case "Beige":
-            return "#f6b96b";
+            return "#BCA062";
         case "Karibigrønn":
-            return "#85E2BA";
+            return "#6EE6C7";
         case "Eplegrønn":
-            return "#6BEC85";
+            return "#A6DB4F";
         case "Laguneblå":
-            return "#1D97AC";
+            return "#007990";
         case "Ferskenoransje":
-            return "#FF9849";
+            return "#FF8F1F";
         case "Neonrosa":
-            return "#FE5DA3";
+            return "#FE5289";
         case "Ametyst":
             return "#966EAB";
         case "Rød":
-            return "#D72C35";
+            return "#BA2F37";
         case "Vinrød":
-            return "#893149";
-
+            return "#774251";
+        case "Kongeblå":
+            return "#3C4492";
+        case "Turkis":
+            return "#5BD1EC";
+        case "Oliven":
+            return "#69614D";
+        case "Pastell Lilla":
+            return "#B4A4BB";
+        case "Pastell blå":
+            return "#A0B3C3";
+        case "Lys Beige":
+            return "#EBD0BD";
+        case "Petrolblå":
+            return "#798EAD";
+        case "Rosegull":
+            return "#F0ACAC";
         case "Sølv":
-            return "#c0c0c0";
+            return "#9D9F9E";
+        case "Salvie Grønn":
+            return "#93A287";
+        case "Polarblå":
+            return "#9EB6D0";
+        case "Lys kobber":
+            return "#FFBB9E";
+        case "Gul":
+            return "#FECA15";
+
+
         case "Gull":
             return "#FFD700";
         case "Hvit":
@@ -45,11 +70,9 @@ const mapColorToHex = (inputColor) => {
             return "#99dbf6";
         case "Mørkeblå":
             return "#1796d4";
-        case "Rød":
-            return "#ce2229";
         case "Brun":
             return "#4e2022";
-        case "Turkis":
+        case "Lys Turkis":
             return "#c5e4cb";
         case "Lyserosa":
             return "#facfd9";
