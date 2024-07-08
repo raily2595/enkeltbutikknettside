@@ -5,6 +5,7 @@ import ColorButtons from "components/Konfigurator/ColorSelector";
 const metallValg = {
     Sølv: `${process.env.PUBLIC_URL}/metall/sølvmetall.png`,
     Gull: `${process.env.PUBLIC_URL}/metall/gullmetall.png`,
+    Svart: `${process.env.PUBLIC_URL}/metall/svartmetall.png`,
 };
 
 const lekeValg = {
