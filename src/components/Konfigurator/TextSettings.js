@@ -1,7 +1,7 @@
 import React from "react";
 
 const TextSettings = ({ text, onTextChange, font, onFontChange }) => {
-    const fonts = ["Handskrevet", "Arial", "Tøff", "Courier New", "Calibri", "Comic Sans", "Stjernekrig", "Times New Roman", "Magisk", "Skog", "Tegnefilm", "Barnebok"];
+    const fonts = ["Handskrevet", "Arial", "Tøff", "Courier New", "Calibri", "Comic Sans", "Stjernekrig", "Times New Roman", "Magisk", "Tegnefilm", "Barnebok"];
 
     return (
         <div className="konfigurator-tekst">
