@@ -8,7 +8,7 @@ const Lekeuten = () => {
                 <ProductConfigurator
                     navn={"lekeuten"}
                     produktpris={100}
-                    prismeter={50}
+                    prismeter={60}
                     harLengdemeter={true}
                     harLengdecm={false}
                     harBredde={false}
