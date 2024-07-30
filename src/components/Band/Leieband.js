@@ -8,7 +8,7 @@ const Leieband = () => {
                 <ProductConfigurator
                     navn={"leiebånd"}
                     produktpris={200}
-                    prismeter={50}
+                    prismeter={60}
                     harLengdemeter={true}
                     harLengdecm={false}
                     harBredde={false}

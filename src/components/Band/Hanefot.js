@@ -8,7 +8,7 @@ const Hanefot = () => {
                 <ProductConfigurator
                     navn={"hanefot"}
                     produktpris={200}
-                    prismeter={50}
+                    prismeter={60}
                     harLengdemeter={true}
                     harLengdecm={false}
                     harBredde={false}
